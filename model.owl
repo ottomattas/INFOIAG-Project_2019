@@ -67,6 +67,17 @@
     
 
 
+    <!-- https://project-intelligent-agents.uu.nl#learnsDuring -->
+
+    <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#learnsDuring">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://project-intelligent-agents.uu.nl#Student"/>
+        <rdfs:range rdf:resource="https://project-intelligent-agents.uu.nl#Period"/>
+        <rdfs:range rdf:resource="https://project-intelligent-agents.uu.nl#Weekday"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://project-intelligent-agents.uu.nl#takes -->
 
     <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#takes">
@@ -81,6 +92,16 @@
     <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#teaches">
         <rdfs:domain rdf:resource="https://project-intelligent-agents.uu.nl#Teacher"/>
         <rdfs:range rdf:resource="https://project-intelligent-agents.uu.nl#Course"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#teachesDuring -->
+
+    <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#teachesDuring">
+        <rdfs:domain rdf:resource="https://project-intelligent-agents.uu.nl#Teacher"/>
+        <rdfs:range rdf:resource="https://project-intelligent-agents.uu.nl#Period"/>
+        <rdfs:range rdf:resource="https://project-intelligent-agents.uu.nl#Weekday"/>
     </owl:ObjectProperty>
     
 
@@ -153,6 +174,33 @@
     <!-- https://project-intelligent-agents.uu.nl#Course -->
 
     <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#Course">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://project-intelligent-agents.uu.nl#covers"/>
+                <owl:someValuesFrom rdf:resource="https://project-intelligent-agents.uu.nl#Topic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://project-intelligent-agents.uu.nl#isTaughtOn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://project-intelligent-agents.uu.nl#Weekday"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://project-intelligent-agents.uu.nl#uses"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://project-intelligent-agents.uu.nl#ResearchMethodology"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://project-intelligent-agents.uu.nl#isTaughtOn"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://project-intelligent-agents.uu.nl#Period"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="https://project-intelligent-agents.uu.nl#Topic"/>
     </owl:Class>
     
@@ -178,6 +226,7 @@
 
     <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#HumanitiesCourse">
         <rdfs:subClassOf rdf:resource="https://project-intelligent-agents.uu.nl#Course"/>
+        <owl:disjointWith rdf:resource="https://project-intelligent-agents.uu.nl#ScienceCourse"/>
     </owl:Class>
     
 
@@ -279,6 +328,19 @@
 
     <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#Teacher">
         <rdfs:subClassOf rdf:resource="https://project-intelligent-agents.uu.nl#Person"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://project-intelligent-agents.uu.nl#teachesDuring"/>
+                <owl:allValuesFrom rdf:resource="https://project-intelligent-agents.uu.nl#Period"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://project-intelligent-agents.uu.nl#teaches"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://project-intelligent-agents.uu.nl#Course"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -517,14 +579,6 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#PostmodernistLiterature">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#HumanitiesCourse"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://project-intelligent-agents.uu.nl#Seminar -->
-
-    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Seminar">
-        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#ResearchMethodology"/>
     </owl:NamedIndividual>
     
 
