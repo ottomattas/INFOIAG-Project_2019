@@ -59,6 +59,14 @@
     
 
 
+    <!-- https://project-intelligent-agents.uu.nl#HumanitiesCourse -->
+
+    <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#HumanitiesCourse">
+        <rdfs:subClassOf rdf:resource="https://project-intelligent-agents.uu.nl#Course"/>
+    </owl:Class>
+    
+
+
     <!-- https://project-intelligent-agents.uu.nl#Linguistics -->
 
     <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#Linguistics">
@@ -173,10 +181,58 @@
     
 
 
+    <!-- https://project-intelligent-agents.uu.nl#AcademicWriting -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#AcademicWriting">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#HumanitiesCourse"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#ArtHistory -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#ArtHistory">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#HumanitiesCourse"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#DigitalEthics -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#DigitalEthics">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#HumanitiesCourse"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#English -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#English">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#HumanitiesCourse"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://project-intelligent-agents.uu.nl#Fr -->
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Fr">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Weekday"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#History -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#History">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#HumanitiesCourse"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#Linguistics -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Linguistics">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#HumanitiesCourse"/>
     </owl:NamedIndividual>
     
 
@@ -221,6 +277,22 @@
     
 
 
+    <!-- https://project-intelligent-agents.uu.nl#Philosophy -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Philosophy">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#HumanitiesCourse"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#PostmodernistLiterature -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#PostmodernistLiterature">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#HumanitiesCourse"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://project-intelligent-agents.uu.nl#Th -->
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Th">
@@ -233,6 +305,14 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Tu">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Weekday"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#VictorianLiterature -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#VictorianLiterature">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#HumanitiesCourse"/>
     </owl:NamedIndividual>
     
 
