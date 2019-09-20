@@ -325,6 +325,7 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#English">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#HumanitiesCourse"/>
+        <isPreliminary rdf:resource="https://project-intelligent-agents.uu.nl#Linguistics"/>
     </owl:NamedIndividual>
     
 
@@ -349,6 +350,7 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#History">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#HumanitiesCourse"/>
+        <isPreliminary rdf:resource="https://project-intelligent-agents.uu.nl#ArtHistory"/>
     </owl:NamedIndividual>
     
 
@@ -357,6 +359,7 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#IntelligentAgents">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#ScienceCourse"/>
+        <isPreliminary rdf:resource="https://project-intelligent-agents.uu.nl#MultiAgentLearnings"/>
     </owl:NamedIndividual>
     
 
@@ -389,6 +392,8 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#MachineLearning">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#ScienceCourse"/>
+        <isPreliminary rdf:resource="https://project-intelligent-agents.uu.nl#AdvancedMachineLearning"/>
+        <isPreliminary rdf:resource="https://project-intelligent-agents.uu.nl#NaturalLanguageProcessing"/>
     </owl:NamedIndividual>
     
 
@@ -397,6 +402,7 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Math">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#ScienceCourse"/>
+        <isPreliminary rdf:resource="https://project-intelligent-agents.uu.nl#AdvancedMath"/>
     </owl:NamedIndividual>
     
 
@@ -469,6 +475,7 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Philosophy">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#HumanitiesCourse"/>
+        <isPreliminary rdf:resource="https://project-intelligent-agents.uu.nl#DigitalEthics"/>
     </owl:NamedIndividual>
     
 
@@ -509,6 +516,7 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#VictorianLiterature">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#HumanitiesCourse"/>
+        <isPreliminary rdf:resource="https://project-intelligent-agents.uu.nl#PostmodernistLiterature"/>
     </owl:NamedIndividual>
     
 
