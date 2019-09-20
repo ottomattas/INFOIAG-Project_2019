@@ -21,9 +21,73 @@
     
 
 
+    <!-- https://project-intelligent-agents.uu.nl#CognitiveScience -->
+
+    <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#CognitiveScience">
+        <rdfs:subClassOf rdf:resource="https://project-intelligent-agents.uu.nl#NaturalScience"/>
+    </owl:Class>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#ComputerScience -->
+
+    <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#ComputerScience">
+        <rdfs:subClassOf rdf:resource="https://project-intelligent-agents.uu.nl#Engineering"/>
+    </owl:Class>
+    
+
+
     <!-- https://project-intelligent-agents.uu.nl#Course -->
 
     <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#Course"/>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#Engineering -->
+
+    <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#Engineering">
+        <rdfs:subClassOf rdf:resource="https://project-intelligent-agents.uu.nl#Topic"/>
+    </owl:Class>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#History -->
+
+    <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#History">
+        <rdfs:subClassOf rdf:resource="https://project-intelligent-agents.uu.nl#SocialScience"/>
+    </owl:Class>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#Linguistics -->
+
+    <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#Linguistics">
+        <rdfs:subClassOf rdf:resource="https://project-intelligent-agents.uu.nl#SocialScience"/>
+    </owl:Class>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#Mathematics -->
+
+    <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#Mathematics">
+        <rdfs:subClassOf rdf:resource="https://project-intelligent-agents.uu.nl#NaturalScience"/>
+    </owl:Class>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#MechanicalEngineering -->
+
+    <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#MechanicalEngineering">
+        <rdfs:subClassOf rdf:resource="https://project-intelligent-agents.uu.nl#Engineering"/>
+    </owl:Class>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#NaturalScience -->
+
+    <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#NaturalScience">
+        <rdfs:subClassOf rdf:resource="https://project-intelligent-agents.uu.nl#Topic"/>
+    </owl:Class>
     
 
 
@@ -39,9 +103,33 @@
     
 
 
+    <!-- https://project-intelligent-agents.uu.nl#Philosophy -->
+
+    <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#Philosophy">
+        <rdfs:subClassOf rdf:resource="https://project-intelligent-agents.uu.nl#SocialScience"/>
+    </owl:Class>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#Physics -->
+
+    <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#Physics">
+        <rdfs:subClassOf rdf:resource="https://project-intelligent-agents.uu.nl#NaturalScience"/>
+    </owl:Class>
+    
+
+
     <!-- https://project-intelligent-agents.uu.nl#ResearchMethodology -->
 
     <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#ResearchMethodology"/>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#SocialScience -->
+
+    <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#SocialScience">
+        <rdfs:subClassOf rdf:resource="https://project-intelligent-agents.uu.nl#Topic"/>
+    </owl:Class>
     
 
 
