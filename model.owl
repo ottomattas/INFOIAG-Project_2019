@@ -125,6 +125,14 @@
     
 
 
+    <!-- https://project-intelligent-agents.uu.nl#ScienceCourse -->
+
+    <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#ScienceCourse">
+        <rdfs:subClassOf rdf:resource="https://project-intelligent-agents.uu.nl#Course"/>
+    </owl:Class>
+    
+
+
     <!-- https://project-intelligent-agents.uu.nl#SocialScience -->
 
     <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#SocialScience">
@@ -159,6 +167,73 @@
     <!-- https://project-intelligent-agents.uu.nl#Weekday -->
 
     <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#Weekday"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#AdvancedMachineLearning -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#AdvancedMachineLearning"/>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#AdvancedMath -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#AdvancedMath"/>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#DataMining -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#DataMining"/>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#IntelligentAgents -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#IntelligentAgents"/>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#MachineLearning -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#MachineLearning"/>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#Math -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Math"/>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#MethodsAIResearch -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#MethodsAIResearch"/>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#MultiAgentLearnings -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#MultiAgentLearnings"/>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#NaturalLanguageProcessing -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#NaturalLanguageProcessing">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#ScienceCourse"/>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
