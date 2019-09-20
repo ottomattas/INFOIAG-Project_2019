@@ -217,6 +217,14 @@
     
 
 
+    <!-- https://project-intelligent-agents.uu.nl#ScienceCourse -->
+
+    <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#ScienceCourse">
+        <rdfs:subClassOf rdf:resource="https://project-intelligent-agents.uu.nl#Course"/>
+    </owl:Class>
+    
+
+
     <!-- https://project-intelligent-agents.uu.nl#SocialScience -->
 
     <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#SocialScience">
@@ -273,10 +281,34 @@
     
 
 
+    <!-- https://project-intelligent-agents.uu.nl#AdvancedMachineLearning -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#AdvancedMachineLearning">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#ScienceCourse"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#AdvancedMath -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#AdvancedMath">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#ScienceCourse"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://project-intelligent-agents.uu.nl#ArtHistory -->
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#ArtHistory">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#HumanitiesCourse"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#DataMining -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#DataMining">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#ScienceCourse"/>
     </owl:NamedIndividual>
     
 
@@ -297,16 +329,18 @@
     
 
 
-    <!-- https://project-intelligent-agents.uu.nl#Fr -->
-
-    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Fr">
-        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Weekday"/>
-            </owl:NamedIndividual>
-
     <!-- https://project-intelligent-agents.uu.nl#Experiment -->
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Experiment">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#ResearchMethodology"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#Fr -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Fr">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Weekday"/>
     </owl:NamedIndividual>
     
 
@@ -319,6 +353,30 @@
     
 
 
+    <!-- https://project-intelligent-agents.uu.nl#IntelligentAgents -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#IntelligentAgents">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#ScienceCourse"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#Lab -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Lab">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#ResearchMethodology"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#Lecture -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Lecture">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#ResearchMethodology"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://project-intelligent-agents.uu.nl#Linguistics -->
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Linguistics">
@@ -327,14 +385,50 @@
     
 
 
+    <!-- https://project-intelligent-agents.uu.nl#MachineLearning -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#MachineLearning">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#ScienceCourse"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#Math -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Math">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#ScienceCourse"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#MethodsAIResearch -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#MethodsAIResearch">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#ScienceCourse"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://project-intelligent-agents.uu.nl#Mo -->
+
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Mo">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Weekday"/>
     </owl:NamedIndividual>
+    
 
-    <!-- https://project-intelligent-agents.uu.nl#Lab -->
-    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Lab">
-        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#ResearchMethodology"/>
+
+    <!-- https://project-intelligent-agents.uu.nl#MultiAgentLearnings -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#MultiAgentLearnings">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#ScienceCourse"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#NaturalLanguageProcessing -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#NaturalLanguageProcessing">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#ScienceCourse"/>
     </owl:NamedIndividual>
     
 
@@ -344,11 +438,6 @@
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#P1">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Period"/>
     </owl:NamedIndividual>
-
-    <!-- https://project-intelligent-agents.uu.nl#Lecture -->
-    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Lecture">
-        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#ResearchMethodology"/>
-    </owl:NamedIndividual>
     
 
 
@@ -356,12 +445,6 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#P2">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Period"/>
-            </owl:NamedIndividual>
-
-    <!-- https://project-intelligent-agents.uu.nl#Seminar -->
-
-    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Seminar">
-        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#ResearchMethodology"/>
     </owl:NamedIndividual>
     
 
@@ -398,6 +481,14 @@
     
 
 
+    <!-- https://project-intelligent-agents.uu.nl#Seminar -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Seminar">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#ResearchMethodology"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://project-intelligent-agents.uu.nl#Th -->
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Th">
@@ -427,6 +518,8 @@
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#We">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Weekday"/>
     </owl:NamedIndividual>
+    
+
 
     <!-- https://project-intelligent-agents.uu.nl#Workshop -->
 
