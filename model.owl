@@ -123,7 +123,9 @@
 
     <!-- https://project-intelligent-agents.uu.nl#Course -->
 
-    <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#Course"/>
+    <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#Course">
+        <owl:disjointWith rdf:resource="https://project-intelligent-agents.uu.nl#Topic"/>
+    </owl:Class>
     
 
 
@@ -191,7 +193,9 @@
 
     <!-- https://project-intelligent-agents.uu.nl#Person -->
 
-    <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#Person"/>
+    <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#Person">
+        <owl:disjointWith rdf:resource="https://project-intelligent-agents.uu.nl#Topic"/>
+    </owl:Class>
     
 
 
