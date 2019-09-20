@@ -159,6 +159,57 @@
     <!-- https://project-intelligent-agents.uu.nl#Weekday -->
 
     <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#Weekday"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#Experiment -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Experiment">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#ResearchMethodology"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#Lab -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Lab">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#ResearchMethodology"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#Lecture -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Lecture">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#ResearchMethodology"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#Seminar -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Seminar">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#ResearchMethodology"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#Workshop -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Workshop">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#ResearchMethodology"/>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
