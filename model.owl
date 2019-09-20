@@ -97,6 +97,35 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#firstName -->
+
+    <owl:DatatypeProperty rdf:about="https://project-intelligent-agents.uu.nl#firstName">
+        <rdfs:domain rdf:resource="https://project-intelligent-agents.uu.nl#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#secondName -->
+
+    <owl:DatatypeProperty rdf:about="https://project-intelligent-agents.uu.nl#secondName">
+        <rdfs:domain rdf:resource="https://project-intelligent-agents.uu.nl#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -496,6 +525,124 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Seminar">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#ResearchMethodology"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#Seminar -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Seminar">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#ResearchMethodology"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#Student1 -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Student1">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Student"/>
+        <firstName>Artie</firstName>
+        <secondName>Armstrong</secondName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#Student2 -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Student2">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Student"/>
+        <firstName>Bill</firstName>
+        <secondName>Bernstein</secondName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#Student3 -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Student3">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Student"/>
+        <firstName>Mickaila</firstName>
+        <secondName>Tarkovski</secondName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#Student4 -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Student4">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Student"/>
+        <firstName>Solomon</firstName>
+        <secondName>Sarti</secondName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#Student5 -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Student5">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Student"/>
+        <firstName>Gigi</firstName>
+        <secondName>Ramone</secondName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#Teacher1 -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Teacher1">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Teacher"/>
+        <firstName>Allie</firstName>
+        <secondName>Arnt</secondName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#Teacher2 -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Teacher2">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Teacher"/>
+        <firstName>Bennie</firstName>
+        <secondName>Brinkerhoff</secondName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#Teacher3 -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Teacher3">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Teacher"/>
+        <firstName>Charles</firstName>
+        <secondName>Cippen</secondName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#Teacher4 -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Teacher4">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Teacher"/>
+        <firstName>Brenda</firstName>
+        <secondName>Bacone</secondName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#Teacher5 -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Teacher5">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Teacher"/>
+        <firstName>Etta</firstName>
+        <secondName>Danz</secondName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#Teacher6 -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Teacher6">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Teacher"/>
+        <firstName>Glenn</firstName>
+        <secondName>Ransberger</secondName>
     </owl:NamedIndividual>
     
 
