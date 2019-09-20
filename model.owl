@@ -159,6 +159,89 @@
     <!-- https://project-intelligent-agents.uu.nl#Weekday -->
 
     <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#Weekday"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#Fr -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Fr">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Weekday"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#Mo -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Mo">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Weekday"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#P1 -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#P1">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Period"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#P2 -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#P2">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Period"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#P3 -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#P3">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Period"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#P4 -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#P4">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Period"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#Th -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Th">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Weekday"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#Tu -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Tu">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Weekday"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#We -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#We">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Weekday"/>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
