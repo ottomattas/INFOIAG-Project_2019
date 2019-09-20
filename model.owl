@@ -13,6 +13,90 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#covers -->
+
+    <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#covers">
+        <rdfs:domain rdf:resource="https://project-intelligent-agents.uu.nl#Course"/>
+        <rdfs:range rdf:resource="https://project-intelligent-agents.uu.nl#Topic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#hasFriend -->
+
+    <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#hasFriend">
+        <rdfs:domain rdf:resource="https://project-intelligent-agents.uu.nl#Student"/>
+        <rdfs:range rdf:resource="https://project-intelligent-agents.uu.nl#Student"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#hasTaken -->
+
+    <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#hasTaken">
+        <rdfs:domain rdf:resource="https://project-intelligent-agents.uu.nl#Student"/>
+        <rdfs:range rdf:resource="https://project-intelligent-agents.uu.nl#Course"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#isPreliminary -->
+
+    <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#isPreliminary">
+        <rdfs:domain rdf:resource="https://project-intelligent-agents.uu.nl#Course"/>
+        <rdfs:range rdf:resource="https://project-intelligent-agents.uu.nl#Course"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#isTaughtOn -->
+
+    <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#isTaughtOn">
+        <rdfs:domain rdf:resource="https://project-intelligent-agents.uu.nl#Course"/>
+        <rdfs:range rdf:resource="https://project-intelligent-agents.uu.nl#Period"/>
+        <rdfs:range rdf:resource="https://project-intelligent-agents.uu.nl#Weekday"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#takes -->
+
+    <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#takes">
+        <rdfs:domain rdf:resource="https://project-intelligent-agents.uu.nl#Student"/>
+        <rdfs:range rdf:resource="https://project-intelligent-agents.uu.nl#Course"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#teaches -->
+
+    <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#teaches">
+        <rdfs:domain rdf:resource="https://project-intelligent-agents.uu.nl#Teacher"/>
+        <rdfs:range rdf:resource="https://project-intelligent-agents.uu.nl#Course"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#uses -->
+
+    <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#uses">
+        <rdfs:domain rdf:resource="https://project-intelligent-agents.uu.nl#Course"/>
+        <rdfs:range rdf:resource="https://project-intelligent-agents.uu.nl#ResearchMethodology"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
