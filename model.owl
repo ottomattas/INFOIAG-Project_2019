@@ -53,7 +53,6 @@
     <!-- https://project-intelligent-agents.uu.nl#isPreliminary -->
 
     <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#isPreliminary">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="https://project-intelligent-agents.uu.nl#Course"/>
         <rdfs:range rdf:resource="https://project-intelligent-agents.uu.nl#Course"/>
@@ -74,7 +73,6 @@
     <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#isTaughtOnPeriod">
         <rdfs:subPropertyOf rdf:resource="https://project-intelligent-agents.uu.nl#isTaughtOn"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdfs:domain rdf:resource="https://project-intelligent-agents.uu.nl#Course"/>
         <rdfs:range rdf:resource="https://project-intelligent-agents.uu.nl#Period"/>
     </owl:ObjectProperty>
@@ -85,7 +83,6 @@
 
     <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#isTaughtOnWeekday">
         <rdfs:subPropertyOf rdf:resource="https://project-intelligent-agents.uu.nl#isTaughtOn"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdfs:domain rdf:resource="https://project-intelligent-agents.uu.nl#Course"/>
         <rdfs:range rdf:resource="https://project-intelligent-agents.uu.nl#Weekday"/>
     </owl:ObjectProperty>
@@ -564,6 +561,16 @@
     
 
 
+    <!-- https://project-intelligent-agents.uu.nl#AdvancedMath -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#AdvancedMath">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Course"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#LinearAlgebra"/>
+        <isPreliminary rdf:resource="https://project-intelligent-agents.uu.nl#MachineLearning"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://project-intelligent-agents.uu.nl#Experiment -->
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Experiment">
@@ -585,6 +592,7 @@
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#IntroductionToMath">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Course"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#LinearAlgebra"/>
+        <isPreliminary rdf:resource="https://project-intelligent-agents.uu.nl#AdvancedMath"/>
         <isTaughtOnPeriod rdf:resource="https://project-intelligent-agents.uu.nl#P1"/>
         <isTaughtOnWeekday rdf:resource="https://project-intelligent-agents.uu.nl#Mo"/>
     </owl:NamedIndividual>
@@ -611,6 +619,15 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#LinearAlgebra">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Mathematics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#MachineLearning -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#MachineLearning">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Course"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#LinearAlgebra"/>
     </owl:NamedIndividual>
     
 
