@@ -92,6 +92,7 @@
     <!-- https://project-intelligent-agents.uu.nl#takes -->
 
     <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#takes">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
         <rdfs:domain rdf:resource="https://project-intelligent-agents.uu.nl#Student"/>
         <rdfs:range rdf:resource="https://project-intelligent-agents.uu.nl#Course"/>
     </owl:ObjectProperty>
@@ -101,6 +102,7 @@
     <!-- https://project-intelligent-agents.uu.nl#teaches -->
 
     <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#teaches">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
         <rdfs:domain rdf:resource="https://project-intelligent-agents.uu.nl#Teacher"/>
         <rdfs:range rdf:resource="https://project-intelligent-agents.uu.nl#Course"/>
     </owl:ObjectProperty>
