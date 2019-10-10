@@ -77,9 +77,25 @@
 
     <!-- https://project-intelligent-agents.uu.nl#isTaughtOn -->
 
-    <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#isTaughtOn">
+    <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#isTaughtOn"/>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#isTaughtOnPeriod -->
+
+    <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#isTaughtOnPeriod">
+        <rdfs:subPropertyOf rdf:resource="https://project-intelligent-agents.uu.nl#isTaughtOn"/>
         <rdfs:domain rdf:resource="https://project-intelligent-agents.uu.nl#Course"/>
         <rdfs:range rdf:resource="https://project-intelligent-agents.uu.nl#Period"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#isTaughtOnWeekday -->
+
+    <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#isTaughtOnWeekday">
+        <rdfs:subPropertyOf rdf:resource="https://project-intelligent-agents.uu.nl#isTaughtOn"/>
+        <rdfs:domain rdf:resource="https://project-intelligent-agents.uu.nl#Course"/>
         <rdfs:range rdf:resource="https://project-intelligent-agents.uu.nl#Weekday"/>
     </owl:ObjectProperty>
     
@@ -125,9 +141,25 @@
 
     <!-- https://project-intelligent-agents.uu.nl#teachesDuring -->
 
-    <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#teachesDuring">
+    <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#teachesDuring"/>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#teachesDuringPeriod -->
+
+    <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#teachesDuringPeriod">
+        <rdfs:subPropertyOf rdf:resource="https://project-intelligent-agents.uu.nl#teachesDuring"/>
         <rdfs:domain rdf:resource="https://project-intelligent-agents.uu.nl#Teacher"/>
         <rdfs:range rdf:resource="https://project-intelligent-agents.uu.nl#Period"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#teachesDuringWeekday -->
+
+    <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#teachesDuringWeekday">
+        <rdfs:subPropertyOf rdf:resource="https://project-intelligent-agents.uu.nl#teachesDuring"/>
+        <rdfs:domain rdf:resource="https://project-intelligent-agents.uu.nl#Teacher"/>
         <rdfs:range rdf:resource="https://project-intelligent-agents.uu.nl#Weekday"/>
     </owl:ObjectProperty>
     
@@ -287,6 +319,38 @@
 
     <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#NaturalScience">
         <rdfs:subClassOf rdf:resource="https://project-intelligent-agents.uu.nl#Topic"/>
+    </owl:Class>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#P1 -->
+
+    <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#P1">
+        <rdfs:subClassOf rdf:resource="https://project-intelligent-agents.uu.nl#Period"/>
+    </owl:Class>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#P2 -->
+
+    <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#P2">
+        <rdfs:subClassOf rdf:resource="https://project-intelligent-agents.uu.nl#Period"/>
+    </owl:Class>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#P3 -->
+
+    <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#P3">
+        <rdfs:subClassOf rdf:resource="https://project-intelligent-agents.uu.nl#Period"/>
+    </owl:Class>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#P4 -->
+
+    <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#P4">
+        <rdfs:subClassOf rdf:resource="https://project-intelligent-agents.uu.nl#Period"/>
     </owl:Class>
     
 
@@ -619,7 +683,7 @@
     <!-- https://project-intelligent-agents.uu.nl#P1 -->
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#P1">
-        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Period"/>
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#P1"/>
     </owl:NamedIndividual>
     
 
@@ -627,7 +691,7 @@
     <!-- https://project-intelligent-agents.uu.nl#P2 -->
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#P2">
-        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Period"/>
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#P2"/>
     </owl:NamedIndividual>
     
 
@@ -635,7 +699,7 @@
     <!-- https://project-intelligent-agents.uu.nl#P3 -->
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#P3">
-        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Period"/>
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#P3"/>
     </owl:NamedIndividual>
     
 
@@ -643,7 +707,7 @@
     <!-- https://project-intelligent-agents.uu.nl#P4 -->
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#P4">
-        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Period"/>
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#P4"/>
     </owl:NamedIndividual>
     
 
