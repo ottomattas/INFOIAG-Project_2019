@@ -495,14 +495,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://project-intelligent-agents.uu.nl#covers"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="https://project-intelligent-agents.uu.nl#Engineering"/>
-                            <rdf:Description rdf:about="https://project-intelligent-agents.uu.nl#NaturalScience"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
+                <owl:someValuesFrom rdf:resource="https://project-intelligent-agents.uu.nl#SocialScience"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -665,7 +658,14 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://project-intelligent-agents.uu.nl#covers"/>
-                <owl:someValuesFrom rdf:resource="https://project-intelligent-agents.uu.nl#SocialScience"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://project-intelligent-agents.uu.nl#Engineering"/>
+                            <rdf:Description rdf:about="https://project-intelligent-agents.uu.nl#NaturalScience"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
