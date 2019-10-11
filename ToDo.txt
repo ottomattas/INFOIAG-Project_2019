@@ -1,1 +1,4 @@
-[] How to make all that is not AdvCourse a BasicCourse
+TODO: How to make all that is not AdvCourse a BasicCourse
+TODO: How to do "per" statement
+TODO: How to retrieve certain instance 
+
