@@ -371,6 +371,7 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://project-intelligent-agents.uu.nl#HumanitiesCourse"/>
+        <owl:disjointWith rdf:resource="https://project-intelligent-agents.uu.nl#BasicHumanitiesCourse"/>
     </owl:Class>
     
 
@@ -385,6 +386,7 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://project-intelligent-agents.uu.nl#ScienceCourse"/>
+        <owl:disjointWith rdf:resource="https://project-intelligent-agents.uu.nl#BasicScienceCourse"/>
     </owl:Class>
     
 
@@ -392,6 +394,12 @@
     <!-- https://project-intelligent-agents.uu.nl#BasicHumanitiesCourse -->
 
     <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#BasicHumanitiesCourse">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://project-intelligent-agents.uu.nl#isPreliminary"/>
+                <owl:someValuesFrom rdf:resource="https://project-intelligent-agents.uu.nl#AdvancedHumanitiesCourse"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://project-intelligent-agents.uu.nl#HumanitiesCourse"/>
     </owl:Class>
     
@@ -400,6 +408,12 @@
     <!-- https://project-intelligent-agents.uu.nl#BasicScienceCourse -->
 
     <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#BasicScienceCourse">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://project-intelligent-agents.uu.nl#isPreliminary"/>
+                <owl:someValuesFrom rdf:resource="https://project-intelligent-agents.uu.nl#AdvancedScienceCourse"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://project-intelligent-agents.uu.nl#ScienceCourse"/>
     </owl:Class>
     
@@ -470,12 +484,27 @@
 
     <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#HumanitiesCourse">
         <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://project-intelligent-agents.uu.nl#covers"/>
-                <owl:someValuesFrom rdf:resource="https://project-intelligent-agents.uu.nl#SocialScience"/>
-            </owl:Restriction>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://project-intelligent-agents.uu.nl#AdvancedHumanitiesCourse"/>
+                    <rdf:Description rdf:about="https://project-intelligent-agents.uu.nl#BasicHumanitiesCourse"/>
+                </owl:unionOf>
+            </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://project-intelligent-agents.uu.nl#Course"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://project-intelligent-agents.uu.nl#covers"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://project-intelligent-agents.uu.nl#Engineering"/>
+                            <rdf:Description rdf:about="https://project-intelligent-agents.uu.nl#NaturalScience"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://project-intelligent-agents.uu.nl#isTaughtOn"/>
@@ -625,19 +654,20 @@
 
     <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#ScienceCourse">
         <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://project-intelligent-agents.uu.nl#covers"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="https://project-intelligent-agents.uu.nl#Engineering"/>
-                            <rdf:Description rdf:about="https://project-intelligent-agents.uu.nl#NaturalScience"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://project-intelligent-agents.uu.nl#AdvancedScienceCourse"/>
+                    <rdf:Description rdf:about="https://project-intelligent-agents.uu.nl#BasicScienceCourse"/>
+                </owl:unionOf>
+            </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://project-intelligent-agents.uu.nl#Course"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://project-intelligent-agents.uu.nl#covers"/>
+                <owl:someValuesFrom rdf:resource="https://project-intelligent-agents.uu.nl#SocialScience"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://project-intelligent-agents.uu.nl#isTaughtOn"/>
