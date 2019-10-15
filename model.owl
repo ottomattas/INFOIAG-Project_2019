@@ -81,6 +81,10 @@
     <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#hasTaken">
         <rdfs:domain rdf:resource="https://project-intelligent-agents.uu.nl#Student"/>
         <rdfs:range rdf:resource="https://project-intelligent-agents.uu.nl#Course"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://project-intelligent-agents.uu.nl#hasTaken"/>
+            <rdf:Description rdf:about="https://project-intelligent-agents.uu.nl#hasPreliminary"/>
+        </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
 
@@ -250,17 +254,6 @@
     <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#practices">
         <rdfs:domain rdf:resource="https://project-intelligent-agents.uu.nl#Student"/>
         <rdfs:range rdf:resource="https://project-intelligent-agents.uu.nl#Hobby"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://project-intelligent-agents.uu.nl#prop -->
-
-    <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#prop">
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://project-intelligent-agents.uu.nl#prop"/>
-            <rdf:Description rdf:about="https://project-intelligent-agents.uu.nl#hasPreliminary"/>
-        </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
 
@@ -1472,9 +1465,9 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Student1">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Student"/>
+        <hasTaken rdf:resource="https://project-intelligent-agents.uu.nl#AdvancedMachineLearning"/>
         <hasTaken rdf:resource="https://project-intelligent-agents.uu.nl#Calculus"/>
         <practices rdf:resource="https://project-intelligent-agents.uu.nl#Football"/>
-        <takes rdf:resource="https://project-intelligent-agents.uu.nl#MachineLearning"/>
         <firstName>Artie</firstName>
         <secondName>Armstrong</secondName>
     </owl:NamedIndividual>
