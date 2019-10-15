@@ -1,4 +1,3 @@
-TODO: How to make all that is not AdvCourse a BasicCourse
 TODO: How to do "per" statement
-TODO: How to retrieve certain instance 
+TODO: Do the difference between canTake and hasTaken in the agent
 
