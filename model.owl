@@ -23,7 +23,12 @@
 
     <!-- https://project-intelligent-agents.uu.nl#canTake -->
 
-    <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#canTake"/>
+    <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#canTake">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://project-intelligent-agents.uu.nl#hasTaken"/>
+            <rdf:Description rdf:about="https://project-intelligent-agents.uu.nl#isPreliminary"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
     
 
 
@@ -277,7 +282,12 @@
 
     <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#takes">
         <rdfs:domain rdf:resource="https://project-intelligent-agents.uu.nl#Student"/>
-        <rdfs:range rdf:resource="https://project-intelligent-agents.uu.nl#Course"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://project-intelligent-agents.uu.nl#canTake"/>
+                <owl:someValuesFrom rdf:resource="https://project-intelligent-agents.uu.nl#Course"/>
+            </owl:Restriction>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
