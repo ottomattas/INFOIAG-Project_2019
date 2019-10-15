@@ -21,6 +21,12 @@
     
 
 
+    <!-- https://project-intelligent-agents.uu.nl#canTake -->
+
+    <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#canTake"/>
+    
+
+
     <!-- https://project-intelligent-agents.uu.nl#covers -->
 
     <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#covers">
@@ -1381,6 +1387,7 @@
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#PostmodernistLiterature">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#HumanitiesCourse"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#TextAnalysis"/>
+        <requires rdf:resource="https://project-intelligent-agents.uu.nl#CriticalThinking"/>
     </owl:NamedIndividual>
     
 
@@ -1478,6 +1485,7 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Student2">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Student"/>
+        <hasTaken rdf:resource="https://project-intelligent-agents.uu.nl#VictorianLiterature"/>
         <firstName>Bill</firstName>
         <secondName>Bernstein</secondName>
     </owl:NamedIndividual>
