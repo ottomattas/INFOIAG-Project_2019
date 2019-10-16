@@ -315,6 +315,10 @@
         <rdfs:subPropertyOf rdf:resource="https://project-intelligent-agents.uu.nl#teachesOn"/>
         <rdfs:domain rdf:resource="https://project-intelligent-agents.uu.nl#Teacher"/>
         <rdfs:range rdf:resource="https://project-intelligent-agents.uu.nl#Period"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://project-intelligent-agents.uu.nl#teaches"/>
+            <rdf:Description rdf:about="https://project-intelligent-agents.uu.nl#isTaughtOnPeriod"/>
+        </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
 
@@ -323,6 +327,8 @@
 
     <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#teachesOnWeekday">
         <rdfs:subPropertyOf rdf:resource="https://project-intelligent-agents.uu.nl#teachesOn"/>
+        <rdfs:domain rdf:resource="https://project-intelligent-agents.uu.nl#Teacher"/>
+        <rdfs:range rdf:resource="https://project-intelligent-agents.uu.nl#Weekday"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="https://project-intelligent-agents.uu.nl#teaches"/>
             <rdf:Description rdf:about="https://project-intelligent-agents.uu.nl#isTaughtOnWeekday"/>
@@ -1044,6 +1050,8 @@
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#ScienceCourse"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#Algorithms"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#DataStructures"/>
+        <isTaughtOnPeriod rdf:resource="https://project-intelligent-agents.uu.nl#P2"/>
+        <isTaughtOnWeekday rdf:resource="https://project-intelligent-agents.uu.nl#We"/>
     </owl:NamedIndividual>
     
 
@@ -1053,6 +1061,7 @@
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#AdvancedMath">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#ScienceCourse"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#SetTheory"/>
+        <isTaughtOnPeriod rdf:resource="https://project-intelligent-agents.uu.nl#P3"/>
     </owl:NamedIndividual>
     
 
@@ -1070,6 +1079,7 @@
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#ArtHistory">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#HumanitiesCourse"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#WorldHistory"/>
+        <isTaughtOnPeriod rdf:resource="https://project-intelligent-agents.uu.nl#P2"/>
     </owl:NamedIndividual>
     
 
@@ -1093,6 +1103,7 @@
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#ScienceCourse"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#Consciousness"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#Mind"/>
+        <isTaughtOnPeriod rdf:resource="https://project-intelligent-agents.uu.nl#P3"/>
     </owl:NamedIndividual>
     
 
@@ -1135,6 +1146,7 @@
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#DataMining">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#ScienceCourse"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#Algorithms"/>
+        <isTaughtOnPeriod rdf:resource="https://project-intelligent-agents.uu.nl#P2"/>
     </owl:NamedIndividual>
     
 
@@ -1160,6 +1172,7 @@
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#DigitalEthics">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#HumanitiesCourse"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#WesternPhilosophy"/>
+        <isTaughtOnPeriod rdf:resource="https://project-intelligent-agents.uu.nl#P3"/>
     </owl:NamedIndividual>
     
 
@@ -1178,6 +1191,7 @@
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#HumanitiesCourse"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#TextAnalysis"/>
         <isPreliminary rdf:resource="https://project-intelligent-agents.uu.nl#AdvancedLinguistics"/>
+        <isTaughtOnPeriod rdf:resource="https://project-intelligent-agents.uu.nl#P1"/>
     </owl:NamedIndividual>
     
 
@@ -1250,6 +1264,7 @@
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#HumanitiesCourse"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#WorldHistory"/>
         <isPreliminary rdf:resource="https://project-intelligent-agents.uu.nl#ArtHistory"/>
+        <isTaughtOnPeriod rdf:resource="https://project-intelligent-agents.uu.nl#P1"/>
     </owl:NamedIndividual>
     
 
@@ -1260,6 +1275,7 @@
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#ScienceCourse"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#Algorithms"/>
         <isPreliminary rdf:resource="https://project-intelligent-agents.uu.nl#MultiAgentLearning"/>
+        <isTaughtOnPeriod rdf:resource="https://project-intelligent-agents.uu.nl#P1"/>
     </owl:NamedIndividual>
     
 
@@ -1279,6 +1295,7 @@
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#HumanitiesCourse"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#WesternPhilosophy"/>
         <isPreliminary rdf:resource="https://project-intelligent-agents.uu.nl#DigitalEthics"/>
+        <isTaughtOnPeriod rdf:resource="https://project-intelligent-agents.uu.nl#P3"/>
     </owl:NamedIndividual>
     
 
@@ -1309,6 +1326,7 @@
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#Algorithms"/>
         <isPreliminary rdf:resource="https://project-intelligent-agents.uu.nl#AdvancedMachineLearning"/>
         <isPreliminary rdf:resource="https://project-intelligent-agents.uu.nl#NaturalLanguageProcessing"/>
+        <isTaughtOnPeriod rdf:resource="https://project-intelligent-agents.uu.nl#P1"/>
         <isTaughtOnWeekday rdf:resource="https://project-intelligent-agents.uu.nl#Mo"/>
         <requires rdf:resource="https://project-intelligent-agents.uu.nl#Programming"/>
     </owl:NamedIndividual>
@@ -1336,6 +1354,7 @@
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#MultiAgentLearning">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#ScienceCourse"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#Algorithms"/>
+        <isTaughtOnPeriod rdf:resource="https://project-intelligent-agents.uu.nl#P1"/>
     </owl:NamedIndividual>
     
 
@@ -1347,6 +1366,7 @@
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#Algorithms"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#Pragmatics"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#Semantics"/>
+        <isTaughtOnPeriod rdf:resource="https://project-intelligent-agents.uu.nl#P2"/>
     </owl:NamedIndividual>
     
 
@@ -1397,6 +1417,7 @@
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#PostmodernistLiterature">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#HumanitiesCourse"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#TextAnalysis"/>
+        <isTaughtOnPeriod rdf:resource="https://project-intelligent-agents.uu.nl#P2"/>
         <requires rdf:resource="https://project-intelligent-agents.uu.nl#CriticalThinking"/>
     </owl:NamedIndividual>
     
@@ -1553,6 +1574,8 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Teacher1">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Teacher"/>
+        <teaches rdf:resource="https://project-intelligent-agents.uu.nl#AdvancedMachineLearning"/>
+        <teaches rdf:resource="https://project-intelligent-agents.uu.nl#MachineLearning"/>
         <firstName>Allie</firstName>
         <secondName>Arnt</secondName>
     </owl:NamedIndividual>
@@ -1563,6 +1586,8 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Teacher2">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Teacher"/>
+        <teaches rdf:resource="https://project-intelligent-agents.uu.nl#AdvancedMath"/>
+        <teaches rdf:resource="https://project-intelligent-agents.uu.nl#DataMining"/>
         <firstName>Bennie</firstName>
         <secondName>Brinkerhoff</secondName>
     </owl:NamedIndividual>
@@ -1573,6 +1598,10 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Teacher3">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Teacher"/>
+        <teaches rdf:resource="https://project-intelligent-agents.uu.nl#ArtHistory"/>
+        <teaches rdf:resource="https://project-intelligent-agents.uu.nl#History"/>
+        <teaches rdf:resource="https://project-intelligent-agents.uu.nl#IntroPhilosophy"/>
+        <teaches rdf:resource="https://project-intelligent-agents.uu.nl#VictorianLiterature"/>
         <firstName>Charles</firstName>
         <secondName>Cippen</secondName>
     </owl:NamedIndividual>
@@ -1583,6 +1612,9 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Teacher4">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Teacher"/>
+        <teaches rdf:resource="https://project-intelligent-agents.uu.nl#DigitalEthics"/>
+        <teaches rdf:resource="https://project-intelligent-agents.uu.nl#English"/>
+        <teaches rdf:resource="https://project-intelligent-agents.uu.nl#PostmodernistLiterature"/>
         <firstName>Brenda</firstName>
         <secondName>Bacone</secondName>
     </owl:NamedIndividual>
@@ -1593,6 +1625,8 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Teacher5">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Teacher"/>
+        <teaches rdf:resource="https://project-intelligent-agents.uu.nl#CognitiveModelling"/>
+        <teaches rdf:resource="https://project-intelligent-agents.uu.nl#NaturalLanguageProcessing"/>
         <firstName>Etta</firstName>
         <secondName>Danz</secondName>
     </owl:NamedIndividual>
@@ -1603,6 +1637,8 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Teacher6">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Teacher"/>
+        <teaches rdf:resource="https://project-intelligent-agents.uu.nl#IntelligentAgents"/>
+        <teaches rdf:resource="https://project-intelligent-agents.uu.nl#MultiAgentLearning"/>
         <firstName>Glenn</firstName>
         <secondName>Ransberger</secondName>
     </owl:NamedIndividual>
@@ -1655,6 +1691,8 @@
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#HumanitiesCourse"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#TextAnalysis"/>
         <isPreliminary rdf:resource="https://project-intelligent-agents.uu.nl#PostmodernistLiterature"/>
+        <isTaughtOnPeriod rdf:resource="https://project-intelligent-agents.uu.nl#P4"/>
+        <isTaughtOnWeekday rdf:resource="https://project-intelligent-agents.uu.nl#Fr"/>
     </owl:NamedIndividual>
     
 
