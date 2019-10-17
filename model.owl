@@ -1252,18 +1252,13 @@
     
 
 
-    <!-- https://project-intelligent-agents.uu.nl#CitiesAndStatesAndCitizenship -->
+    <!-- https://project-intelligent-agents.uu.nl#CitiesStatesAndCitizenship -->
 
-    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#CitiesAndStatesAndCitizenship">
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#CitiesStatesAndCitizenship">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#HumanitiesCourse"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://project-intelligent-agents.uu.nl#Class -->
-
-    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Class">
-        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Sociology"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#Institutions"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#SocialClass"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#SpecificHistory"/>
     </owl:NamedIndividual>
     
 
@@ -1312,6 +1307,11 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#ColonialMemoryAndPostcolonialHeritage">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#HumanitiesCourse"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#GeneralHistory"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#Institutions"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#RaceAndEthnicity"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#SocialClass"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#TextAnalysis"/>
     </owl:NamedIndividual>
     
 
@@ -1424,6 +1424,10 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#CriticalWriting">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#HumanitiesCourse"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#Media"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#Pragmatics"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#Semantics"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#TextAnalysis"/>
     </owl:NamedIndividual>
     
 
@@ -1472,6 +1476,8 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#DigitalEthics">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#HumanitiesCourse"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#Ethics"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#Media"/>
     </owl:NamedIndividual>
     
 
@@ -1480,6 +1486,7 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#DigitalMethodsInLinguistics">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#HumanitiesCourse"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#ComputationalModeling"/>
     </owl:NamedIndividual>
     
 
@@ -1728,6 +1735,14 @@
     
 
 
+    <!-- https://project-intelligent-agents.uu.nl#Institutions -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Institutions">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Sociology"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://project-intelligent-agents.uu.nl#IntelligentAgents -->
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#IntelligentAgents">
@@ -1815,6 +1830,14 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Mechanics">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Physics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#Media -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Media">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Sociology"/>
     </owl:NamedIndividual>
     
 
@@ -2123,6 +2146,14 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Semiotics">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Linguistics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#SocialClass -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#SocialClass">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Sociology"/>
     </owl:NamedIndividual>
     
 
