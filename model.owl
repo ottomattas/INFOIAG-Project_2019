@@ -1055,6 +1055,12 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#AIForGameTechnology">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#ScienceCourse"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#Algebra"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#Algorithms"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#ComputationalModeling"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#ComputerGraphics"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#Logic"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#ProgrammingLanguages"/>
     </owl:NamedIndividual>
     
 
@@ -1079,6 +1085,9 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#AdvancedGraphics">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#ScienceCourse"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#Algorithms"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#ComputationalModeling"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#ComputerGraphics"/>
     </owl:NamedIndividual>
     
 
@@ -1087,6 +1096,7 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#AdvancedOrganicSynthesis">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#ScienceCourse"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#ChemicalBonding"/>
     </owl:NamedIndividual>
     
 
@@ -1095,6 +1105,8 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#AdvancedPharmacology">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#ScienceCourse"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#ChemicalBonding"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#Pharmacology"/>
     </owl:NamedIndividual>
     
 
@@ -1103,6 +1115,9 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#AdvancedPhisicalChemistry">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#ScienceCourse"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#ChemicalBonding"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#ElectroChemistry"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#ThermoChemistry"/>
     </owl:NamedIndividual>
     
 
@@ -1111,6 +1126,8 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#AdvancedSpectroscopy">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#ScienceCourse"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#Calculus"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#ChemicalBonding"/>
     </owl:NamedIndividual>
     
 
@@ -1119,6 +1136,9 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#AdvancedSpectroscopyOfNanomaterials">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#ScienceCourse"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#Calculus"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#ChemicalBonding"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#ChemicalEngineering"/>
     </owl:NamedIndividual>
     
 
@@ -1271,6 +1291,14 @@
     <!-- https://project-intelligent-agents.uu.nl#ChemicalBonding -->
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#ChemicalBonding">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Chemistry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#ChemicalEngineering -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#ChemicalEngineering">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Chemistry"/>
     </owl:NamedIndividual>
     
@@ -2133,6 +2161,14 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#PatternRecognition">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#ScienceCourse"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#Pharmacology -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Pharmacology">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Chemistry"/>
     </owl:NamedIndividual>
     
 
