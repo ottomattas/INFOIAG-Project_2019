@@ -35,7 +35,6 @@
     <!-- https://project-intelligent-agents.uu.nl#covers -->
 
     <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#covers">
-        <rdfs:domain rdf:resource="https://project-intelligent-agents.uu.nl#Course"/>
         <rdfs:range rdf:resource="https://project-intelligent-agents.uu.nl#Topic"/>
     </owl:ObjectProperty>
     
@@ -68,8 +67,6 @@
     <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#hasPreliminary">
         <owl:inverseOf rdf:resource="https://project-intelligent-agents.uu.nl#isPreliminary"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="https://project-intelligent-agents.uu.nl#Course"/>
-        <rdfs:range rdf:resource="https://project-intelligent-agents.uu.nl#Course"/>
     </owl:ObjectProperty>
     
 
@@ -91,7 +88,6 @@
 
     <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#hasTaken">
         <rdfs:domain rdf:resource="https://project-intelligent-agents.uu.nl#Student"/>
-        <rdfs:range rdf:resource="https://project-intelligent-agents.uu.nl#Course"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="https://project-intelligent-agents.uu.nl#hasTaken"/>
             <rdf:Description rdf:about="https://project-intelligent-agents.uu.nl#hasPreliminary"/>
@@ -176,8 +172,6 @@
 
     <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#isPreliminary">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="https://project-intelligent-agents.uu.nl#Course"/>
-        <rdfs:range rdf:resource="https://project-intelligent-agents.uu.nl#Course"/>
     </owl:ObjectProperty>
     
 
@@ -187,7 +181,6 @@
     <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#isRequired">
         <owl:inverseOf rdf:resource="https://project-intelligent-agents.uu.nl#requires"/>
         <rdfs:domain rdf:resource="https://project-intelligent-agents.uu.nl#Skill"/>
-        <rdfs:range rdf:resource="https://project-intelligent-agents.uu.nl#Course"/>
     </owl:ObjectProperty>
     
 
@@ -204,8 +197,6 @@
 
     <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#isTaughtOnPeriod">
         <rdfs:subPropertyOf rdf:resource="https://project-intelligent-agents.uu.nl#isTaughtOn"/>
-        <rdfs:domain rdf:resource="https://project-intelligent-agents.uu.nl#Course"/>
-        <rdfs:range rdf:resource="https://project-intelligent-agents.uu.nl#Period"/>
     </owl:ObjectProperty>
     
 
@@ -214,7 +205,6 @@
 
     <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#isTaughtOnWeekday">
         <rdfs:subPropertyOf rdf:resource="https://project-intelligent-agents.uu.nl#isTaughtOn"/>
-        <rdfs:domain rdf:resource="https://project-intelligent-agents.uu.nl#Course"/>
         <rdfs:range rdf:resource="https://project-intelligent-agents.uu.nl#Weekday"/>
     </owl:ObjectProperty>
     
@@ -225,7 +215,6 @@
     <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#isUsed">
         <owl:inverseOf rdf:resource="https://project-intelligent-agents.uu.nl#uses"/>
         <rdfs:domain rdf:resource="https://project-intelligent-agents.uu.nl#ResearchMethodology"/>
-        <rdfs:range rdf:resource="https://project-intelligent-agents.uu.nl#Course"/>
     </owl:ObjectProperty>
     
 
@@ -243,7 +232,6 @@
     <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#learnsOnPeriod">
         <rdfs:subPropertyOf rdf:resource="https://project-intelligent-agents.uu.nl#learnsOn"/>
         <rdfs:domain rdf:resource="https://project-intelligent-agents.uu.nl#Student"/>
-        <rdfs:range rdf:resource="https://project-intelligent-agents.uu.nl#Period"/>
     </owl:ObjectProperty>
     
 
@@ -272,7 +260,6 @@
     <!-- https://project-intelligent-agents.uu.nl#requires -->
 
     <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#requires">
-        <rdfs:domain rdf:resource="https://project-intelligent-agents.uu.nl#Course"/>
         <rdfs:range rdf:resource="https://project-intelligent-agents.uu.nl#Skill"/>
     </owl:ObjectProperty>
     
@@ -282,22 +269,13 @@
 
     <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#takes">
         <rdfs:domain rdf:resource="https://project-intelligent-agents.uu.nl#Student"/>
-        <rdfs:range>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://project-intelligent-agents.uu.nl#canTake"/>
-                <owl:someValuesFrom rdf:resource="https://project-intelligent-agents.uu.nl#Course"/>
-            </owl:Restriction>
-        </rdfs:range>
     </owl:ObjectProperty>
     
 
 
     <!-- https://project-intelligent-agents.uu.nl#teaches -->
 
-    <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#teaches">
-        <rdfs:domain rdf:resource="https://project-intelligent-agents.uu.nl#Teacher"/>
-        <rdfs:range rdf:resource="https://project-intelligent-agents.uu.nl#Course"/>
-    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#teaches"/>
     
 
 
@@ -313,8 +291,6 @@
 
     <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#teachesOnPeriod">
         <rdfs:subPropertyOf rdf:resource="https://project-intelligent-agents.uu.nl#teachesOn"/>
-        <rdfs:domain rdf:resource="https://project-intelligent-agents.uu.nl#Teacher"/>
-        <rdfs:range rdf:resource="https://project-intelligent-agents.uu.nl#Period"/>
     </owl:ObjectProperty>
     
 
@@ -335,7 +311,6 @@
 
     <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#uses">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://project-intelligent-agents.uu.nl#Course"/>
         <rdfs:range rdf:resource="https://project-intelligent-agents.uu.nl#ResearchMethodology"/>
     </owl:ObjectProperty>
     
@@ -384,12 +359,6 @@
     <!-- https://project-intelligent-agents.uu.nl#AdvancedCourse -->
 
     <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#AdvancedCourse">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://project-intelligent-agents.uu.nl#hasPreliminary"/>
-                <owl:someValuesFrom rdf:resource="https://project-intelligent-agents.uu.nl#Course"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://project-intelligent-agents.uu.nl#CourseLevel"/>
     </owl:Class>
     
@@ -406,12 +375,6 @@
     <!-- https://project-intelligent-agents.uu.nl#BasicCourse -->
 
     <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#BasicCourse">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://project-intelligent-agents.uu.nl#isPreliminary"/>
-                <owl:someValuesFrom rdf:resource="https://project-intelligent-agents.uu.nl#Course"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://project-intelligent-agents.uu.nl#CourseLevel"/>
     </owl:Class>
     
@@ -441,14 +404,6 @@
     
 
 
-    <!-- https://project-intelligent-agents.uu.nl#Course -->
-
-    <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#Course">
-        <owl:disjointWith rdf:resource="https://project-intelligent-agents.uu.nl#Topic"/>
-    </owl:Class>
-    
-
-
     <!-- https://project-intelligent-agents.uu.nl#CourseLevel -->
 
     <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#CourseLevel">
@@ -460,16 +415,13 @@
                 </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://project-intelligent-agents.uu.nl#Course"/>
     </owl:Class>
     
 
 
     <!-- https://project-intelligent-agents.uu.nl#CourseType -->
 
-    <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#CourseType">
-        <rdfs:subClassOf rdf:resource="https://project-intelligent-agents.uu.nl#Course"/>
-    </owl:Class>
+    <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#CourseType"/>
     
 
 
@@ -534,13 +486,6 @@
                 <owl:onClass rdf:resource="https://project-intelligent-agents.uu.nl#ResearchMethodology"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://project-intelligent-agents.uu.nl#isTaughtOn"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onClass rdf:resource="https://project-intelligent-agents.uu.nl#Period"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -579,39 +524,25 @@
 
     <!-- https://project-intelligent-agents.uu.nl#P1 -->
 
-    <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#P1">
-        <rdfs:subClassOf rdf:resource="https://project-intelligent-agents.uu.nl#Period"/>
-    </owl:Class>
+    <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#P1"/>
     
 
 
     <!-- https://project-intelligent-agents.uu.nl#P2 -->
 
-    <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#P2">
-        <rdfs:subClassOf rdf:resource="https://project-intelligent-agents.uu.nl#Period"/>
-    </owl:Class>
+    <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#P2"/>
     
 
 
     <!-- https://project-intelligent-agents.uu.nl#P3 -->
 
-    <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#P3">
-        <rdfs:subClassOf rdf:resource="https://project-intelligent-agents.uu.nl#Period"/>
-    </owl:Class>
+    <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#P3"/>
     
 
 
     <!-- https://project-intelligent-agents.uu.nl#P4 -->
 
-    <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#P4">
-        <rdfs:subClassOf rdf:resource="https://project-intelligent-agents.uu.nl#Period"/>
-    </owl:Class>
-    
-
-
-    <!-- https://project-intelligent-agents.uu.nl#Period -->
-
-    <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#Period"/>
+    <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#P4"/>
     
 
 
@@ -694,13 +625,6 @@
                 <owl:onProperty rdf:resource="https://project-intelligent-agents.uu.nl#uses"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onClass rdf:resource="https://project-intelligent-agents.uu.nl#ResearchMethodology"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://project-intelligent-agents.uu.nl#isTaughtOn"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onClass rdf:resource="https://project-intelligent-agents.uu.nl#Period"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -954,63 +878,6 @@
                     </owl:Class>
                 </owl:unionOf>
             </owl:Class>
-        </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="https://project-intelligent-agents.uu.nl#Teacher"/>
-    </owl:Class>
-    
-
-
-    <!-- https://project-intelligent-agents.uu.nl#Teacher -->
-
-    <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#Teacher">
-        <rdfs:subClassOf rdf:resource="https://project-intelligent-agents.uu.nl#Person"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://project-intelligent-agents.uu.nl#teaches"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onClass>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://project-intelligent-agents.uu.nl#isTaughtOnPeriod"/>
-                        <owl:allValuesFrom rdf:resource="https://project-intelligent-agents.uu.nl#P1"/>
-                    </owl:Restriction>
-                </owl:onClass>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://project-intelligent-agents.uu.nl#teaches"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onClass>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://project-intelligent-agents.uu.nl#isTaughtOnPeriod"/>
-                        <owl:allValuesFrom rdf:resource="https://project-intelligent-agents.uu.nl#P2"/>
-                    </owl:Restriction>
-                </owl:onClass>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://project-intelligent-agents.uu.nl#teaches"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onClass>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://project-intelligent-agents.uu.nl#isTaughtOnPeriod"/>
-                        <owl:allValuesFrom rdf:resource="https://project-intelligent-agents.uu.nl#P3"/>
-                    </owl:Restriction>
-                </owl:onClass>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://project-intelligent-agents.uu.nl#teaches"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onClass>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://project-intelligent-agents.uu.nl#isTaughtOnPeriod"/>
-                        <owl:allValuesFrom rdf:resource="https://project-intelligent-agents.uu.nl#P4"/>
-                    </owl:Restriction>
-                </owl:onClass>
-            </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
     
@@ -2478,7 +2345,6 @@
     <!-- https://project-intelligent-agents.uu.nl#Teacher1 -->
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Teacher1">
-        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Teacher"/>
         <firstName>Allie</firstName>
         <secondName>Arnt</secondName>
     </owl:NamedIndividual>
@@ -2488,7 +2354,6 @@
     <!-- https://project-intelligent-agents.uu.nl#Teacher2 -->
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Teacher2">
-        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Teacher"/>
         <firstName>Bennie</firstName>
         <secondName>Brinkerhoff</secondName>
     </owl:NamedIndividual>
@@ -2498,7 +2363,6 @@
     <!-- https://project-intelligent-agents.uu.nl#Teacher3 -->
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Teacher3">
-        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Teacher"/>
         <firstName>Charles</firstName>
         <secondName>Cippen</secondName>
     </owl:NamedIndividual>
@@ -2508,7 +2372,6 @@
     <!-- https://project-intelligent-agents.uu.nl#Teacher4 -->
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Teacher4">
-        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Teacher"/>
         <firstName>Brenda</firstName>
         <secondName>Bacone</secondName>
     </owl:NamedIndividual>
@@ -2518,7 +2381,6 @@
     <!-- https://project-intelligent-agents.uu.nl#Teacher5 -->
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Teacher5">
-        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Teacher"/>
         <firstName>Etta</firstName>
         <secondName>Danz</secondName>
     </owl:NamedIndividual>
@@ -2528,7 +2390,6 @@
     <!-- https://project-intelligent-agents.uu.nl#Teacher6 -->
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Teacher6">
-        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Teacher"/>
         <firstName>Glenn</firstName>
         <secondName>Ransberger</secondName>
     </owl:NamedIndividual>
