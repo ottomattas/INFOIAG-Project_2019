@@ -473,6 +473,14 @@
     
 
 
+    <!-- https://project-intelligent-agents.uu.nl#Economy -->
+
+    <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#Economy">
+        <rdfs:subClassOf rdf:resource="https://project-intelligent-agents.uu.nl#SocialScience"/>
+    </owl:Class>
+    
+
+
     <!-- https://project-intelligent-agents.uu.nl#History -->
 
     <owl:Class rdf:about="https://project-intelligent-agents.uu.nl#History">
@@ -1180,6 +1188,22 @@
     
 
 
+    <!-- https://project-intelligent-agents.uu.nl#AppliedEconomy -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#AppliedEconomy">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Economy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#BehaviouralEconomicsAndPublicPolicy -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#BehaviouralEconomicsAndPublicPolicy">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#SocialCourses"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://project-intelligent-agents.uu.nl#BigData -->
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#BigData">
@@ -1432,6 +1456,14 @@
     
 
 
+    <!-- https://project-intelligent-agents.uu.nl#Culture -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Culture">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Sociology"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://project-intelligent-agents.uu.nl#DataMining -->
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#DataMining">
@@ -1478,6 +1510,7 @@
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#HumanitiesCourse"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#Ethics"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#Media"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#ModernPhilosopy"/>
     </owl:NamedIndividual>
     
 
@@ -1487,6 +1520,9 @@
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#DigitalMethodsInLinguistics">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#HumanitiesCourse"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#ComputationalModeling"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#Language"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#Semantics"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#Syntax"/>
     </owl:NamedIndividual>
     
 
@@ -1503,6 +1539,9 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#EconomicEthics">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#HumanitiesCourse"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#Ethics"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#Institutions"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#Sustainability"/>
     </owl:NamedIndividual>
     
 
@@ -1539,6 +1578,14 @@
     
 
 
+    <!-- https://project-intelligent-agents.uu.nl#EmpiricalEconomy -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#EmpiricalEconomy">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#SocialCourses"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://project-intelligent-agents.uu.nl#EnergyConversionTechnology -->
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#EnergyConversionTechnology">
@@ -1559,6 +1606,10 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#EnglishAndCulturalDiversity">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#HumanitiesCourse"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#Culture"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#Language"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#RaceAndEthnicity"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#SocialClass"/>
     </owl:NamedIndividual>
     
 
@@ -1567,6 +1618,7 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Entrepreneurship">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#HumanitiesCourse"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#Microeconomics"/>
     </owl:NamedIndividual>
     
 
@@ -1583,6 +1635,9 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#EthicalTheoryAndMoralPractice">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#HumanitiesCourse"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#Ethics"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#ModernPhilosopy"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#TextAnalysis"/>
     </owl:NamedIndividual>
     
 
@@ -1599,6 +1654,8 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#EthicsAndPublicPolicy">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#HumanitiesCourse"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#Ethics"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#Institutions"/>
     </owl:NamedIndividual>
     
 
@@ -1654,6 +1711,30 @@
     
 
 
+    <!-- https://project-intelligent-agents.uu.nl#Finance -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Finance">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Economy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#FinancialRegulation -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#FinancialRegulation">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#SocialCourses"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#FinancialRegulations -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#FinancialRegulations">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#SocialCourses"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://project-intelligent-agents.uu.nl#Football -->
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Football">
@@ -1667,6 +1748,10 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#FoundationOfSoundPatterns">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#HumanitiesCourse"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#ComputationalModeling"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#Language"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#OscillationsAndWaves"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#Pragmatics"/>
     </owl:NamedIndividual>
     
 
@@ -1715,6 +1800,9 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#HeritageAndIdentity">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#HumanitiesCourse"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#Culture"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#SocialClass"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#SpecificHistory"/>
     </owl:NamedIndividual>
     
 
@@ -1723,6 +1811,8 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#HistoryAndPhilosophyOfObjectivity">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#HumanitiesCourse"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#ModernPhilosopy"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#SpecificHistory"/>
     </owl:NamedIndividual>
     
 
@@ -1731,6 +1821,10 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#HistoryAndPoliticsOfSociety">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#HumanitiesCourse"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#GeneralHistory"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#Institutions"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#SpecificHistory"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#TextAnalysis"/>
     </owl:NamedIndividual>
     
 
@@ -1769,10 +1863,21 @@
     
 
 
+    <!-- https://project-intelligent-agents.uu.nl#Language -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Language">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Linguistics"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://project-intelligent-agents.uu.nl#LanguageAcqusition -->
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#LanguageAcqusition">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#HumanitiesCourse"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#CognitivePsychology"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#Education"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#Language"/>
     </owl:NamedIndividual>
     
 
@@ -1781,6 +1886,10 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#LanguageBrainAndCognition">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#HumanitiesCourse"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#CognitiveModelling"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#CognitivePsychology"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#Language"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#Neurobiology"/>
     </owl:NamedIndividual>
     
 
@@ -1818,6 +1927,14 @@
     
 
 
+    <!-- https://project-intelligent-agents.uu.nl#Macroeconomics -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Macroeconomics">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Economy"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://project-intelligent-agents.uu.nl#MathematicsInFinance -->
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#MathematicsInFinance">
@@ -1846,6 +1963,9 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#MedievalHistory">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#HumanitiesCourse"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#GeneralHistory"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#SocialClass"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#TextAnalysis"/>
     </owl:NamedIndividual>
     
 
@@ -1866,6 +1986,14 @@
     
 
 
+    <!-- https://project-intelligent-agents.uu.nl#Microeconomics -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Microeconomics">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Economy"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://project-intelligent-agents.uu.nl#Mo -->
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Mo">
@@ -1878,6 +2006,10 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#ModernHistory">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#HumanitiesCourse"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#GeneralHistory"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#TextAnalysis"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#19thCenturyLiterature"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#20thCenturyLiterature"/>
     </owl:NamedIndividual>
     
 
@@ -1894,6 +2026,9 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#ModernistAndPostmodernistLiterature">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#HumanitiesCourse"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#ContemporaryLiterature"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#TextAnalysis"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#20thCenturyLiterature"/>
     </owl:NamedIndividual>
     
 
@@ -1926,6 +2061,14 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#NaturalLanguageProcessing">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#ScienceCourse"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#Neurobiology -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Neurobiology">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Biology"/>
     </owl:NamedIndividual>
     
 
@@ -2006,6 +2149,10 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#PhilosophyOfTheMind">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#HumanitiesCourse"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#CognitivePsychology"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#Language"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#ModernPhilosopy"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#ScientificPhilosophy"/>
     </owl:NamedIndividual>
     
 
@@ -2014,6 +2161,17 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#PhilosophyPlatoAndAristotle">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#HumanitiesCourse"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#AncientPhilosophy"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#Culture"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#TextAnalysis"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#PolicyAnalysis -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#PolicyAnalysis">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#SocialCourses"/>
     </owl:NamedIndividual>
     
 
@@ -2078,6 +2236,9 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Publishing">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#HumanitiesCourse"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#ContemporaryLiterature"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#Language"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#TextAnalysis"/>
     </owl:NamedIndividual>
     
 
@@ -2102,6 +2263,9 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#RewardingLiterature">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#HumanitiesCourse"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#ContemporaryLiterature"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#Language"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#Media"/>
     </owl:NamedIndividual>
     
 
@@ -2233,6 +2397,22 @@
     
 
 
+    <!-- https://project-intelligent-agents.uu.nl#Sustainability -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Sustainability">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Economy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#SustainabilityGrowthAndInequality -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#SustainabilityGrowthAndInequality">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#SocialCourses"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://project-intelligent-agents.uu.nl#Syntax -->
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Syntax">
@@ -2245,6 +2425,8 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#SyntaxAndStructure">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#HumanitiesCourse"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#Language"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#Syntax"/>
     </owl:NamedIndividual>
     
 
@@ -2337,6 +2519,10 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#TextsAndCulture">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#HumanitiesCourse"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#Culture"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#Language"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#RaceAndEthnicity"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#TextAnalysis"/>
     </owl:NamedIndividual>
     
 
@@ -2385,6 +2571,8 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#VictorianLiterature">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#HumanitiesCourse"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#TextAnalysis"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#19thCenturyLiterature"/>
     </owl:NamedIndividual>
     
 
