@@ -191,6 +191,12 @@
         <teaches rdf:resource="http://www.semanticweb.org/sorin/ontologies/2019/9/untitled-ontology-19#C1"/>
         <teaches rdf:resource="http://www.semanticweb.org/sorin/ontologies/2019/9/untitled-ontology-19#C3"/>
     </owl:NamedIndividual>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://www.semanticweb.org/sorin/ontologies/2019/9/untitled-ontology-19#T2"/>
+        <owl:assertionProperty rdf:resource="http://www.semanticweb.org/sorin/ontologies/2019/9/untitled-ontology-19#teaches"/>
+        <owl:targetIndividual rdf:resource="http://www.semanticweb.org/sorin/ontologies/2019/9/untitled-ontology-19#C2"/>
+    </rdf:Description>
     
 
 
@@ -226,7 +232,7 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/sorin/ontologies/2019/9/untitled-ontology-19#Person"/>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/sorin/ontologies/2019/9/untitled-ontology-19#teaches"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:maxQualifiedCardinality>
                 <owl:onClass rdf:resource="http://www.semanticweb.org/sorin/ontologies/2019/9/untitled-ontology-19#CourseP1"/>
             </owl:Restriction>
         </owl:intersectionOf>
