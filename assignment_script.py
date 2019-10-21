@@ -38,3 +38,15 @@ for course in all_courses:
 onto.save(file = "ontology_with_all_periods_set.owl", format = "rdfxml")
 
 #%%
+merged_hobbies_onto = owl.get_ontology("./MERGEDHOBBIES.owl")
+merged_hobbies_onto.load()
+all_social_courses_from_merged = merged_hobbies_onto.search(iri="*SocialCourse")[0].instances()
+
+#%%
+onto_social_courses = onto.search(type=onto.SocialCourse)
+#%%
+onto_social_courses.extend(all_social_courses_from_merged)
+# onto.save(file = "merged.owl", format = "rdfxml")
+
+
+#%%
