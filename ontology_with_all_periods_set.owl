@@ -301,6 +301,7 @@
     <!-- https://project-intelligent-agents.uu.nl#uses -->
 
     <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#uses">
+        <rdfs:domain rdf:resource="https://project-intelligent-agents.uu.nl#Course"/>
         <rdfs:range rdf:resource="https://project-intelligent-agents.uu.nl#ResearchMethodology"/>
     </owl:ObjectProperty>
     
