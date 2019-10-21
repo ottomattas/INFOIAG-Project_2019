@@ -25,12 +25,14 @@ for course in all_courses:
 
 #%%
 for course in all_courses:
-    print("================")
-    print(course)
-    print(course.improves)
-    print(len(course.improves))
-    if len(course.improves) == 0:
-        course.improves.append(np.random.choice(all_RM))
+    len_property_items = len(course.uses)
+    print(f"======== {len_property_items} items ========")
+    if len_property_items == 0:
+        random = np.random.choice(all_RM)
+        print(f"{course}: {course.uses} items - Assigning: {random}")
+        course.uses.append(random)
+    else:
+        print(course.uses)
 
 #%%
 onto.save(file = "ontology_with_all_periods_set.owl", format = "rdfxml")
