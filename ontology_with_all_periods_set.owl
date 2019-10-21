@@ -928,6 +928,8 @@
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#ComputerGraphics"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#Logic"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#ProgrammingLanguages"/>
+        <hasPreliminary rdf:resource="https://project-intelligent-agents.uu.nl#AdvancedGraphics"/>
+        <hasPreliminary rdf:resource="https://project-intelligent-agents.uu.nl#PatternRecognition"/>
         <isTaughtOnPeriod rdf:resource="https://project-intelligent-agents.uu.nl#P4"/>
         <uses rdf:resource="https://project-intelligent-agents.uu.nl#Seminar"/>
     </owl:NamedIndividual>
@@ -956,6 +958,7 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#AdvancedGraphics">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#ScienceCourse"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#Algebra"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#Algorithms"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#ComputationalModeling"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#ComputerGraphics"/>
@@ -970,6 +973,8 @@
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#AdvancedOrganicSynthesis">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#ScienceCourse"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#ChemicalBonding"/>
+        <isPreliminary rdf:resource="https://project-intelligent-agents.uu.nl#AdvancedPharmacology"/>
+        <isPreliminary rdf:resource="https://project-intelligent-agents.uu.nl#AdvancedPhisicalChemistry"/>
         <isTaughtOnPeriod rdf:resource="https://project-intelligent-agents.uu.nl#P2"/>
         <uses rdf:resource="https://project-intelligent-agents.uu.nl#Seminar"/>
     </owl:NamedIndividual>
@@ -980,8 +985,11 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#AdvancedPharmacology">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#ScienceCourse"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#BioEngineering"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#CellBiology"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#ChemicalBonding"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#Pharmacology"/>
+        <hasPreliminary rdf:resource="https://project-intelligent-agents.uu.nl#ChemicalBiology"/>
         <isTaughtOnPeriod rdf:resource="https://project-intelligent-agents.uu.nl#P2"/>
         <uses rdf:resource="https://project-intelligent-agents.uu.nl#Lecture"/>
     </owl:NamedIndividual>
@@ -994,6 +1002,7 @@
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#ScienceCourse"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#ChemicalBonding"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#ElectroChemistry"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#ParticlePhysics"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#ThermoChemistry"/>
         <isTaughtOnPeriod rdf:resource="https://project-intelligent-agents.uu.nl#P4"/>
         <uses rdf:resource="https://project-intelligent-agents.uu.nl#Workshop"/>
@@ -1005,8 +1014,12 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#AdvancedSpectroscopy">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#ScienceCourse"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#Algebra"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#Calculus"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#ChemicalBonding"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#ChemicalEngineering"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#OscillationsAndWaves"/>
+        <isPreliminary rdf:resource="https://project-intelligent-agents.uu.nl#AdvancedSpectroscopyOfNanomaterials"/>
         <isTaughtOnPeriod rdf:resource="https://project-intelligent-agents.uu.nl#P4"/>
         <uses rdf:resource="https://project-intelligent-agents.uu.nl#Experiment"/>
     </owl:NamedIndividual>
@@ -1017,9 +1030,12 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#AdvancedSpectroscopyOfNanomaterials">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#ScienceCourse"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#Algebra"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#Calculus"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#ChemicalBonding"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#ChemicalEngineering"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#OscillationsAndWaves"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#Topology"/>
         <isTaughtOnPeriod rdf:resource="https://project-intelligent-agents.uu.nl#P2"/>
         <uses rdf:resource="https://project-intelligent-agents.uu.nl#Lecture"/>
     </owl:NamedIndividual>
@@ -1188,6 +1204,7 @@
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#ScienceCourse"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#ComputerArchitecture"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#Databases"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#Media"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#SystemsDesign"/>
         <isTaughtOnPeriod rdf:resource="https://project-intelligent-agents.uu.nl#P3"/>
         <uses rdf:resource="https://project-intelligent-agents.uu.nl#Lab"/>
@@ -1225,6 +1242,7 @@
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#ComputationalModeling"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#Evolution"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#Neurobiology"/>
+        <isPreliminary rdf:resource="https://project-intelligent-agents.uu.nl#AdvancedOrganicSynthesis"/>
         <isTaughtOnPeriod rdf:resource="https://project-intelligent-agents.uu.nl#P3"/>
         <uses rdf:resource="https://project-intelligent-agents.uu.nl#Workshop"/>
     </owl:NamedIndividual>
@@ -1254,6 +1272,7 @@
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#Algebra"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#Algorithms"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#Calculus"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#InferentialArgumentation"/>
         <isTaughtOnPeriod rdf:resource="https://project-intelligent-agents.uu.nl#P2"/>
         <uses rdf:resource="https://project-intelligent-agents.uu.nl#Lab"/>
     </owl:NamedIndividual>
@@ -1275,6 +1294,7 @@
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#CellBiology"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#ChemicalBonding"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#ChemicalEngineering"/>
+        <isPreliminary rdf:resource="https://project-intelligent-agents.uu.nl#AdvancedPharmacology"/>
         <isTaughtOnPeriod rdf:resource="https://project-intelligent-agents.uu.nl#P1"/>
         <uses rdf:resource="https://project-intelligent-agents.uu.nl#Workshop"/>
     </owl:NamedIndividual>
@@ -1337,6 +1357,7 @@
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#Neurobiology"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#Probability"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#ScientificPhilosophy"/>
+        <isPreliminary rdf:resource="https://project-intelligent-agents.uu.nl#PhilosophyOfAI"/>
         <isTaughtOnPeriod rdf:resource="https://project-intelligent-agents.uu.nl#P2"/>
         <uses rdf:resource="https://project-intelligent-agents.uu.nl#Lecture"/>
     </owl:NamedIndividual>
@@ -1392,8 +1413,12 @@
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#ScienceCourse"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#Algorithms"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#Combinatorics"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#InferentialArgumentation"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#Probability"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#SystemsDesign"/>
+        <hasPreliminary rdf:resource="https://project-intelligent-agents.uu.nl#AlgebraicTopology"/>
+        <hasPreliminary rdf:resource="https://project-intelligent-agents.uu.nl#CalculusOfVariations"/>
+        <hasPreliminary rdf:resource="https://project-intelligent-agents.uu.nl#ErgodicTheory"/>
         <isTaughtOnPeriod rdf:resource="https://project-intelligent-agents.uu.nl#P4"/>
         <uses rdf:resource="https://project-intelligent-agents.uu.nl#Experiment"/>
     </owl:NamedIndividual>
@@ -1408,6 +1433,7 @@
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#ComputationalModeling"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#Evolution"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#Neurobiology"/>
+        <isPreliminary rdf:resource="https://project-intelligent-agents.uu.nl#BiologicalModeling"/>
         <isTaughtOnPeriod rdf:resource="https://project-intelligent-agents.uu.nl#P4"/>
         <uses rdf:resource="https://project-intelligent-agents.uu.nl#Seminar"/>
     </owl:NamedIndividual>
@@ -1446,6 +1472,7 @@
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#ComputationalModeling"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#ComputerGraphics"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#SystemsDesign"/>
+        <isPreliminary rdf:resource="https://project-intelligent-agents.uu.nl#AdvancedGraphics"/>
         <isTaughtOnPeriod rdf:resource="https://project-intelligent-agents.uu.nl#P4"/>
         <uses rdf:resource="https://project-intelligent-agents.uu.nl#Lecture"/>
     </owl:NamedIndividual>
@@ -1548,6 +1575,7 @@
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#Databases"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#ProgrammingLanguages"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#SystemsDesign"/>
+        <isPreliminary rdf:resource="https://project-intelligent-agents.uu.nl#BigData"/>
         <isTaughtOnPeriod rdf:resource="https://project-intelligent-agents.uu.nl#P2"/>
         <uses rdf:resource="https://project-intelligent-agents.uu.nl#Seminar"/>
     </owl:NamedIndividual>
@@ -1626,6 +1654,7 @@
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#ChemicalBonding"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#ChemicalEngineering"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#Pharmacology"/>
+        <hasPreliminary rdf:resource="https://project-intelligent-agents.uu.nl#AdvancedPharmacology"/>
         <isTaughtOnPeriod rdf:resource="https://project-intelligent-agents.uu.nl#P1"/>
         <uses rdf:resource="https://project-intelligent-agents.uu.nl#Seminar"/>
     </owl:NamedIndividual>
@@ -1700,6 +1729,7 @@
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#ComputationalModeling"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#ElectroChemistry"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#Thermodynamics"/>
+        <isPreliminary rdf:resource="https://project-intelligent-agents.uu.nl#EnergySystemsModeling"/>
         <isTaughtOnPeriod rdf:resource="https://project-intelligent-agents.uu.nl#P2"/>
         <uses rdf:resource="https://project-intelligent-agents.uu.nl#Seminar"/>
     </owl:NamedIndividual>
@@ -1753,6 +1783,7 @@
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#ErgodicTheory">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#ScienceCourse"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#Combinatorics"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#InferentialArgumentation"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#Probability"/>
         <isTaughtOnPeriod rdf:resource="https://project-intelligent-agents.uu.nl#P4"/>
         <uses rdf:resource="https://project-intelligent-agents.uu.nl#Lab"/>
@@ -1819,6 +1850,7 @@
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#Algorithms"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#ComputationalModeling"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#DataStructures"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#Evolution"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#ProgrammingLanguages"/>
         <isTaughtOnPeriod rdf:resource="https://project-intelligent-agents.uu.nl#P1"/>
         <uses rdf:resource="https://project-intelligent-agents.uu.nl#Lab"/>
@@ -1915,6 +1947,7 @@
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#Kinematics"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#Mechanics"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#ProgrammingLanguages"/>
+        <isPreliminary rdf:resource="https://project-intelligent-agents.uu.nl#GamePhysics"/>
         <isTaughtOnPeriod rdf:resource="https://project-intelligent-agents.uu.nl#P2"/>
         <uses rdf:resource="https://project-intelligent-agents.uu.nl#Seminar"/>
     </owl:NamedIndividual>
@@ -1945,6 +1978,7 @@
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#ScienceCourse"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#Algebra"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#Algorithms"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#InferentialArgumentation"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#Topology"/>
         <isTaughtOnPeriod rdf:resource="https://project-intelligent-agents.uu.nl#P3"/>
         <uses rdf:resource="https://project-intelligent-agents.uu.nl#Lecture"/>
@@ -1992,6 +2026,14 @@
     
 
 
+    <!-- https://project-intelligent-agents.uu.nl#InferentialArgumentation -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#InferentialArgumentation">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Mathematics"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://project-intelligent-agents.uu.nl#Institutions -->
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Institutions">
@@ -2009,6 +2051,7 @@
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#Databases"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#Logic"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#ProgrammingLanguages"/>
+        <isPreliminary rdf:resource="https://project-intelligent-agents.uu.nl#MultiAgentSystems"/>
         <isTaughtOnPeriod rdf:resource="https://project-intelligent-agents.uu.nl#P3"/>
         <uses rdf:resource="https://project-intelligent-agents.uu.nl#Seminar"/>
     </owl:NamedIndividual>
@@ -2301,6 +2344,7 @@
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#ComputationalModeling"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#Logic"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#SystemsDesign"/>
+        <isPreliminary rdf:resource="https://project-intelligent-agents.uu.nl#MultiAgentLearning"/>
         <isTaughtOnPeriod rdf:resource="https://project-intelligent-agents.uu.nl#P1"/>
         <uses rdf:resource="https://project-intelligent-agents.uu.nl#Lecture"/>
     </owl:NamedIndividual>
@@ -2503,7 +2547,10 @@
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#ScienceCourse"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#Algebra"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#Combinatorics"/>
+        <covers rdf:resource="https://project-intelligent-agents.uu.nl#InferentialArgumentation"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#Probability"/>
+        <isPreliminary rdf:resource="https://project-intelligent-agents.uu.nl#ComplexSystems"/>
+        <isPreliminary rdf:resource="https://project-intelligent-agents.uu.nl#ComputationalQuantumMechanics"/>
         <isTaughtOnPeriod rdf:resource="https://project-intelligent-agents.uu.nl#P1"/>
         <uses rdf:resource="https://project-intelligent-agents.uu.nl#Lab"/>
     </owl:NamedIndividual>
