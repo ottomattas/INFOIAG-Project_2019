@@ -1,6 +1,7 @@
 import json
 import os
 import warnings
+from pprint import pprint
 
 import pandas as pd
 from owlready2 import *
@@ -15,7 +16,6 @@ class Agent():
 
     def __init__(self, ontology, data, s_index):
         self.ontology = ontology
-
         with open(data) as json_data:
             self.student_data = json.load(json_data)
 
@@ -45,13 +45,26 @@ class Agent():
     def build_combinations(self):
         taken_course = self.extract_courses_taken()
         possible_course = self.extract_possible_courses()
-        basic_course = self.extract_basic_courses().instances()
+        basic_course_without_preliminary = [c for c in self.extract_basic_courses().instances() if
+                                            len(c.hasPreliminary) <= 0]
 
-        comb = [c for c in possible_course if c not in taken_course]
+        takable = set(possible_course).union(set(basic_course_without_preliminary))
 
+        final_takable = takable.difference(set(taken_course))
 
+        course_per_periods = {"P1": [], "P2": [], "P3": [], "P4": []}
 
-        print(comb)
+        for course in final_takable:
+            period = str(course.isTaughtOnPeriod[0]).split(".")[1]
+            if period == "P1":
+                course_per_periods["P1"].append(course)
+            elif period == "P2":
+                course_per_periods["P2"].append(course)
+            elif period == "P3":
+                course_per_periods["P3"].append(course)
+            else:
+                course_per_periods["P4"].append(course)
+        pprint(course_per_periods)
 
     def check_consistency(self):
         pass
