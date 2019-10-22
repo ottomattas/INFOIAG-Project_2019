@@ -38,22 +38,3 @@ for course in all_courses:
 #%%
 onto.save(file = "ultimate_ontology.owl", format = "rdfxml")
 
-#%%
-merged_hobbies_onto = owl.get_ontology("./MERGEDHOBBIES.owl")
-merged_hobbies_onto.load()
-all_social_courses_from_merged = merged_hobbies_onto.Course.CourseType.SocialCourse.instances()
-
-#%%
-#%%
-for individual in onto_social_courses:
-    print("===========")
-    print(individual.name)
-    for to_merge_indi in all_social_courses_from_merged: 
-        print(to_merge_indi.name)
-        if individual.name == to_merge_indi.name:
-            print("#### MATCH ####")
-            print(f"{individual.covers}:{to_merge_indi.covers}")
-            individual.covers.extend(to_merge_indi.covers)
-            print("#### MATCH ####")
-
-#%%
