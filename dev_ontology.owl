@@ -7,7 +7,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:project-intelligent-agents="https://project-intelligent-agents.uu.nl#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/bestname/ontologies/2019/9/untitled-ontology-12"/>
+    <owl:Ontology rdf:about="https://project-intelligent-agents.uu.nl#"/>
     
 
 

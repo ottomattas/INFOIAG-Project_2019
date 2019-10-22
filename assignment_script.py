@@ -1,7 +1,8 @@
 #%%
 import owlready2 as owl
 import numpy as np
-ONTOLOGY_FILE   = "./merged_ontology.owl"
+ONTOLOGY_FILE   = "./dev_ontology.owl"
+ONTOLOGY_FILE2   = "./ultimate_ontology.owl"
 
 
 #%%
@@ -36,5 +37,5 @@ for course in all_courses:
         print(course.uses)
 
 #%%
-onto.save(file = "ultimate_ontology.owl", format = "rdfxml")
+# onto.save(file = "ultimate_ontology.owl", format = "rdfxml")
 
