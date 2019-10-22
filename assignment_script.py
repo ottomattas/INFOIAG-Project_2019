@@ -45,8 +45,14 @@ all_social_courses_from_merged = merged_hobbies_onto.search(iri="*SocialCourse")
 #%%
 onto_social_courses = onto.search(type=onto.SocialCourse)
 #%%
-onto_social_courses.extend(all_social_courses_from_merged)
-# onto.save(file = "merged.owl", format = "rdfxml")
-
+for individual in onto_social_courses:
+    print("===========")
+    print(individual.name)
+    for to_merge_indi in all_social_courses_from_merged: 
+        print(to_merge_indi.name)
+        if individual.name == to_merge_indi.name:
+            print("#### MATCH ####")
+            print(f"{individual.covers}:{to_merge_indi.covers}")
+            individual.covers.extend(to_merge_indi.covers)
 
 #%%
