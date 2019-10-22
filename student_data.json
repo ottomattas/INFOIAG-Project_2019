@@ -1,12 +1,14 @@
-{
-    "id": "",
-    "first_nama": "",
+[
+    {
+    "id": 1,
+    "first_name": "",
     "second_name": "",
     "preferences": {
         "topics": [],
         "skills": [],
-        "techears": [],
+        "teachers": [],
         "friends": [],
         "hobbies": []
     }
 }
+]

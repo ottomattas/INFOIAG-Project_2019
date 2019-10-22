@@ -610,3 +610,4 @@ TSWLatexianTemp*
 .history
 
 # End of https://www.gitignore.io/api/python,eclipse,pycharm,intellij,visualstudiocode,tex
+.idea/
