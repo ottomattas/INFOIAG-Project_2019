@@ -1,7 +1,7 @@
 #%%
 import owlready2 as owl
 import numpy as np
-ONTOLOGY_FILE   = "./ontology_with_all_periods_set.owl"
+ONTOLOGY_FILE   = "./merged_ontology.owl"
 
 
 #%%
@@ -13,6 +13,7 @@ all_courses = onto.search(type=onto.Course)
 all_periods = onto.search(type=onto.Period)
 all_hobbies = onto.search(type=onto.Hobby)
 all_RM = onto.search(type=onto.ResearchMethodology)
+onto_social_courses = onto.search(type=onto.SocialCourse)
 
 #%%
 for course in all_courses:
@@ -35,15 +36,14 @@ for course in all_courses:
         print(course.uses)
 
 #%%
-onto.save(file = "ontology_with_all_periods_set.owl", format = "rdfxml")
+onto.save(file = "ultimate_ontology.owl", format = "rdfxml")
 
 #%%
 merged_hobbies_onto = owl.get_ontology("./MERGEDHOBBIES.owl")
 merged_hobbies_onto.load()
-all_social_courses_from_merged = merged_hobbies_onto.search(iri="*SocialCourse")[0].instances()
+all_social_courses_from_merged = merged_hobbies_onto.Course.CourseType.SocialCourse.instances()
 
 #%%
-onto_social_courses = onto.search(type=onto.SocialCourse)
 #%%
 for individual in onto_social_courses:
     print("===========")
@@ -54,5 +54,6 @@ for individual in onto_social_courses:
             print("#### MATCH ####")
             print(f"{individual.covers}:{to_merge_indi.covers}")
             individual.covers.extend(to_merge_indi.covers)
+            print("#### MATCH ####")
 
 #%%
