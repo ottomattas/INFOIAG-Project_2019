@@ -5,23 +5,22 @@ import numpy as np
 from owlready2 import *
 from pprint import pprint
 import warnings
-from itertools import combinations 
+from itertools import combinations
 
 warnings.filterwarnings("ignore")
-print("\033c")
 
 ONTOLOGY_FILE   = "./ultimate_ontology.owl"
 DATA_FILE       = "./student_data.json"
-COURSE_THRESHOLD = 4
+COURSE_THRESHOLD = 5
 
 class agent():
 
     def __init__(self, ontology, data, s_index):
-        self.ontology   = ontology   
-        
+        self.ontology   = ontology
+
         with open(data) as json_data:
             self.data = json.load(json_data)
-        
+
         self.student_obj = self.ontology.search(studentID=self.data["id"])[0]
 
     def extract_courses_taken(self):
@@ -36,9 +35,10 @@ class agent():
         basic_courses = self.ontology.BasicCourse
         return basic_courses
 
+    # checked
     def get_similar_courses_to(self, course, all_courses, no):
-        
-        similar_courses = []        
+
+        similar_courses = []
         topics = course.covers
         for c in all_courses:
             if c == course:
@@ -52,26 +52,12 @@ class agent():
 
         return [c[0] for c in similar_courses[-no:]]
 
+    # checked
     def generate_combinations(self, courses):
         return list(combinations(courses, 2)) + list(combinations(courses, 3))
 
-    def extract_preferences(self):
-
-        preferences = self.data["preferences"]
-        importance_list = self.data["importance"]
-        period = preferences["period"]
-        courses = self.get_courses_per_period()[period]
-        if len(courses) < COURSE_THRESHOLD:
-            packages = generate_combinations(courses)
-            ranked_packages = rank(packages)
-
-
-
-
-        pprint(courses)
-
     def map_to_interval(self, importance):
-        pref_wheight = {
+        pref_weight = {
             "topics": 0,
             "skills": 0,
             "techears_id": 0,
@@ -79,12 +65,14 @@ class agent():
             "hobbies": 0,
         }
         split = 1 / (len(importance) - 1)
-        pref_wheight[importance[0]] = 2
-        pref_wheight[importance[-1]] = 1
+        pref_weight[importance[0]] = 2
+        pref_weight[importance[-1]] = 1
         for idx, p in enumerate(importance[1:-1]):
-            pref_wheight[p] = 2 - (idx + 1) * split
-        
-        return pref_wheight
+            pref_weight[p] = 2 - (idx + 1) * split
+
+        print("Preferences Weight: ")
+        pprint(pref_weight)
+        return pref_weight
 
 
     def get_topics_scores(self, course, topics):
@@ -95,40 +83,55 @@ class agent():
         score_per_course = []
         for c in packege:
             course_scores = []
-            course_scores.append(get_topics_scores(c, preferences["topics"]))
-            # do the same for each preference (ex skills etc) 
+            course_scores.append(self.get_topics_scores(c, preferences["topics"]))
+            # do the same for each preference (ex skills etc)
             score_per_course.append(sum(course_scores))
 
 
 
         return sum(score_per_course)
 
-
-
     def rank(self, packages):
         package_score_dict = {}
         importance_list = self.data["importance"]
-        pref_wheight = self.map_to_interval(importance_list)
+        pref_weight = self.map_to_interval(importance_list)
         for p in packages:
-            package_score_dict[tuple(p)] = self.calculate_score(p, pref_wheight)
+            package_score_dict[tuple(p)] = self.calculate_score(p, pref_weight)
         return package_score_dict
-        
-    def apply_filter(self):
-        pass
 
+    def match_preferences(self):
+
+        preferences = self.data["preferences"]
+        importance_list = self.data["importance"]
+        period = preferences["period"]
+        courses = self.get_courses_per_period()[period]
+        if len(courses) <= COURSE_THRESHOLD:
+            packages = self.generate_combinations(courses)
+            print("Generated Packages: ", packages)
+            ranked_packages = self.rank(packages)
+
+
+        print("Courses from period [" + period + "]: ", courses)
+
+
+    # checked
     def get_courses_per_period(self):
         taken_course = self.extract_courses_taken()
         possible_course = self.extract_possible_courses()
-        basic_course_without_preliminary = [c for c in self.extract_basic_courses().instances() if
-                                            len(c.hasPreliminary) <= 0]
+        basic_course_without_preliminary = [c for c in self.extract_basic_courses().instances()
+                                            if len(c.hasPreliminary) <= 0
+                                            ]
 
-        takable = set(possible_course).union(set(basic_course_without_preliminary))
+        takeble = set(possible_course).union(set(basic_course_without_preliminary))
+        final_takeble = takeble.difference(set(taken_course))
 
-        final_takable = takable.difference(set(taken_course))
+        course_per_periods = {"P1": [],
+                              "P2": [],
+                              "P3": [],
+                              "P4": []
+                              }
 
-        course_per_periods = {"P1": [], "P2": [], "P3": [], "P4": []}
-
-        for course in final_takable:
+        for course in final_takeble:
             period = str(course.isTaughtOnPeriod[0]).split(".")[1]
             if period == "P1":
                 course_per_periods["P1"].append(course)
@@ -136,42 +139,38 @@ class agent():
                 course_per_periods["P2"].append(course)
             elif period == "P3":
                 course_per_periods["P3"].append(course)
-            else:
+            elif period == "P4":
                 course_per_periods["P4"].append(course)
+
         return course_per_periods
 
-
-    def check_consistency(self):
-        pass
-
+    # checked
     def get_all_courses(self):
-        
+
         HumanitiesCourses    = list(self.ontology.HumanitiesCourse.instances())
         ScienceCourses       = list(self.ontology.ScienceCourse.instances())
         SocialCourses        = list(self.ontology.SocialCourse.instances())
 
         return HumanitiesCourses + ScienceCourses + SocialCourses
 
+    def check_consistency(self):
+        pass
+
+
 def course_planning(agent):
-    
+
     coursesTaken        = agent.extract_courses_taken()
-    print(coursesTaken)
-    #preliminaryCourses  = agent.preliminary_courses(coursesTaken)
-    #print(preliminaryCourses)
-    #df_hasTaken = agent.extract_skills_topics(coursesTaken)
-    #print("Courses has Taken: \n", df_hasTaken)
-    #df_canTake = agent.extract_skills_topics(agent.courses_canTake())
-    #print("Courses can Take: \n", df_canTake)
     all_courses         = agent.get_all_courses()
     most_similar        = agent.get_similar_courses_to(coursesTaken[0], all_courses, 3)
-    print(most_similar)
+    print("Taken Courses: ", coursesTaken)
+    print("Most similar courses to: [", coursesTaken[0], "] are the following: ", most_similar)
 
-    agent.extract_preferences()
+    agent.match_preferences()
 
 
 
 def main():
-    
+
     # ONTOLOGY_FILE - path to the ontology
     onto = get_ontology(ONTOLOGY_FILE)
     onto.load()
@@ -179,8 +178,8 @@ def main():
     with onto:
         sync_reasoner(infer_property_values=True)
 
-        new_agent = agent(onto, DATA_FILE, 0)
-        course_planning(new_agent)
+        onto_agent = agent(onto, DATA_FILE, 0)
+        course_planning(onto_agent)
 
 
 if __name__ == "__main__":

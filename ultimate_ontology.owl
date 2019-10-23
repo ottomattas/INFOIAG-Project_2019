@@ -352,6 +352,12 @@
     
 
 
+    <!-- https://project-intelligent-agents.uu.nl#teacherID -->
+
+    <owl:DatatypeProperty rdf:about="https://project-intelligent-agents.uu.nl#teacherID"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -2951,6 +2957,7 @@
         <teaches rdf:resource="https://project-intelligent-agents.uu.nl#AncientHistory"/>
         <firstName>Allie</firstName>
         <secondName>Arnt</secondName>
+        <teacherID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</teacherID>
     </owl:NamedIndividual>
     
 
