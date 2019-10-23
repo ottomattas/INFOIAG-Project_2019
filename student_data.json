@@ -1,14 +1,12 @@
-[
-    {
+{
     "id": 1,
-    "first_name": "",
-    "second_name": "",
     "preferences": {
-        "topics": [],
-        "skills": [],
-        "teachers": [],
+        "period": "P1",
+        "topics": ["TextAnalysis"],
+        "skills": ["CriticalThinking", "Presenting"],
+        "techears_id": [1],
         "friends": [],
-        "hobbies": []
-    }
+        "hobbies": ["Football"]
+    },
+    "importance": ["topics", "skills", "teacher_id"]
 }
-]
