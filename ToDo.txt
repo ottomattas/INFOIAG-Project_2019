@@ -1,3 +1,0 @@
-TODO: How to do "per" statement
-TODO: Do the difference between canTake and hasTaken in the agent
-
