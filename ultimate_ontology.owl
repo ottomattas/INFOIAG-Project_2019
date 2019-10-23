@@ -2839,10 +2839,10 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Student1">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Student"/>
-        <hasTaken rdf:resource="https://project-intelligent-agents.uu.nl#AIForGameTechnology"/>
         <hasTaken rdf:resource="https://project-intelligent-agents.uu.nl#AncientHistory"/>
         <hasTaken rdf:resource="https://project-intelligent-agents.uu.nl#HistoryAndPhilosophyOfObjectivity"/>
         <hasTaken rdf:resource="https://project-intelligent-agents.uu.nl#HistoryAndPoliticsOfSociety"/>
+        <hasTaken rdf:resource="https://project-intelligent-agents.uu.nl#PatternRecognition"/>
         <firstName>Artie</firstName>
         <secondName>Armstrong</secondName>
         <studentID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</studentID>

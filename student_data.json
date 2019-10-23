@@ -2,8 +2,8 @@
     "id": 1,
     "preferences": {
         "period": "P1",
-        "topics": ["TextAnalysis"],
-        "skills": ["CriticalThinking", "Presenting"],
+        "topics": ["Logic", "ComputerGraphics"],
+        "skills": ["Programming"],
         "techears_id": [1],
         "friends": [],
         "hobbies": ["Football"]
