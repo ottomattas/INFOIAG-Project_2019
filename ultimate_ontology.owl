@@ -21,6 +21,15 @@
     
 
 
+    <!-- https://project-intelligent-agents.uu.nl#belongsToTopic -->
+
+    <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#belongsToTopic">
+        <rdfs:domain rdf:resource="https://project-intelligent-agents.uu.nl#Teacher"/>
+        <rdfs:range rdf:resource="https://project-intelligent-agents.uu.nl#Topic"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://project-intelligent-agents.uu.nl#canTake -->
 
     <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#canTake">
