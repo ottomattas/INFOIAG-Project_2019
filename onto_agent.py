@@ -11,11 +11,10 @@ warnings.filterwarnings("ignore")
 
 ONTOLOGY_FILE   = "./ultimate_ontology.owl"
 DATA_FILE       = "./student_data.json"
-COURSE_THRESHOLD = 5
 # Observations:
 #TODO: - Remove Bias (2 vs 3 course packages)
 #TODO: - Scaling / Normalization
-#TODO: - Score - Similarity - (?? what should we do in case of equality) ????
+#TODO: - Score X - Similarity X- (?? what should we do in case of equality) ???? The INFO GAIN approach is biased back to the firrst question ???? NO
 #TODO: - Performance measure: average score of random/total course over the average score of the filtered/best ones - How much better is our?
 #TODO: - Equal imporance for preferences (same weight)
 #TODO: - learn new skills preference (only if we have ultimate_ontology0)
@@ -158,8 +157,27 @@ class Agent():
         Agent.print_debug("Best packeges: ", package_score_list[-5:])
         return package_score_list
 
-    def post_rank(self, packege):
-        
+    # def post_rank(self, prefs, packages):
+    #     pref_gain_list = []
+    #     for p in prefs:
+    #         self.apply_pref(p, packages)
+
+    def extract_topics(self, course_list):
+        return set([topic.name
+                    for topic in list(itertools.chain.from_iterable([c.covers for c in course_list]))
+                    ])
+
+    def similar_rank(self, taken, packages):
+        similar_score_list = []
+        course_packages = [t[0] for t in packages]
+        taken_topics = self.extract_topics(taken)
+        for idx, package in enumerate(packages):
+            pack_topics = self.extract_topics(course_packages[idx])
+            similar_score_list.append((course_packages[idx], len(taken_topics.intersection(pack_topics)) / len(package[0]) + package[1]))
+
+        similar_score_list.sort(key = lambda t: t[1])
+        return similar_score_list
+
 
     def match_preferences(self):
 
@@ -168,16 +186,14 @@ class Agent():
         period = preferences["period"]
         courses = self.get_courses_per_period()[period]
         Agent.print_debug("Courses from period [" + period + "]: ", courses)
-        if len(courses) <= COURSE_THRESHOLD:
-            packages = self.generate_combinations(courses)
-            Agent.print_debug("Generated Packages: ", packages, "Number: ", len(packages))
-            ranked_packages = self.rank(packages)
-            # if the best packages have the same score
-            if ranked_packages[-1][1] == ranked_packages[-2][1]:
-                final_packages = self.post_rank(ranked_packages)
 
+        packages = self.generate_combinations(courses)
+        Agent.print_debug("Generated Packages: ", packages, "Number: ", len(packages))
+        ranked_packages = self.rank(packages)
+        # if the best packages have the same score
+        if ranked_packages[-1][1] == ranked_packages[-2][1]:
+            similar_packages = self.similar_rank(self.extract_courses_taken(), ranked_packages)
 
-        # TODO: else: ??
 
         return ranked_packages[-1]
 
