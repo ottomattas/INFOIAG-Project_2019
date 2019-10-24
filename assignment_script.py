@@ -59,14 +59,14 @@ import random
 all_hobbies = onto.search(type=onto.Hobby)
 all_weekdays = onto.search(type=onto.Weekday)
 for hobby in all_hobbies:
-    len_property_items = len(hobby.isPractisedOnWeekday)
+    len_property_items = len(hobby.isPracticedOnWeekday)
     print(f"======== {len_property_items} items ========")
     if len_property_items < 1:
         random_days = np.random.choice(all_weekdays)
-        print(f"{hobby}: {hobby.isPractisedOnWeekday} items - Assigning: {random_days}")
-        hobby.isPractisedOnWeekday.append(random_days)
+        print(f"{hobby}: {hobby.isPracticedOnWeekday} items - Assigning: {random_days}")
+        hobby.isPracticedOnWeekday.append(random_days)
     else:
-        print(hobby.isPractisedOnWeekday)
+        print(hobby.isPracticedOnWeekday)
 # %%
 # import mca
 
