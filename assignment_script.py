@@ -26,6 +26,7 @@ for course in all_courses:
     if len(course.isTaughtOnPeriod) == 0:
         course.isTaughtOnPeriod.append(np.random.choice(all_periods))
 
+
 # %%
 for course in all_courses:
     len_property_items = len(course.uses)
@@ -36,6 +37,20 @@ for course in all_courses:
         course.uses.append(random)
     else:
         print(course.uses)
+
+# %%
+import random
+all_courses = onto.search(type=onto.Course)
+all_weekdays = onto.search(type=onto.Weekday)
+for course in all_courses:
+    len_property_items = len(course.isTaughtOnWeekday)
+    print(f"======== {len_property_items} items ========")
+    if len_property_items < 3:
+        random_days = random.sample(all_weekdays, 2-len_property_items)
+        print(f"{course}: {course.isTaughtOnWeekday} items - Assigning: {random_days}")
+        course.isTaughtOnWeekday.extend(random_days)
+    else:
+        print(course.isTaughtOnWeekday)
 
 # %%
 # import mca
@@ -70,9 +85,11 @@ for idx in range(no_clusters):
 onto.save(file="ultimate_ontology.owl", format="rdfxml")
 
 # %%
+
+#%%
 import names
 
-no_of_required_teachers = len(onto.Course.instances()) // 5
+no_of_required_teachers = len(range(30)) 
 if len(onto.Teacher.instances()) < no_of_required_teachers:
     for num in range(len(onto.Teacher.instances()), no_of_required_teachers):
         temp_teacher = onto.Teacher(f"Teacher{num+1}")
@@ -82,15 +99,16 @@ if len(onto.Teacher.instances()) < no_of_required_teachers:
         print(temp_teacher)
 else:
     print("Not necessary to add a Teacher")
-
-#%%
 # TODO: Teachers and their subjects per period
 import numpy as np
 all_periods = onto.search(type=onto.Period)
 all_teachers = onto.search(type=onto.Teacher)
 all_courses = onto.search(type=onto.Course)
+# for i in range(6):
 for period in all_periods:
     for teacher in all_teachers:
+        # if len(teacher.teaches) > 3:
+        #     break
         prefix = f"Teacher {teacher.name}: "
         print(prefix + f"For period {period.name}")
         if len(teacher.teaches) < 4:
@@ -106,8 +124,14 @@ for period in all_periods:
                     random_course_of_teacher = np.random.choice(teacher.teaches).name
                     print(prefix + f"Pick nearest of random for: '{random_course_of_teacher}'")
                     picked_courses = [all_courses[course_idx] for course_idx in np.where(kmeans.labels_ == kmeans.predict(Xdf.loc[[random_course_of_teacher]])[0])[0]]
-                    filtered_courses = [c for c in picked_courses if period in c.isTaughtOnPeriod and c not in teacher.teaches]
-                    print(prefix + f"These are the candidate courses {picked_course}")
+                    print(teacher.teaches)
+                    print(picked_courses[0].isTaughtOnPeriod)
+                    filtered_courses = set(picked_courses) - set(teacher.teaches)
+                    print(filtered_courses)
+                    isBusyOn = [p for x in teacher.teaches for p in x.isTaughtOnPeriod]
+                    filtered_courses = [c for c in picked_courses if c.isTaughtOnPeriod[0] not in isBusyOn]
+                    print(filtered_courses)
+                    print(prefix + f"These are the candidate courses {picked_courses}")
                     if len(filtered_courses):
                         picked_course = np.random.choice(filtered_courses)
                         print(prefix + f"Picked => {picked_course}")
@@ -118,5 +142,9 @@ for period in all_periods:
 # TODO: Rename canTake to unlocks
 # TODO: Generate Students up to ten students
 # TODO: All hobbies need a day
-# TODO: Add functional
+# TODO: All courses need 2 Weekdays
+# TODO: Add functional:
+# %%
+
+
 # %%
