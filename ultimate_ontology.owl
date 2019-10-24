@@ -30,6 +30,17 @@
     
 
 
+    <!-- https://project-intelligent-agents.uu.nl#canTake -->
+
+    <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#canTake">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://project-intelligent-agents.uu.nl#hasTaken"/>
+            <rdf:Description rdf:about="https://project-intelligent-agents.uu.nl#isPreliminary"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://project-intelligent-agents.uu.nl#covers -->
 
     <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#covers">
@@ -298,17 +309,6 @@
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="https://project-intelligent-agents.uu.nl#teaches"/>
             <rdf:Description rdf:about="https://project-intelligent-agents.uu.nl#isTaughtOnPeriod"/>
-        </owl:propertyChainAxiom>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://project-intelligent-agents.uu.nl#unlockedCourse -->
-
-    <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#unlockedCourse">
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://project-intelligent-agents.uu.nl#hasTaken"/>
-            <rdf:Description rdf:about="https://project-intelligent-agents.uu.nl#isPreliminary"/>
         </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
@@ -2088,7 +2088,7 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Football">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Hobby"/>
-        <isPracticedOnWeekday rdf:resource="https://project-intelligent-agents.uu.nl#Mo"/>
+        <isPracticedOnWeekday rdf:resource="https://project-intelligent-agents.uu.nl#Th"/>
     </owl:NamedIndividual>
     
 
@@ -3004,13 +3004,22 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Student1">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Student"/>
-        <hasTaken rdf:resource="https://project-intelligent-agents.uu.nl#AIForGameTechnology"/>
-        <hasTaken rdf:resource="https://project-intelligent-agents.uu.nl#AncientHistory"/>
         <hasTaken rdf:resource="https://project-intelligent-agents.uu.nl#HistoryAndPhilosophyOfObjectivity"/>
-        <hasTaken rdf:resource="https://project-intelligent-agents.uu.nl#HistoryAndPoliticsOfSociety"/>
         <firstName>Artie</firstName>
         <secondName>Armstrong</secondName>
         <studentID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</studentID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#Student10 -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Student10">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Student"/>
+        <hasTaken rdf:resource="https://project-intelligent-agents.uu.nl#AIForGameTechnology"/>
+        <firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sarah</firstName>
+        <secondName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Masterson</secondName>
+        <studentID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</studentID>
     </owl:NamedIndividual>
     
 
@@ -3019,6 +3028,7 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Student2">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Student"/>
+        <hasTaken rdf:resource="https://project-intelligent-agents.uu.nl#MachineLearningForHumanVisionAndLanguage"/>
         <firstName>Bill</firstName>
         <secondName>Bernstein</secondName>
     </owl:NamedIndividual>
@@ -3029,6 +3039,7 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Student3">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Student"/>
+        <hasTaken rdf:resource="https://project-intelligent-agents.uu.nl#Bioinformatics"/>
         <firstName>Mickaila</firstName>
         <secondName>Tarkovski</secondName>
     </owl:NamedIndividual>
@@ -3039,6 +3050,7 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Student4">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Student"/>
+        <hasTaken rdf:resource="https://project-intelligent-agents.uu.nl#NaturalLanguageProcessing"/>
         <firstName>Solomon</firstName>
         <secondName>Sarti</secondName>
     </owl:NamedIndividual>
@@ -3049,8 +3061,54 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Student5">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Student"/>
+        <hasTaken rdf:resource="https://project-intelligent-agents.uu.nl#GenderStudies"/>
         <firstName>Gigi</firstName>
         <secondName>Ramone</secondName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#Student6 -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Student6">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Student"/>
+        <hasTaken rdf:resource="https://project-intelligent-agents.uu.nl#MultiAgentSystems"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#Student7 -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Student7">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Student"/>
+        <hasTaken rdf:resource="https://project-intelligent-agents.uu.nl#MicrobialGenomics"/>
+        <firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scott</firstName>
+        <secondName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Western</secondName>
+        <studentID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</studentID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#Student8 -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Student8">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Student"/>
+        <hasTaken rdf:resource="https://project-intelligent-agents.uu.nl#LanguageBrainAndCognition"/>
+        <firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deborah</firstName>
+        <secondName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hamons</secondName>
+        <studentID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</studentID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#Student9 -->
+
+    <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Student9">
+        <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Student"/>
+        <hasTaken rdf:resource="https://project-intelligent-agents.uu.nl#EnglishAndCulturalDiversity"/>
+        <firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glen</firstName>
+        <secondName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Isbrecht</secondName>
+        <studentID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</studentID>
     </owl:NamedIndividual>
     
 
@@ -3538,7 +3596,7 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Tennis">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Hobby"/>
-        <isPracticedOnWeekday rdf:resource="https://project-intelligent-agents.uu.nl#Tu"/>
+        <isPracticedOnWeekday rdf:resource="https://project-intelligent-agents.uu.nl#Th"/>
     </owl:NamedIndividual>
     
 
