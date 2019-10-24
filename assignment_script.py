@@ -7,14 +7,12 @@ import numpy as np
 ONTOLOGY_FILE = "./dev_ontology.owl"
 ONTOLOGY_FILE2 = "./ultimate_ontology.owl"
 
-
 # %%
 onto = owl.get_ontology(ONTOLOGY_FILE2)
 onto.load()
 
 # %%
 all_courses = onto.search(type=onto.Course)
-all_periods = onto.search(type=onto.Period)
 all_hobbies = onto.search(type=onto.Hobby)
 all_RM = onto.search(type=onto.ResearchMethodology)
 onto_social_courses = onto.search(type=onto.SocialCourse)
@@ -39,8 +37,6 @@ for course in all_courses:
     else:
         print(course.uses)
 
-
-
 # %%
 # import mca
 
@@ -60,36 +56,67 @@ X = np.zeros([no_courses, no_topics])
 for idx, course in enumerate(all_courses):
     for topic in course.covers:
         X[idx, prep_topic_to_idx[topic.name]] = 1
-# %%
-return_topics_from_course_vector(1, X, prep_idx_to_topic)
 
-# %%
 Xdf = pd.DataFrame(X, index=[course.name for course in all_courses], columns=[topic.name for topic in all_topics])
-
-# %%
 no_clusters = 21
 kmeans = KMeans(no_clusters)
 kmeans.fit(Xdf)
 
-# %%
-# group2 =
-# print(group2)
 for idx in range(no_clusters):
     print([all_courses[course_idx] for course_idx in np.where(kmeans.labels_ == idx)[0]])
 # %%
 
 # %%
-# onto.save(file = "ultimate_ontology.owl", format = "rdfxml")
+onto.save(file="ultimate_ontology.owl", format="rdfxml")
+
+# %%
 import names
 
-no_of_required_teachers = len(onto.Course.instances())//5
-if len(onto.Teacher.instances()) <= no_of_required_teachers:
+no_of_required_teachers = len(onto.Course.instances()) // 5
+if len(onto.Teacher.instances()) < no_of_required_teachers:
     for num in range(len(onto.Teacher.instances()), no_of_required_teachers):
-        temp_teacher = onto.Teachers(f"Teacher{num+1}")
-        temp_teacher.firstName = names.get_first_name()
-        temp_teacher.secondName =  names.get_last_name()
+        temp_teacher = onto.Teacher(f"Teacher{num+1}")
+        temp_teacher.firstName.append(names.get_first_name())
+        temp_teacher.secondName.append(names.get_last_name())
+        temp_teacher.teacherID.append(num)
         print(temp_teacher)
+else:
+    print("Not necessary to add a Teacher")
 
+#%%
+# TODO: Teachers and their subjects per period
+import numpy as np
+all_periods = onto.search(type=onto.Period)
+all_teachers = onto.search(type=onto.Teacher)
+all_courses = onto.search(type=onto.Course)
+for period in all_periods:
+    for teacher in all_teachers:
+        prefix = f"Teacher {teacher.name}: "
+        print(prefix + f"For period {period.name}")
+        if len(teacher.teaches) < 4:
+            print(prefix + f"Needs to teach an additional course")
+            if (period not in [p.name for course in teacher.teaches for p in course.isTaughtOnPeriod]):
+                print(prefix + f"Will pick a course for period {period.name}")
+                if len(teacher.teaches) < 1:
+                    print(prefix + "Pick random")
+                    picked_course = np.random.choice(all_courses)
+                    print(prefix + f"Picked => {picked_course}")
+                    teacher.teaches.append(picked_course)
+                else:
+                    random_course_of_teacher = np.random.choice(teacher.teaches).name
+                    print(prefix + f"Pick nearest of random for: '{random_course_of_teacher}'")
+                    picked_courses = [all_courses[course_idx] for course_idx in np.where(kmeans.labels_ == kmeans.predict(Xdf.loc[[random_course_of_teacher]])[0])[0]]
+                    filtered_courses = [c for c in picked_courses if period in c.isTaughtOnPeriod and c not in teacher.teaches]
+                    print(prefix + f"These are the candidate courses {picked_course}")
+                    if len(filtered_courses):
+                        picked_course = np.random.choice(filtered_courses)
+                        print(prefix + f"Picked => {picked_course}")
+                        teacher.teaches.append(picked_course)
+                    else:
+                        print(prefix + f"Couldn't set a course!")
 
-
+# TODO: Rename canTake to unlocks
+# TODO: Generate Students up to ten students
+# TODO: All hobbies need a day
+# TODO: Add functional
 # %%
