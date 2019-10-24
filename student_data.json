@@ -4,9 +4,11 @@
         "period": "P1",
         "topics": ["Logic", "ComputerGraphics"],
         "skills": ["Programming"],
-        "techears_id": [1],
-        "friends": [],
-        "hobbies": ["Football"]
+        "likes": [1],
+        "dislikes": [1],
+        "friends": true,
+        "hobbies": ["Football"],
+        "weekdays": []
     },
-    "importance": ["topics", "skills", "teacher_id"]
+    "importance": ["friends", "likes", "skills", "topics"]
 }

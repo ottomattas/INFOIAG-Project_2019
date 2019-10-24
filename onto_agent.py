@@ -12,16 +12,34 @@ warnings.filterwarnings("ignore")
 ONTOLOGY_FILE   = "./ultimate_ontology.owl"
 DATA_FILE       = "./student_data.json"
 COURSE_THRESHOLD = 5
-
+# Observations:
+#TODO: - Remove Bias (2 vs 3 course packages)
+#TODO: - Scaling / Normalization
+#TODO: - Score - Similarity - (?? what should we do in case of equality) ????
+#TODO: - Performance measure: average score of random/total course over the average score of the filtered/best ones - How much better is our?
+#TODO: - Equal imporance for preferences (same weight)
+#TODO: - learn new skills preference (only if we have ultimate_ontology0)
 class Agent():
 
-    def __init__(self, ontology, data, s_index):
-        self.ontology   = ontology
+    def __init__(self, data, s_index):
+
+        self.ontology   = get_ontology(ONTOLOGY_FILE)
+        self.ontology.load()
+        with self.ontology:
+            sync_reasoner(infer_property_values=True)
 
         with open(data) as json_data:
-            self.data = json.load(json_data)
+            self.data   = json.load(json_data)
 
-        self.student_obj = self.ontology.search(studentID=self.data["id"])[0]
+        self.student_obj            = self.ontology.search(studentID=self.data["id"])[0]
+        self.disliked_teachers_obj  = [self.ontology.search(teacherID=teacher_id)[0]
+                                        for teacher_id in self.data["preferences"]["dislikes"]
+                                        ]
+        self.liked_teachers_obj     = [self.ontology.search(teacherID=teacher_id)[0]
+                                        for teacher_id in self.data["preferences"]["likes"]
+                                        ]
+        self.friends_obj            = self.student_obj.hasFriend
+
 
     @staticmethod
     def print_debug(*param):
@@ -65,9 +83,9 @@ class Agent():
         pref_weight = {
             "topics": 0,
             "skills": 0,
-            "techears_id": 0,
+            "likes": 0,
+            "dislikes": 0,
             "friends": 0,
-            "hobbies": 0,
         }
         split = 1 / (len(importance) - 1)
         pref_weight[importance[0]] = 2
@@ -81,15 +99,35 @@ class Agent():
     # checked
     def get_topics_scores(self, course, pref_topics):
         topics = course.covers
-        topics = [str(t).split(".")[1] for t in topics]
+        topics = [t.name for t in topics]
         return len(set(topics).intersection(set(pref_topics)))
 
     # checked
     def get_skills_scores(self, course, pref_skills):
         research_met = course.uses
         skills = research_met[0].improves
-        skills = [str(s).split(".")[1] for s in skills]
+        skills = [s.name for s in skills]
         return len(set(skills).intersection(set(pref_skills)))
+
+    def get_dislikes_scores(self, course, pref_dislike, weight):
+        for teacher in self.disliked_teachers_obj:
+            if course.name in [c.name for c in teacher.teaches]:
+                # why did we do this shit here?
+                return -weight
+        return 1
+
+    def get_likes_scores(self, course, pref_likes, weight):
+        for teacher in self.liked_teachers_obj:
+            if course.name in [c.name for c in teacher.teaches]:
+                return weight
+        return 1
+
+    def get_friends_scores(self, course, pref_friends, weight):
+        friends_courses = [friend.takes for friend in self.friends_obj]
+        courses = [c.name for c in list(itertools.chain.from_iterable(friends_courses))]
+        if course.name in courses:
+            return weight
+        return 1
 
     def calculate_score(self, packege, pref_w):
         preferences = self.data["preferences"]
@@ -98,7 +136,11 @@ class Agent():
             course_scores = []
             course_scores.append(pref_w["topics"] * self.get_topics_scores(c, preferences["topics"]))
             course_scores.append(pref_w["skills"] * self.get_skills_scores(c, preferences["skills"]))
-            # TODO: compute other preferences
+            course_scores.append(self.get_dislikes_scores(c, preferences["dislikes"], pref_w["dislikes"]))
+            course_scores.append(self.get_likes_scores(c, preferences["likes"], pref_w["likes"]))
+            course_scores.append(self.get_friends_scores(c, preferences["friends"], pref_w["friends"]))
+
+
 
             score_per_course.append(sum(course_scores))
 
@@ -109,12 +151,15 @@ class Agent():
         importance_list = self.data["importance"]
         pref_weight = self.map_to_interval(importance_list)
         for p in packages:
-            package_score_list.append((p, self.calculate_score(p, pref_weight)))
+            package_score_list.append((p, self.calculate_score(p, pref_weight) / len(p)))
 
         package_score_list.sort(key = lambda t: t[1])
 
-        Agent.print_debug("Best packeges: ", package_score_list[-2:])
+        Agent.print_debug("Best packeges: ", package_score_list[-5:])
         return package_score_list
+
+    def post_rank(self, packege):
+        
 
     def match_preferences(self):
 
@@ -127,6 +172,11 @@ class Agent():
             packages = self.generate_combinations(courses)
             Agent.print_debug("Generated Packages: ", packages, "Number: ", len(packages))
             ranked_packages = self.rank(packages)
+            # if the best packages have the same score
+            if ranked_packages[-1][1] == ranked_packages[-2][1]:
+                final_packages = self.post_rank(ranked_packages)
+
+
         # TODO: else: ??
 
         return ranked_packages[-1]
@@ -188,15 +238,8 @@ def course_planning(agent):
 
 def main():
 
-    # ONTOLOGY_FILE - path to the ontology
-    onto = get_ontology(ONTOLOGY_FILE)
-    onto.load()
-
-    with onto:
-        sync_reasoner(infer_property_values=True)
-
-        onto_agent = Agent(onto, DATA_FILE, 0)
-        course_planning(onto_agent)
+    onto_agent = Agent(DATA_FILE, 0)
+    course_planning(onto_agent)
 
 
 if __name__ == "__main__":
