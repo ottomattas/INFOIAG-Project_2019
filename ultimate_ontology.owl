@@ -30,17 +30,6 @@
     
 
 
-    <!-- https://project-intelligent-agents.uu.nl#canTake -->
-
-    <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#canTake">
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://project-intelligent-agents.uu.nl#hasTaken"/>
-            <rdf:Description rdf:about="https://project-intelligent-agents.uu.nl#isPreliminary"/>
-        </owl:propertyChainAxiom>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://project-intelligent-agents.uu.nl#covers -->
 
     <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#covers">
@@ -309,6 +298,17 @@
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="https://project-intelligent-agents.uu.nl#teaches"/>
             <rdf:Description rdf:about="https://project-intelligent-agents.uu.nl#isTaughtOnPeriod"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://project-intelligent-agents.uu.nl#unlockedCourse -->
+
+    <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#unlockedCourse">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://project-intelligent-agents.uu.nl#hasTaken"/>
+            <rdf:Description rdf:about="https://project-intelligent-agents.uu.nl#isPreliminary"/>
         </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
