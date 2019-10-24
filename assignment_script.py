@@ -39,6 +39,7 @@ for course in all_courses:
         print(course.uses)
 
 # %%
+# TODO: All courses need 2 Weekdays
 import random
 all_courses = onto.search(type=onto.Course)
 all_weekdays = onto.search(type=onto.Weekday)
@@ -52,6 +53,20 @@ for course in all_courses:
     else:
         print(course.isTaughtOnWeekday)
 
+# %%
+# TODO: All hobbies need a day
+import random
+all_hobbies = onto.search(type=onto.Hobby)
+all_weekdays = onto.search(type=onto.Weekday)
+for hobby in all_hobbies:
+    len_property_items = len(hobby.isPractisedOnWeekday)
+    print(f"======== {len_property_items} items ========")
+    if len_property_items < 1:
+        random_days = np.random.choice(all_weekdays)
+        print(f"{hobby}: {hobby.isPractisedOnWeekday} items - Assigning: {random_days}")
+        hobby.isPractisedOnWeekday.append(random_days)
+    else:
+        print(hobby.isPractisedOnWeekday)
 # %%
 # import mca
 
@@ -141,8 +156,6 @@ for period in all_periods:
 
 # TODO: Rename canTake to unlocks
 # TODO: Generate Students up to ten students
-# TODO: All hobbies need a day
-# TODO: All courses need 2 Weekdays
 # TODO: Add functional:
 # %%
 
