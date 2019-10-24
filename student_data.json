@@ -7,7 +7,7 @@
         "likes": [1],
         "dislikes": [1],
         "friends": true,
-        "hobbies": ["Football"],
+        "hobby": "Football",
         "weekdays": []
     },
     "importance": ["friends", "likes", "skills", "topics"]

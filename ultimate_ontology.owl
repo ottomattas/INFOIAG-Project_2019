@@ -2085,6 +2085,8 @@
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#ModernPhilosopy"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#SpecificHistory"/>
         <isTaughtOnPeriod rdf:resource="https://project-intelligent-agents.uu.nl#P1"/>
+        <isTaughtOnWeekday rdf:resource="https://project-intelligent-agents.uu.nl#Friday"/>
+        <isTaughtOnWeekday rdf:resource="https://project-intelligent-agents.uu.nl#Tuesday"/>
         <uses rdf:resource="https://project-intelligent-agents.uu.nl#Lab"/>
     </owl:NamedIndividual>
     

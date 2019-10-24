@@ -11,13 +11,16 @@ warnings.filterwarnings("ignore")
 
 ONTOLOGY_FILE   = "./ultimate_ontology.owl"
 DATA_FILE       = "./student_data.json"
+
 # Observations:
 #TODO: - Remove Bias (2 vs 3 course packages)
 #TODO: - Scaling / Normalization
 #TODO: - Score X - Similarity X- (?? what should we do in case of equality) ???? The INFO GAIN approach is biased back to the firrst question ???? NO
 #TODO: - Performance measure: average score of random/total course over the average score of the filtered/best ones - How much better is our?
 #TODO: - Equal imporance for preferences (same weight)
-#TODO: - learn new skills preference (only if we have ultimate_ontology0)
+#TODO: - Learn new skills preference (only if we have time)
+#TODO: - Translate from pythonic queries to Manchester queries
+
 class Agent():
 
     def __init__(self, data, s_index):
@@ -157,11 +160,6 @@ class Agent():
         Agent.print_debug("Best packeges: ", package_score_list[-5:])
         return package_score_list
 
-    # def post_rank(self, prefs, packages):
-    #     pref_gain_list = []
-    #     for p in prefs:
-    #         self.apply_pref(p, packages)
-
     def extract_topics(self, course_list):
         return set([topic.name
                     for topic in list(itertools.chain.from_iterable([c.covers for c in course_list]))
@@ -236,8 +234,15 @@ class Agent():
 
         return HumanitiesCourses + ScienceCourses + SocialCourses
 
-    def check_consistency(self):
-        pass
+    def check_hobbies(self):
+        with self.ontology:
+            hobby = self.data["preferences"]["hobby"]
+            if hobby:
+                self.student_obj.practices = [self.ontology.Hobby(hobby)]
+                try:
+                    sync_reasoner(infer_property_values=True)
+                except OwlReadyInconsistentOntologyError:
+                    print("Inconsistent")
 
 
 def course_planning(agent):
@@ -248,6 +253,7 @@ def course_planning(agent):
     Agent.print_debug("Taken Courses: ", coursesTaken)
     Agent.print_debug("Most similar courses to: [", coursesTaken[0], "] are the following: ", most_similar)
 
+    agent.check_hobbies()
     agent.match_preferences()
 
 
