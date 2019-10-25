@@ -283,7 +283,10 @@
 
     <!-- https://project-intelligent-agents.uu.nl#takes -->
 
-    <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#takes"/>
+    <owl:ObjectProperty rdf:about="https://project-intelligent-agents.uu.nl#takes">
+        <rdfs:domain rdf:resource="https://project-intelligent-agents.uu.nl#Student"/>
+        <rdfs:range rdf:resource="https://project-intelligent-agents.uu.nl#Course"/>
+    </owl:ObjectProperty>
     
 
 
@@ -1978,7 +1981,7 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Football">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Hobby"/>
-        <isPracticedOnWeekday rdf:resource="https://project-intelligent-agents.uu.nl#Tuesday"/>
+        <isPracticedOnWeekday rdf:resource="https://project-intelligent-agents.uu.nl#Tu"/>
     </owl:NamedIndividual>
     
 
@@ -2558,6 +2561,7 @@
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#Neurobiology"/>
         <covers rdf:resource="https://project-intelligent-agents.uu.nl#ScientificPhilosophy"/>
         <isTaughtOnPeriod rdf:resource="https://project-intelligent-agents.uu.nl#P3"/>
+        <isTaughtOnWeekday rdf:resource="https://project-intelligent-agents.uu.nl#Tu"/>
         <uses rdf:resource="https://project-intelligent-agents.uu.nl#Experiment"/>
     </owl:NamedIndividual>
     
@@ -2845,6 +2849,7 @@
         <hasTaken rdf:resource="https://project-intelligent-agents.uu.nl#HistoryAndPhilosophyOfObjectivity"/>
         <hasTaken rdf:resource="https://project-intelligent-agents.uu.nl#HistoryAndPoliticsOfSociety"/>
         <hasTaken rdf:resource="https://project-intelligent-agents.uu.nl#PatternRecognition"/>
+        <takes rdf:resource="https://project-intelligent-agents.uu.nl#PhilosophyOfAI"/>
         <firstName>Artie</firstName>
         <secondName>Armstrong</secondName>
         <studentID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</studentID>
