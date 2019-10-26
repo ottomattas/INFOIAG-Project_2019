@@ -1,13 +1,10 @@
-import json
-import os
-import warnings
 from itertools import combinations
 from pprint import pprint
 from random import sample, randint
 
-import numpy as np
-import pandas as pd
 from owlready2 import *
+
+from Student import Student
 
 
 from trust_system import AgentModel
@@ -26,16 +23,15 @@ class Agent:
         with self.ontology:
             sync_reasoner(infer_property_values=True)
 
-        with open(data) as json_data:
-            self.data = json.load(json_data)
+        self.student = Student(idx)
 
         self.trust_models = trust_models
         self.student_obj = self.ontology.search(studentID=self.data["id"])[0]
         self.disliked_teachers_obj = [self.ontology.search(teacherID=teacher_id)[0]
-                                      for teacher_id in self.data["preferences"]["dislikes"]
+                                      for teacher_id in self.student.data["preferences"]["dislikes"]
                                       ]
         self.liked_teachers_obj = [self.ontology.search(teacherID=teacher_id)[0]
-                                   for teacher_id in self.data["preferences"]["likes"]
+                                   for teacher_id in self.student.data["preferences"]["likes"]
                                    ]
         self.friends_obj = self.student_obj.hasFriend
 
@@ -84,8 +80,6 @@ class Agent:
         pref_weight[importance[-1]] = 0
         for idx, p in enumerate(importance[1:-1]):
             pref_weight[p] = 1 - (idx + 1) * split
-
-        Agent.print_debug("Preferences Weight: ", pref_weight)
         return pref_weight
 
     @staticmethod
@@ -141,25 +135,28 @@ class Agent:
 
 
     def calculate_score(self, package, pref_w):
-        preferences = self.data["preferences"]
+        preferences = dict(self.student.given_preferences)
         score_per_course = []
         for c in package:
-            course_scores = [pref_w["topics"] * self.get_topics_scores(c, preferences["topics"]),
-                             pref_w["skills"] * self.get_skills_scores(c, preferences["skills"]),
-                             self.get_dislikes_scores(c, pref_w["dislikes"]),
-                             self.get_likes_scores(c, pref_w["likes"]),
-                             self.get_friends_scores(c, pref_w["friends"]),
-                             self.get_trust_scores(c)
-                             ]
-
+            course_scores = []
+            if "topics" in preferences: course_scores.append(
+                pref_w["topics"] * self.get_topics_scores(c, preferences["topics"]))
+            if "skills" in preferences: course_scores.append(
+                pref_w["skills"] * self.get_skills_scores(c, preferences["skills"]))
+            if "dislikes" in preferences: course_scores.append(
+                self.get_dislikes_scores(c, pref_w["dislikes"]))
+            if "likes" in preferences: course_scores.append(
+                self.get_likes_scores(c, pref_w["likes"]))
+            if "friends" in preferences: course_scores.append(
+                self.get_friends_scores(c, pref_w["friends"]))
             score_per_course.append(sum(course_scores))
-
         return sum(score_per_course)
 
     def rank(self, packages):
         package_score_list = []
-        importance_list = self.data["importance"]
+        importance_list = self.student.get_ranked_preferences()
         pref_weight = self.map_to_interval(importance_list)
+        self.print_debug("Preferences Weight: ", pref_weight)
         for p in packages:
             package_score_list.append((p, self.calculate_score(p, pref_weight) / len(p)))
 
@@ -183,15 +180,17 @@ class Agent:
         return similar_score_list
 
     def match_preferences(self):
-        preferences = self.data["preferences"]
-        period = preferences["period"]
+        period = self.student.get_period()
         courses = self.get_courses_per_period()[period]
-        self.print_debug("Courses from period [" + period + "]: ", courses)
+        self.print_debug("Student is looking for courses on period: ", period)
 
         packages = self.generate_combinations(courses)
-        self.print_debug("Generated Packages: ", packages, "Number: ", len(packages))
+        self.print_debug("System can generate {} packages.".format(len(packages)))
         ranked_packages = self.rank(packages)
         if ranked_packages[-1][1] == ranked_packages[-2][1]:
+            self.print_debug(
+                "WARNING:\nThere is a tie, system will narrow down by matching \n"
+                "similarity with previously taken courses.")
             similar_packages = self.similarity_rank(ranked_packages)
             return similar_packages[-1]
 
@@ -227,16 +226,14 @@ class Agent:
         return course_per_periods
 
     def get_all_courses(self):
-
         humanities_courses = list(self.ontology.HumanitiesCourse.instances())
         science_courses = list(self.ontology.ScienceCourse.instances())
         social_courses = list(self.ontology.SocialCourse.instances())
-
         return humanities_courses + science_courses + social_courses
 
     def check_hobbies(self):
         with self.ontology:
-            hobby = self.data["preferences"]["hobby"]
+            hobby = self.student.get_hobby()
             if hobby:
                 self.student_obj.practices = [self.ontology.Hobby(hobby)]
                 try:
@@ -244,41 +241,5 @@ class Agent:
                 except OwlReadyInconsistentOntologyError:
                     self.print_debug("INCONSISTENCY: Student can't take course on same day as hobby.")
 
-
-def course_planning(agent):
-    courses_taken = agent.extract_courses_taken()
-    all_courses = agent.get_all_courses()
-    most_similar = agent.get_similar_courses_to(courses_taken[0], all_courses, 3)
-    agent.print_debug("Taken Courses: ", courses_taken)
-    agent.print_debug("Most similar courses to: [", courses_taken[0], "] are the following: ", most_similar)
-
-    agent.check_hobbies()
-    agent.match_preferences()
-
-def generate_trust_models(courses, no_models, courses_per_model):
-    for i in range(no_models):
-        stud_courses = sample(courses, courses_per_model)
-        courses_ratings = [[c.name, randint(0, 10)] for c in stud_courses]
-        with open("agent_model{}".format(i), "w") as f:
-            for thing in courses_ratings:
-                f.write(str(thing)[1:-1] + "\n")
-
-def main():
-    # models_list = []
-    # for i in range(6):
-    #     models_list.append(AgentModel("agent_model{}".format(i)))
-    #
-    # a = AgentModel("agent_model0")
-    # a.trust(models_list)
-    # a.course_scores(models_list)
-    #
-    # onto_agent = Agent(DATA_FILE, a.trust_scores_dict)
-    # course_planning(onto_agent)
-    # generate_trust_models(onto_agent.get_all_courses(), 6, 10)
-
-    calendar = GCalendar()
     calendar.insert_event(("IntelligentAgents", "Monday"))
-
-
-if __name__ == "__main__":
-    main()
+    calendar = GCalendar()
