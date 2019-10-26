@@ -15,26 +15,18 @@ DATA_FILE = "./student_data.json"
 
 
 # Observations:
-# TODO: Remove Bias (2 vs 3 course packages)
-
-# TODO: Scaling / Normalization
-
-# TODO: Score X - Similarity X- (?? what should we do in case of equality) ????
-#  The INFO GAIN approach is biased back to the firrst question ???? NO
 
 # TODO: Performance measure: average score of random/total
 #  course over the average score of the filtered/best ones - How much better is our?
 
-# TODO: Equal importance for preferences (same weight)
+# TODO: isPractisedOnWeekday is Functional and teaches is
+#  inverse functional and needs domain (Teacher) range (Course)   --> Tested and working
 
-# TODO: Learn new skills preference (only if we have time)
-
-# TODO: Translate from pythonic queries to Manchester queries
+# TODO: Print mock dialog
 
 class Agent:
 
     def __init__(self, data):
-
         self.ontology = get_ontology(ONTOLOGY_FILE)
         self.ontology.load()
         with self.ontology:
@@ -93,10 +85,10 @@ class Agent:
             "friends": 0,
         }
         split = 1 / (len(importance) - 1)
-        pref_weight[importance[0]] = 2
-        pref_weight[importance[-1]] = 1
+        pref_weight[importance[0]] = 1
+        pref_weight[importance[-1]] = 0
         for idx, p in enumerate(importance[1:-1]):
-            pref_weight[p] = 2 - (idx + 1) * split
+            pref_weight[p] = 1 - (idx + 1) * split
 
         Agent.print_debug("Preferences Weight: ", pref_weight)
         return pref_weight
@@ -129,22 +121,21 @@ class Agent:
     def get_dislikes_scores(self, course, weight):
         for teacher in self.disliked_teachers_obj:
             if course.name in [c.name for c in teacher.teaches]:
-                # why did we do this shit here?
                 return -weight
-        return 1
+        return weight
 
     def get_likes_scores(self, course, weight):
         for teacher in self.liked_teachers_obj:
             if course.name in [c.name for c in teacher.teaches]:
                 return weight
-        return 1
+        return -weight
 
     def get_friends_scores(self, course, weight):
         friends_courses = [friend.takes for friend in self.friends_obj]
         courses = [c.name for c in list(itertools.chain.from_iterable(friends_courses))]
         if course.name in courses:
             return weight
-        return 1
+        return 0
 
     def calculate_score(self, package, pref_w):
         preferences = self.data["preferences"]
@@ -179,7 +170,8 @@ class Agent:
         for idx, package in enumerate(packages_and_rank_score):
             pack_topics = self.extract_topics(course_packages[idx])
             similar_score_list.append(
-                (course_packages[idx], len(taken_topics.intersection(pack_topics)) + package[1]))  # / len(package[0])
+                (course_packages[idx],
+                 len(taken_topics.intersection(pack_topics)) / len(package[0]) + package[1]))
 
         similar_score_list.sort(key=lambda _t: _t[1])
         self.print_debug("Best after similarity ranking packages: ", similar_score_list[-5:])
@@ -194,7 +186,6 @@ class Agent:
         packages = self.generate_combinations(courses)
         self.print_debug("Generated Packages: ", packages, "Number: ", len(packages))
         ranked_packages = self.rank(packages)
-        # if the best packages have the same score
         if ranked_packages[-1][1] == ranked_packages[-2][1]:
             similar_packages = self.similarity_rank(ranked_packages)
             return similar_packages[-1]
