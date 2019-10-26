@@ -3,6 +3,7 @@ import os
 import warnings
 from itertools import combinations
 from pprint import pprint
+from random import sample, randint
 
 import numpy as np
 import pandas as pd
@@ -97,14 +98,14 @@ class Agent:
     def get_topics_scores(course, pref_topics):
         topics = course.covers
         topics = [t.name for t in topics]
-        return len(set(topics).intersection(set(pref_topics)))
+        return len(set(topics).intersection(set(pref_topics))) / len(pref_topics)
 
     @staticmethod
     def get_skills_scores(course, pref_skills):
         research_met = course.uses
         skills = research_met[0].improves
         skills = [s.name for s in skills]
-        return len(set(skills).intersection(set(pref_skills)))
+        return len(set(skills).intersection(set(pref_skills))) / len(pref_skills)
 
     def extract_courses_taken(self):
         taken_courses = self.student_obj.hasTaken
@@ -135,7 +136,7 @@ class Agent:
         courses = [c.name for c in list(itertools.chain.from_iterable(friends_courses))]
         if course.name in courses:
             return weight
-        return 0
+        return -weight
 
     def calculate_score(self, package, pref_w):
         preferences = self.data["preferences"]
@@ -241,19 +242,25 @@ class Agent:
 
 
 def course_planning(agent):
-    courses_taken = agent.extract_courses_taken()
+    # courses_taken = agent.extract_courses_taken()
     all_courses = agent.get_all_courses()
-    most_similar = agent.get_similar_courses_to(courses_taken[0], all_courses, 3)
-    agent.print_debug("Taken Courses: ", courses_taken)
-    agent.print_debug("Most similar courses to: [", courses_taken[0], "] are the following: ", most_similar)
-
-    agent.check_hobbies()
-    agent.match_preferences()
-
+    # most_similar = agent.get_similar_courses_to(courses_taken[0], all_courses, 3)
+    # agent.print_debug("Taken Courses: ", courses_taken)
+    # agent.print_debug("Most similar courses to: [", courses_taken[0], "] are the following: ", most_similar)
+    #
+    # agent.check_hobbies()
+    # agent.match_preferences()
+    return all_courses
 
 def main():
     onto_agent = Agent(DATA_FILE)
-    course_planning(onto_agent)
+    courses = course_planning(onto_agent)
+    for i in range(6):
+        stud_courses = sample(courses, 10)
+        courses_ratings = [[c.name, randint(0, 10)] for c in stud_courses]
+        with open("agent_model{}".format(i), "w") as f:
+            for thing in courses_ratings:
+                f.write(str(thing)[1:-1] + "\n")
 
 
 if __name__ == "__main__":
