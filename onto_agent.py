@@ -9,25 +9,17 @@ import numpy as np
 import pandas as pd
 from owlready2 import *
 
+
+from trust_system import AgentModel
+
 warnings.filterwarnings("ignore")
 
 ONTOLOGY_FILE = "./ultimate_ontology.owl"
 DATA_FILE = "./student_data.json"
 
-
-# Observations:
-
-# TODO: Performance measure: average score of random/total
-#  course over the average score of the filtered/best ones - How much better is our?
-
-# TODO: isPractisedOnWeekday is Functional and teaches is
-#  inverse functional and needs domain (Teacher) range (Course)   --> Tested and working
-
-# TODO: Print mock dialog
-
 class Agent:
 
-    def __init__(self, data):
+    def __init__(self, data, trust_models):
         self.ontology = get_ontology(ONTOLOGY_FILE)
         self.ontology.load()
         with self.ontology:
@@ -36,6 +28,7 @@ class Agent:
         with open(data) as json_data:
             self.data = json.load(json_data)
 
+        self.trust_models = trust_models
         self.student_obj = self.ontology.search(studentID=self.data["id"])[0]
         self.disliked_teachers_obj = [self.ontology.search(teacherID=teacher_id)[0]
                                       for teacher_id in self.data["preferences"]["dislikes"]
@@ -138,6 +131,14 @@ class Agent:
             return weight
         return -weight
 
+    def get_trust_scores(self, course):
+        score = 0
+        for model in self.trust_models:
+            if course.name in self.trust_models[model]:
+                score += self.trust_models[model][course.name]
+        return score
+
+
     def calculate_score(self, package, pref_w):
         preferences = self.data["preferences"]
         score_per_course = []
@@ -146,7 +147,9 @@ class Agent:
                              pref_w["skills"] * self.get_skills_scores(c, preferences["skills"]),
                              self.get_dislikes_scores(c, pref_w["dislikes"]),
                              self.get_likes_scores(c, pref_w["likes"]),
-                             self.get_friends_scores(c, pref_w["friends"])]
+                             self.get_friends_scores(c, pref_w["friends"]),
+                             self.get_trust_scores(c)
+                             ]
 
             score_per_course.append(sum(course_scores))
 
@@ -260,9 +263,17 @@ def generate_trust_models(courses, no_models, courses_per_model):
                 f.write(str(thing)[1:-1] + "\n")
 
 def main():
-    onto_agent = Agent(DATA_FILE)
-    # course_planning(onto_agent)
-    generate_trust_models(onto_agent.get_all_courses(), 6, 10)
+    models_list = []
+    for i in range(6):
+        models_list.append(AgentModel("agent_model{}".format(i)))
+
+    a = AgentModel("agent_model0")
+    a.trust(models_list)
+    a.course_scores(models_list)
+
+    onto_agent = Agent(DATA_FILE, a.trust_scores_dict)
+    course_planning(onto_agent)
+    # generate_trust_models(onto_agent.get_all_courses(), 6, 10)
 
 
 if __name__ == "__main__":

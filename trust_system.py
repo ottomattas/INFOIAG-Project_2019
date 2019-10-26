@@ -71,13 +71,11 @@ class AgentModel:
         return trust_scores_dict
 
 
-
-
-models_list = []
-for i in range(6):
-    models_list.append(AgentModel("agent_model{}".format(i)))
-
-a = AgentModel("agent_model0")
-pprint(a.trust(models_list))
-print("-" * 70)
-pprint(a.course_scores(models_list))
+# models_list = []
+# for i in range(6):
+#     models_list.append(AgentModel("agent_model{}".format(i)))
+#
+# a = AgentModel("agent_model0")
+# pprint(a.trust(models_list))
+# print("-" * 70)
+# pprint(a.course_scores(models_list))
