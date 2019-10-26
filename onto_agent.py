@@ -11,6 +11,7 @@ from owlready2 import *
 
 
 from trust_system import AgentModel
+from quickstart import GCalendar
 
 warnings.filterwarnings("ignore")
 
@@ -263,17 +264,20 @@ def generate_trust_models(courses, no_models, courses_per_model):
                 f.write(str(thing)[1:-1] + "\n")
 
 def main():
-    models_list = []
-    for i in range(6):
-        models_list.append(AgentModel("agent_model{}".format(i)))
-
-    a = AgentModel("agent_model0")
-    a.trust(models_list)
-    a.course_scores(models_list)
-
-    onto_agent = Agent(DATA_FILE, a.trust_scores_dict)
-    course_planning(onto_agent)
+    # models_list = []
+    # for i in range(6):
+    #     models_list.append(AgentModel("agent_model{}".format(i)))
+    #
+    # a = AgentModel("agent_model0")
+    # a.trust(models_list)
+    # a.course_scores(models_list)
+    #
+    # onto_agent = Agent(DATA_FILE, a.trust_scores_dict)
+    # course_planning(onto_agent)
     # generate_trust_models(onto_agent.get_all_courses(), 6, 10)
+
+    calendar = GCalendar()
+    calendar.insert_event(("IntelligentAgents", "Monday"))
 
 
 if __name__ == "__main__":
