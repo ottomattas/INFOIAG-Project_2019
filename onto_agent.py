@@ -242,25 +242,27 @@ class Agent:
 
 
 def course_planning(agent):
-    # courses_taken = agent.extract_courses_taken()
+    courses_taken = agent.extract_courses_taken()
     all_courses = agent.get_all_courses()
-    # most_similar = agent.get_similar_courses_to(courses_taken[0], all_courses, 3)
-    # agent.print_debug("Taken Courses: ", courses_taken)
-    # agent.print_debug("Most similar courses to: [", courses_taken[0], "] are the following: ", most_similar)
-    #
-    # agent.check_hobbies()
-    # agent.match_preferences()
-    return all_courses
+    most_similar = agent.get_similar_courses_to(courses_taken[0], all_courses, 3)
+    agent.print_debug("Taken Courses: ", courses_taken)
+    agent.print_debug("Most similar courses to: [", courses_taken[0], "] are the following: ", most_similar)
 
-def main():
-    onto_agent = Agent(DATA_FILE)
-    courses = course_planning(onto_agent)
-    for i in range(6):
-        stud_courses = sample(courses, 10)
+    agent.check_hobbies()
+    agent.match_preferences()
+
+def generate_trust_models(courses, no_models, courses_per_model):
+    for i in range(no_models):
+        stud_courses = sample(courses, courses_per_model)
         courses_ratings = [[c.name, randint(0, 10)] for c in stud_courses]
         with open("agent_model{}".format(i), "w") as f:
             for thing in courses_ratings:
                 f.write(str(thing)[1:-1] + "\n")
+
+def main():
+    onto_agent = Agent(DATA_FILE)
+    # course_planning(onto_agent)
+    generate_trust_models(onto_agent.get_all_courses(), 6, 10)
 
 
 if __name__ == "__main__":
