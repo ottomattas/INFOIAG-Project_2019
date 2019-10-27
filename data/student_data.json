@@ -1,0 +1,170 @@
+[
+  {
+    "id": 1,
+    "preferences": {
+      "period": "P1",
+      "hobby": "",
+      "topics": [
+        "Logic",
+        "ComputerGraphics"
+      ],
+      "skills": [
+        "Programming"
+      ],
+      "likes": [
+        1
+      ],
+      "dislikes": [
+        1
+      ],
+      "friends": true,
+      "weekdays": []
+    },
+    "importance": [
+      "friends",
+      "likes",
+      "skills",
+      "topics"
+    ]
+  },
+  {
+    "id": 2,
+    "preferences": {
+      "period": "P4",
+      "hobby": "",
+      "topics": [
+        "GeneralHistory",
+        "SpecificHistory"
+      ],
+      "skills": [
+        "AcademicWriting"
+      ],
+      "likes": [
+        1
+      ],
+      "dislikes": [
+        1
+      ],
+      "friends": true,
+      "weekdays": []
+    },
+    "importance": [
+      "friends",
+      "likes",
+      "skills",
+      "topics"
+    ]
+  },
+  {
+    "id": 3,
+    "preferences": {
+      "period": "P3",
+      "hobby": "",
+      "topics": [
+        "Ethics",
+        "TextAnalysis"
+      ],
+      "skills": [
+        "CriticalThinking"
+      ],
+      "likes": [
+        1
+      ],
+      "dislikes": [
+        1
+      ],
+      "friends": true,
+      "weekdays": []
+    },
+    "importance": [
+      "friends",
+      "likes",
+      "skills",
+      "topics"
+    ]
+  },
+  {
+    "id": 4,
+    "preferences": {
+      "period": "P4",
+      "hobby": "",
+      "topics": [
+        "Algorithms",
+        "Databases"
+      ],
+      "skills": [
+        "Programming"
+      ],
+      "likes": [
+        1
+      ],
+      "dislikes": [
+        1
+      ],
+      "friends": true,
+      "weekdays": []
+    },
+    "importance": [
+      "friends",
+      "likes",
+      "skills",
+      "topics"
+    ]
+  },
+  {
+    "id": 5,
+    "preferences": {
+      "period": "P2",
+      "hobby": "",
+      "topics": [
+        "Finance",
+        "Sustainability"
+      ],
+      "skills": [
+        "Creativity"
+      ],
+      "likes": [
+        1
+      ],
+      "dislikes": [
+        1
+      ],
+      "friends": true,
+      "weekdays": []
+    },
+    "importance": [
+      "friends",
+      "likes",
+      "skills",
+      "topics"
+    ]
+  },
+  {
+    "id": 6,
+    "preferences": {
+      "period": "P1",
+      "hobby": "",
+      "topics": [
+        "Logic",
+        "ComputerGraphics"
+      ],
+      "skills": [
+        "Debating"
+      ],
+      "likes": [
+        1
+      ],
+      "dislikes": [
+        1
+      ],
+      "friends": true,
+      "weekdays": []
+    },
+    "importance": [
+      "friends",
+      "likes",
+      "skills",
+      "topics"
+    ]
+  }
+]
