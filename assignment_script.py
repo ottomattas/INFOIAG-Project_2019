@@ -203,12 +203,15 @@ import names
 all_courses = onto.Course.instances()
 all_hobbies = onto.Hobby.instances()
 all_students = onto.Student.instances()
-temp_student = all_students[0]
-temp_student.hasTaken
-
-# =================================================================
-# %%
-onto.sync_reasoner(infer_property_value = True)
+temp_student = all_students[1]
+for temp_student in all_students:
+    # temp_student.hasTaken
+    candidate_courses = np.where(kmeans.labels_ == kmeans.predict(Xdf.loc[Xdf.index==temp_student.hasTaken[0].name])[0])[0]
+    candidate_courses_labelled = [all_courses[idx] for idx in candidate_courses]
+    print(f"Student {temp_student.name}: with {temp_student.hasTaken[0]} has following candidate courses {candidate_courses_labelled}")
+    selected_courses_taken = random.sample(candidate_courses_labelled, random.randrange(2))
+    print(f"Took: {selected_courses_taken}")
+    temp_student.hasTaken.extend(selected_courses_taken)
 # =================================================================
 # %%
 onto.save(file="ultimate_ontology.owl", format="rdfxml")
