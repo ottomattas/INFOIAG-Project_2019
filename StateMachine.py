@@ -1,6 +1,7 @@
 import json
 
 from onto_agent import Agent
+from trust_system import AgentModel
 
 
 class StateMachine(object):
@@ -14,11 +15,19 @@ class StateMachine(object):
         self.__dict__ = self.__shared_state
 
     def run(self):
-        self.currentState = StartState()
-        with open("./student_data.json") as json_data:
+        models_list = []
+        for i in range(6):
+            models_list.append(AgentModel("./models/agent_model{}".format(i)))
+        a = AgentModel("./models/agent_model0")
+        a.trust(models_list)
+        a.generate_course_scores(models_list)
+
+        with open("./data/student_data.json") as json_data:
             data = json.load(json_data)
-        for idx in range(len(data)):
-            self.agent = Agent(idx)
+
+        for idx in range(len(data) - 1):
+            self.currentState = StartState()
+            self.agent = Agent(idx, a.trust_scores_dict)
             self.update(self.agent)
 
     def update(self, agent):

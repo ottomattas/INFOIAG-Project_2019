@@ -1,24 +1,17 @@
 from itertools import combinations
 from pprint import pprint
-from random import sample, randint
 
 from owlready2 import *
 
 from Student import Student
 
-
-from trust_system import AgentModel
-from quickstart import GCalendar
-
 warnings.filterwarnings("ignore")
 
-ONTOLOGY_FILE = "./ultimate_ontology.owl"
-DATA_FILE = "./student_data.json"
 
 class Agent:
 
-    def __init__(self, data, trust_models):
-        self.ontology = get_ontology(ONTOLOGY_FILE)
+    def __init__(self, idx, trust_models):
+        self.ontology = get_ontology("./ultimate_ontology.owl")
         self.ontology.load()
         with self.ontology:
             sync_reasoner(infer_property_values=True)
@@ -26,7 +19,7 @@ class Agent:
         self.student = Student(idx)
 
         self.trust_models = trust_models
-        self.student_obj = self.ontology.search(studentID=self.data["id"])[0]
+        self.student_obj = self.ontology.search(studentID=self.student.data["id"])[0]
         self.disliked_teachers_obj = [self.ontology.search(teacherID=teacher_id)[0]
                                       for teacher_id in self.student.data["preferences"]["dislikes"]
                                       ]
@@ -133,7 +126,6 @@ class Agent:
                 score += self.trust_models[model][course.name]
         return score
 
-
     def calculate_score(self, package, pref_w):
         preferences = dict(self.student.given_preferences)
         score_per_course = []
@@ -149,6 +141,7 @@ class Agent:
                 self.get_likes_scores(c, pref_w["likes"]))
             if "friends" in preferences: course_scores.append(
                 self.get_friends_scores(c, pref_w["friends"]))
+            course_scores.append(self.get_trust_scores(c))
             score_per_course.append(sum(course_scores))
         return sum(score_per_course)
 
@@ -187,14 +180,17 @@ class Agent:
         packages = self.generate_combinations(courses)
         self.print_debug("System can generate {} packages.".format(len(packages)))
         ranked_packages = self.rank(packages)
-        if ranked_packages[-1][1] == ranked_packages[-2][1]:
+        try:
+            if ranked_packages[-1][1] == ranked_packages[-2][1]:
+                self.print_debug(
+                    "WARNING:\nThere is a tie, system will narrow down by matching \n"
+                    "similarity with previously taken courses.")
+                similar_packages = self.similarity_rank(ranked_packages)
+                return similar_packages[-1]
+        except IndexError:
             self.print_debug(
-                "WARNING:\nThere is a tie, system will narrow down by matching \n"
-                "similarity with previously taken courses.")
-            similar_packages = self.similarity_rank(ranked_packages)
-            return similar_packages[-1]
-
-        return ranked_packages[-1]
+                "WARNING:\nLooks like there is only one combination possible.")
+            return ranked_packages[-1]
 
     def get_courses_per_period(self):
         taken_course = self.extract_courses_taken()
@@ -240,6 +236,3 @@ class Agent:
                     sync_reasoner(infer_property_values=True)
                 except OwlReadyInconsistentOntologyError:
                     self.print_debug("INCONSISTENCY: Student can't take course on same day as hobby.")
-
-    calendar.insert_event(("IntelligentAgents", "Monday"))
-    calendar = GCalendar()

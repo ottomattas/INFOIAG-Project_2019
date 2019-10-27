@@ -2866,8 +2866,10 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Student2">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Student"/>
+        <hasTaken rdf:resource="https://project-intelligent-agents.uu.nl#AncientHistory"/>
         <firstName>Bill</firstName>
         <secondName>Bernstein</secondName>
+        <studentID rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">2</studentID>
     </owl:NamedIndividual>
     
 
@@ -2876,8 +2878,10 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Student3">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Student"/>
+        <hasTaken rdf:resource="https://project-intelligent-agents.uu.nl#PhilosophyOfTheMind"/>
         <firstName>Mickaila</firstName>
         <secondName>Tarkovski</secondName>
+        <studentID rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">3</studentID>
     </owl:NamedIndividual>
     
 
@@ -2886,8 +2890,10 @@
 
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Student4">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Student"/>
+        <hasTaken rdf:resource="https://project-intelligent-agents.uu.nl#EthicalTheoryAndMoralPractice"/>
         <firstName>Solomon</firstName>
         <secondName>Sarti</secondName>
+        <studentID rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">4</studentID>
     </owl:NamedIndividual>
     
 
@@ -2898,9 +2904,9 @@
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Student"/>
         <hasFriend rdf:resource="https://project-intelligent-agents.uu.nl#Student1"/>
         <takes rdf:resource="https://project-intelligent-agents.uu.nl#MachineLearningForHumanVisionAndLanguage"/>
-        <takes rdf:resource="https://project-intelligent-agents.uu.nl#PhilosophyOfTheMind"/>
         <firstName>Gigi</firstName>
         <secondName>Ramone</secondName>
+        <studentID rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">5</studentID>
     </owl:NamedIndividual>
     
 

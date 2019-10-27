@@ -4,7 +4,7 @@ from random import shuffle
 
 class Student:
     def __init__(self, json_idx):
-        with open("./student_data.json") as json_data:
+        with open("./data/student_data.json") as json_data:
             self.data = json.load(json_data)[json_idx]
         self.ranked_preferences = self.data["importance"]
         shuffle(self.ranked_preferences)

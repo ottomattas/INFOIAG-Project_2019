@@ -33,11 +33,11 @@
       "period": "P4",
       "hobby": "",
       "topics": [
-        "Logic",
-        "ComputerGraphics"
+        "GeneralHistory",
+        "SpecificHistory"
       ],
       "skills": [
-        "Programming"
+        "AcademicWriting"
       ],
       "likes": [
         1
@@ -61,11 +61,11 @@
       "period": "P3",
       "hobby": "",
       "topics": [
-        "Logic",
-        "ComputerGraphics"
+        "Ethics",
+        "TextAnalysis"
       ],
       "skills": [
-        "Programming"
+        "CriticalThinking"
       ],
       "likes": [
         1
@@ -89,8 +89,8 @@
       "period": "P4",
       "hobby": "",
       "topics": [
-        "Logic",
-        "ComputerGraphics"
+        "Algorithms",
+        "Databases"
       ],
       "skills": [
         "Programming"
@@ -117,11 +117,11 @@
       "period": "P2",
       "hobby": "",
       "topics": [
-        "Logic",
-        "ComputerGraphics"
+        "Finance",
+        "Sustainability"
       ],
       "skills": [
-        "Programming"
+        "Creativity"
       ],
       "likes": [
         1
@@ -149,7 +149,7 @@
         "ComputerGraphics"
       ],
       "skills": [
-        "Programming"
+        "Debating"
       ],
       "likes": [
         1

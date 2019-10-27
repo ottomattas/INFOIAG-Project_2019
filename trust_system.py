@@ -1,5 +1,4 @@
 from statistics import mean
-from pprint import pprint
 
 
 class AgentModel:
@@ -36,7 +35,6 @@ class AgentModel:
             diff_list = [abs(self.course_ratings[c] - model_ratings[c]) for c in common]
             trust_dict[model.id] = (10 - mean(diff_list)) * 0.1 * scale
         self.trust_dict = trust_dict
-        return trust_dict
 
     @staticmethod
     def score(x):
@@ -49,14 +47,13 @@ class AgentModel:
     @staticmethod
     def score_discount(x):
         # 1 + 0.9 + ... + 0.1 + 0.0
-        max = (10 * 11 / 2) / 10
+        mx = (10 * 11 / 2) / 10
         if x > 10:
-            return max
+            return mx
         n = 10 - x
-        return max - ((n * (n + 1) / 2) / 10)
+        return mx - ((n * (n + 1) / 2) / 10)
 
-
-    def course_scores(self, agents_models):
+    def generate_course_scores(self, agents_models):
         if not self.trust_dict:
             return
 
@@ -64,12 +61,11 @@ class AgentModel:
         for model in agents_models:
             model_ratings = model.get_course_ratings()
             for course in model_ratings:
-                model_ratings[course] = AgentModel.score(model_ratings[course]) * self.trust_dict[model.id] * AgentModel.score_discount(len(self.trust_dict))
+                model_ratings[course] = AgentModel.score(model_ratings[course]) * self.trust_dict[
+                    model.id] * AgentModel.score_discount(len(self.trust_dict))
             trust_scores_dict[model.id] = model_ratings
 
         self.trust_scores_dict = trust_scores_dict
-        return trust_scores_dict
-
 
 # models_list = []
 # for i in range(6):
