@@ -189,15 +189,15 @@ else:
 
 
 #%%
+# Generate a random course for a student
 all_courses = onto.Course.instances()
 all_students = onto.Student.instances()
 
 for temp_student in all_students:
     if len(onto.Student.hasTaken) < 1:
         took = random.sample(all_courses, 1)
-
-        # temp_student.hasTaken.append(took[0])
         print(f"Student has taken: {took[0]}")
+        temp_student.hasTaken.append(took[0])
 
 
 
@@ -206,7 +206,7 @@ for temp_student in all_students:
 all_courses = onto.Course.instances()
 all_hobbies = onto.Hobby.instances()
 all_students = onto.Student.instances()
-temp_student = all_students[1]
+# temp_student = all_students[1]
 for temp_student in all_students:
     # temp_student.hasTaken
     try:
@@ -230,10 +230,21 @@ all_students = onto.Student.instances()
 temp_student = all_students[1]
 for temp_student in all_students:
     # temp_student.hasTaken
-    candidate_friends = set(random.sample(all_students, random.randrange(2))) - set([temp_student])
+    candidate_friends = set(random.sample(all_students, random.randrange(3))) - set([temp_student])
     print(f"Student {temp_student.name}: has {candidate_friends} as friends")
-    # print(f"Took: {selected_courses_taken}")
     temp_student.hasFriend.extend(candidate_friends)
+
+
+#%%
+all_courses = onto.Course.instances()
+all_hobbies = onto.Hobby.instances()
+all_students = onto.Student.instances()
+temp_student = all_students[1]
+for temp_student in all_students:
+    # temp_student.hasTaken
+    candidate_hobby = random.sample(all_hobbies, random.randrange(2))
+    print(f"Student {temp_student.name} practises {candidate_hobby}")
+    temp_student.practices.extend(candidate_hobby)
 
 # =================================================================
 # %%
