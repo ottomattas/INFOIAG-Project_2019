@@ -196,9 +196,19 @@ if len(onto.Student.instances()) < no_of_required_students:
 else:
     print("Not necessary to add a Student")
 
+#%%
+import random
+import numpy as np
+import names
+all_courses = onto.Course.instances()
+all_hobbies = onto.Hobby.instances()
+all_students = onto.Student.instances()
+temp_student = all_students[0]
+temp_student.hasTaken
 
-
-
+# =================================================================
+# %%
+onto.sync_reasoner(infer_property_value = True)
 # =================================================================
 # %%
 onto.save(file="ultimate_ontology.owl", format="rdfxml")
