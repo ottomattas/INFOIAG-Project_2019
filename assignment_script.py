@@ -168,21 +168,13 @@ for period in all_periods:
                     else:
                         print(prefix + f"Couldn't set a course!")
 
-# TODO: Rename canTake to unlocks
-# TODO: Add functional:
+
 # %%
 # TODO: Generate Students up to ten students
 no_of_required_students = len(range(30)) 
 all_courses = onto.Course.instances()
 all_hobbies = onto.Hobby.instances()
 all_students = onto.Student.instances()
-# picked_courses = [all_courses[course_idx] for course_idx in np.where(kmeans.labels_ == kmeans.predict(Xdf.loc[[random_course_of_teacher]])[0])[0]]
-# temp_student = onto.Student(f"Student{num+1}")
-# temp_student.firstName.append(names.get_first_name())
-# temp_student.secondName.append(names.get_last_name())
-# temp_student.studentID.append(num)
-
-# print(temp_student)
 
 if len(onto.Student.instances()) < no_of_required_students:
     for num in range(len(onto.Student.instances()), no_of_required_students):
@@ -195,6 +187,20 @@ if len(onto.Student.instances()) < no_of_required_students:
 else:
     print("Not necessary to add a Student")
 
+
+#%%
+all_courses = onto.Course.instances()
+all_students = onto.Student.instances()
+
+for temp_student in all_students:
+    if len(onto.Student.hasTaken) < 1:
+        took = random.sample(all_courses, 1)
+
+        # temp_student.hasTaken.append(took[0])
+        print(f"Student has taken: {took[0]}")
+
+
+
 #%%
 
 all_courses = onto.Course.instances()
@@ -203,12 +209,18 @@ all_students = onto.Student.instances()
 temp_student = all_students[1]
 for temp_student in all_students:
     # temp_student.hasTaken
-    candidate_courses = np.where(kmeans.labels_ == kmeans.predict(Xdf.loc[Xdf.index==temp_student.hasTaken[0].name])[0])[0]
-    candidate_courses_labelled = [all_courses[idx] for idx in candidate_courses]
-    print(f"Student {temp_student.name}: with {temp_student.hasTaken[0]} has following candidate courses {candidate_courses_labelled}")
-    selected_courses_taken = random.sample(candidate_courses_labelled, random.randrange(2))
-    print(f"Took: {selected_courses_taken}")
-    temp_student.hasTaken.extend(selected_courses_taken)
+    try:
+        predicted_courses = kmeans.predict(Xdf.loc[Xdf.index==temp_student.hasTaken[0].name])[0]
+        get_group = np.where(kmeans.labels_ == predicted_courses)
+        if len(get_group):
+            candidate_courses = get_group[0]
+            candidate_courses_labelled = [all_courses[idx] for idx in candidate_courses]
+            print(f"Student {temp_student.name}: with {temp_student.hasTaken[0]} has following candidate courses {candidate_courses_labelled}")
+            selected_courses_taken = random.sample(candidate_courses_labelled, random.randrange(2))
+            print(f"Took: {selected_courses_taken}")
+            temp_student.hasTaken.extend(selected_courses_taken)
+    except Exception as e:
+        print(e)
 
 
 #%%
