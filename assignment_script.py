@@ -4,6 +4,8 @@ import pandas as pd
 from sklearn.cluster import KMeans
 import owlready2 as owl
 import numpy as np
+import random
+import names
 ONTOLOGY_FILE = "./dev_ontology.owl"
 ONTOLOGY_FILE2 = "./ultimate_ontology.owl"
 
@@ -170,9 +172,6 @@ for period in all_periods:
 # TODO: Add functional:
 # %%
 # TODO: Generate Students up to ten students
-import random
-import numpy as np
-import names
 no_of_required_students = len(range(10)) 
 all_courses = onto.Course.instances()
 all_hobbies = onto.Hobby.instances()
@@ -197,9 +196,7 @@ else:
     print("Not necessary to add a Student")
 
 #%%
-import random
-import numpy as np
-import names
+
 all_courses = onto.Course.instances()
 all_hobbies = onto.Hobby.instances()
 all_students = onto.Student.instances()
@@ -212,6 +209,20 @@ for temp_student in all_students:
     selected_courses_taken = random.sample(candidate_courses_labelled, random.randrange(2))
     print(f"Took: {selected_courses_taken}")
     temp_student.hasTaken.extend(selected_courses_taken)
+
+
+#%%
+all_courses = onto.Course.instances()
+all_hobbies = onto.Hobby.instances()
+all_students = onto.Student.instances()
+temp_student = all_students[1]
+for temp_student in all_students:
+    # temp_student.hasTaken
+    candidate_friends = set(random.sample(all_students, random.randrange(2))) - set(temp_student)
+    print(f"Student {temp_student.name}: has {candidate_friends} as friends")
+    # print(f"Took: {selected_courses_taken}")
+    # temp_student.hasTaken.extend(selected_courses_taken)
+
 # =================================================================
 # %%
 onto.save(file="ultimate_ontology.owl", format="rdfxml")
