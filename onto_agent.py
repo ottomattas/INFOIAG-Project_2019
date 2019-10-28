@@ -9,7 +9,7 @@ warnings.filterwarnings("ignore")
 class Agent:
 
     def __init__(self, trust_models, data):
-        self.ontology = get_ontology("./ultimate_ontology.owl")
+        self.ontology = get_ontology("./ontology.owl")
         self.ontology.load()
         with self.ontology:
             sync_reasoner(infer_property_values=True)
