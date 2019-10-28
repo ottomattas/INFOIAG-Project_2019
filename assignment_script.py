@@ -209,7 +209,7 @@ all_students = onto.Student.instances()
 # temp_student = all_students[1]
 for temp_student in all_students:
     # temp_student.hasTaken
-    try:
+    try:p
         predicted_courses = kmeans.predict(Xdf.loc[Xdf.index==temp_student.hasTaken[0].name])[0]
         get_group = np.where(kmeans.labels_ == predicted_courses)
         if len(get_group):
