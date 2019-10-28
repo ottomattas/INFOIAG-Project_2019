@@ -1,11 +1,11 @@
 # %%
-from sklearn.decomposition import PCA
+#from sklearn.decomposition import PCA
 import pandas as pd
-from sklearn.cluster import KMeans
+#from sklearn.cluster import KMeans
 import owlready2 as owl
 import numpy as np
 import random
-import names
+#import names
 ONTOLOGY_FILE = "./dev_ontology.owl"
 ONTOLOGY_FILE2 = "./ultimate_ontology.owl"
 
@@ -234,6 +234,72 @@ for temp_student in all_students:
     print(f"Student {temp_student.name}: has {candidate_friends} as friends")
     temp_student.hasFriend.extend(candidate_friends)
 
+#%%
+from itertools import chain
+import json
+import random
+import owlready2 as owl
+import pprint
+
+def extract_topics(course_list):
+    return list(set([topic.name
+                for topic in list(chain.from_iterable([c.covers for c in course_list]))
+                ]))
+
+
+onto = owl.get_ontology("./ultimate_ontology.owl")
+onto.load()
+all_students = onto.Student.instances()
+
+with open("./data/student_data_new.json") as json_data:
+    data = json.load(json_data)
+
+# with onto:
+#     owl.sync_reasoner(infer_property_values=True)
+
+weekdays = ["Mo","Tu","We","Th","Fr"]
+periods = ["P1","P2","P3","P4"]
+
+
+for idx, s in enumerate(all_students):
+    id = s.studentID
+    hobby = str(s.practices)
+    inte = random.randint(0,2)
+
+    if inte == 0:
+        topics = random.choices(extract_topics(onto.HumanitiesCourse.instances()), k=(inte + 2))
+    elif inte == 1:
+        topics = random.choices(extract_topics(onto.ScienceCourse.instances()), k=(inte + 2))
+    elif inte == 2:
+        topics = random.choices(extract_topics(onto.SocialCourse.instances()), k=(inte + 2))
+
+    skills = random.choices(s.hasSkill, k=3)
+    like = random.randint(0,29)
+    dislike = random.randint(0,29)
+    friends = bool(random.randint(0,1))
+    weekday = random.choice(weekdays)
+    period = random.choice(periods)
+
+
+    for i in range(len(skills)):
+        skills[i] = str(skills[i])
+
+    skills = set(skills)
+
+    data[idx]["id"] = id
+    data[idx]["preferences"]["period"] = period
+    data[idx]["preferences"]["hobby"] = hobby
+    data[idx]["preferences"]["topics"] = topics
+    data[idx]["preferences"]["skills"] = list(skills)
+    data[idx]["preferences"]["likes"] = like
+    data[idx]["preferences"]["dislikes"] = dislike
+    data[idx]["preferences"]["friends"] = friends
+    data[idx]["preferences"]["weekday"] = weekday
+
+
+
+with open('./data/student_data_final.json', 'w') as outfile:
+    json.dump(data, outfile, indent=4)
 
 #%%
 all_courses = onto.Course.instances()

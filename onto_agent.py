@@ -1,4 +1,4 @@
-from itertools import combinations
+from itertools import combinations, chain
 from pprint import pprint
 
 from owlready2 import *
@@ -18,12 +18,10 @@ class Agent:
         self.pref_weight = None
         self.trust_models = trust_models
         self.student_obj = self.ontology.search(studentID=data["id"])[0]
-        self.disliked_teachers_obj = [self.ontology.search(teacherID=teacher_id)[0]
-                                      for teacher_id in data["preferences"]["dislikes"]
-                                      ]
-        self.liked_teachers_obj = [self.ontology.search(teacherID=teacher_id)[0]
-                                   for teacher_id in data["preferences"]["likes"]
-                                   ]
+        self.disliked_teachers_obj = self.ontology.search(teacherID=data["preferences"]["dislikes"])[0]
+
+        self.liked_teachers_obj = self.ontology.search(teacherID=data["preferences"]["likes"])[0]
+
         self.friends_obj = self.student_obj.hasFriend
 
     @staticmethod
@@ -55,6 +53,7 @@ class Agent:
 
     @staticmethod
     def generate_combinations(courses):
+        print(len(list(combinations(courses, 2)) + list(combinations(courses, 3))))
         return list(combinations(courses, 2)) + list(combinations(courses, 3))
 
     @staticmethod
@@ -92,28 +91,26 @@ class Agent:
         return taken_courses
 
     def extract_possible_courses(self):
-        can_take = self.student_obj.canTake
+        can_take = self.student_obj.unlockedCourse
         return can_take
 
     def extract_basic_courses(self):
-        basic_courses = self.ontology.BasicCourse
+        basic_courses = set(self.ontology.Course.instances()).difference(set(self.ontology.AdvancedCourse.instances()))
         return basic_courses
 
     def get_dislikes_scores(self, course, weight):
-        for teacher in self.disliked_teachers_obj:
-            if course.name in [c.name for c in teacher.teaches]:
-                return -weight
+        if course.name in [c.name for c in self.disliked_teachers_obj.teaches]:
+            return -weight
         return weight
 
     def get_likes_scores(self, course, weight):
-        for teacher in self.liked_teachers_obj:
-            if course.name in [c.name for c in teacher.teaches]:
-                return weight
+        if course.name in [c.name for c in self.liked_teachers_obj.teaches]:
+            return weight
         return -weight
 
     def get_friends_scores(self, course, weight):
         friends_courses = [friend.takes for friend in self.friends_obj]
-        courses = [c.name for c in list(itertools.chain.from_iterable(friends_courses))]
+        courses = [c.name for c in list(chain.from_iterable(friends_courses))]
         if course.name in courses:
             return weight
         return -weight
@@ -173,25 +170,11 @@ class Agent:
         courses = self.get_courses_per_period()[period]
         self.packages = self.generate_combinations(courses)
 
-    # def match_preferences(self, period):
-    #     #     try:
-    #     #         if ranked_packages[-1][1] == ranked_packages[-2][1]:
-    #     #             self.print_debug(
-    #     #                 "WARNING:\nThere is a tie, system will narrow down by matching \n"
-    #     #                 "similarity with previously taken courses.")
-    #     #             similar_packages = self.similarity_rank(ranked_packages)
-    #     #             return similar_packages[-1]
-    #     #     except IndexError:
-    #     #         self.print_debug(
-    #     #             "WARNING:\nLooks like there is only one combination possible.")
-    #     #         return ranked_packages[-1]
-
     def get_courses_per_period(self):
         taken_course = self.extract_courses_taken()
         possible_course = self.extract_possible_courses()
-        basic_course_without_preliminary = [c for c in self.extract_basic_courses().instances()
-                                            if len(c.hasPreliminary) <= 0
-                                            ]
+        basic_course_without_preliminary = [c for c in self.extract_basic_courses()
+                                            if not c.hasPreliminary]
 
         takeable = set(possible_course).union(set(basic_course_without_preliminary))
         final_takeable = takeable.difference(set(taken_course))

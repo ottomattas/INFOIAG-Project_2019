@@ -1,0 +1,782 @@
+[
+    {
+        "id": 0,
+        "preferences": {
+            "period": "P3",
+            "hobby": "",
+            "topics": [
+                "ComputationalModeling",
+                "Language",
+                "Youth",
+                "Media"
+            ],
+            "skills": [
+                "AcademicWriting",
+                "Experimentation"
+            ],
+            "likes": 5,
+            "dislikes": 16,
+            "friends": true,
+            "weekday": "Tu"
+        },
+        "importance": [
+            "friends",
+            "likes",
+            "skills",
+            "topics"
+        ]
+    },
+    {
+        "id": 9,
+        "preferences": {
+            "period": "P1",
+            "hobby": "Sewing",
+            "topics": [
+                "BioEngineering",
+                "ProgrammingLanguages",
+                "CognitivePsychology"
+            ],
+            "skills": [
+                "Programming",
+                "Teamwork"
+            ],
+            "likes": 13,
+            "dislikes": 13,
+            "friends": false,
+            "weekday": "Th"
+        },
+        "importance": [
+            "friends",
+            "likes",
+            "skills",
+            "topics"
+        ]
+    },
+    {
+        "id": 28,
+        "preferences": {
+            "period": "P4",
+            "hobby": "",
+            "topics": [
+                "Microeconomics",
+                "Syntax"
+            ],
+            "skills": [
+                "CriticalThinking",
+                "Presenting"
+            ],
+            "likes": 10,
+            "dislikes": 22,
+            "friends": false,
+            "weekday": "Mo"
+        },
+        "importance": [
+            "friends",
+            "likes",
+            "skills",
+            "topics"
+        ]
+    },
+    {
+        "id": 10,
+        "preferences": {
+            "period": "P4",
+            "hobby": "",
+            "topics": [
+                "Semantics",
+                "Finance",
+                "Media",
+                "Education"
+            ],
+            "skills": [
+                "AcademicWriting",
+                "Debating",
+                "Presenting"
+            ],
+            "likes": 26,
+            "dislikes": 25,
+            "friends": true,
+            "weekday": "Th"
+        },
+        "importance": [
+            "friends",
+            "likes",
+            "skills",
+            "topics"
+        ]
+    },
+    {
+        "id": 17,
+        "preferences": {
+            "period": "P1",
+            "hobby": "Tennis",
+            "topics": [
+                "ProgrammingLanguages",
+                "Topology",
+                "Neurobiology"
+            ],
+            "skills": [
+                "Programming",
+                "Teamwork"
+            ],
+            "likes": 19,
+            "dislikes": 16,
+            "friends": false,
+            "weekday": "Fr"
+        },
+        "importance": [
+            "friends",
+            "likes",
+            "skills",
+            "topics"
+        ]
+    },
+    {
+        "id": 18,
+        "preferences": {
+            "period": "P2",
+            "hobby": "",
+            "topics": [
+                "ChemicalBonding",
+                "Botany",
+                "Mechanics"
+            ],
+            "skills": [
+                "Summarisation"
+            ],
+            "likes": 12,
+            "dislikes": 23,
+            "friends": true,
+            "weekday": "Fr"
+        },
+        "importance": [
+            "friends",
+            "likes",
+            "skills",
+            "topics"
+        ]
+    },
+    {
+        "id": 11,
+        "preferences": {
+            "period": "P3",
+            "hobby": "Sewing",
+            "topics": [
+                "Media",
+                "ModernPhilosopy",
+                "Syntax"
+            ],
+            "skills": [
+                "AcademicWriting",
+                "Debating",
+                "Presenting"
+            ],
+            "likes": 23,
+            "dislikes": 8,
+            "friends": false,
+            "weekday": "Mo"
+        },
+        "importance": [
+            "friends",
+            "likes",
+            "skills",
+            "topics"
+        ]
+    },
+    {
+        "id": 1,
+        "preferences": {
+            "period": "P1",
+            "hobby": "Archery",
+            "topics": [
+                "ModernPhilosopy",
+                "Thermodynamics",
+                "ComputerArchitecture"
+            ],
+            "skills": [
+                "CriticalThinking",
+                "Presenting"
+            ],
+            "likes": 26,
+            "dislikes": 18,
+            "friends": true,
+            "weekday": "Th"
+        },
+        "importance": [
+            "friends",
+            "likes",
+            "skills",
+            "topics"
+        ]
+    },
+    {
+        "id": 22,
+        "preferences": {
+            "period": "P3",
+            "hobby": "Football",
+            "topics": [
+                "Macroeconomics",
+                "AppliedEconomy",
+                "ClinicalPsychology",
+                "CognitivePsychology"
+            ],
+            "skills": [
+                "CriticalThinking"
+            ],
+            "likes": 5,
+            "dislikes": 3,
+            "friends": true,
+            "weekday": "Tu"
+        },
+        "importance": [
+            "friends",
+            "likes",
+            "skills",
+            "topics"
+        ]
+    },
+    {
+        "id": 12,
+        "preferences": {
+            "period": "P3",
+            "hobby": "",
+            "topics": [
+                "Algebra",
+                "ChemicalBonding",
+                "ElectroChemistry"
+            ],
+            "skills": [
+                "Programming",
+                "Teamwork"
+            ],
+            "likes": 17,
+            "dislikes": 27,
+            "friends": false,
+            "weekday": "We"
+        },
+        "importance": [
+            "friends",
+            "likes",
+            "skills",
+            "topics"
+        ]
+    },
+    {
+        "id": 13,
+        "preferences": {
+            "period": "P3",
+            "hobby": "Archery",
+            "topics": [
+                "Botany",
+                "ParticlePhysics",
+                "ScientificPhilosophy"
+            ],
+            "skills": [
+                "Programming",
+                "Teamwork"
+            ],
+            "likes": 14,
+            "dislikes": 26,
+            "friends": true,
+            "weekday": "Th"
+        },
+        "importance": [
+            "friends",
+            "likes",
+            "skills",
+            "topics"
+        ]
+    },
+    {
+        "id": 23,
+        "preferences": {
+            "period": "P1",
+            "hobby": "",
+            "topics": [
+                "CognitivePsychology",
+                "VictorianLiterature"
+            ],
+            "skills": [
+                "Programming",
+                "Teamwork"
+            ],
+            "likes": 0,
+            "dislikes": 18,
+            "friends": true,
+            "weekday": "Tu"
+        },
+        "importance": [
+            "friends",
+            "likes",
+            "skills",
+            "topics"
+        ]
+    },
+    {
+        "id": 6,
+        "preferences": {
+            "period": "P1",
+            "hobby": "",
+            "topics": [
+                "Sustainability",
+                "CognitivePsychology",
+                "Leadership",
+                "RaceAndEthnicity"
+            ],
+            "skills": [
+                "AcademicWriting",
+                "Summarisation"
+            ],
+            "likes": 5,
+            "dislikes": 17,
+            "friends": false,
+            "weekday": "Tu"
+        },
+        "importance": [
+            "friends",
+            "likes",
+            "skills",
+            "topics"
+        ]
+    },
+    {
+        "id": 14,
+        "preferences": {
+            "period": "P2",
+            "hobby": "Tennis",
+            "topics": [
+                "SpecificHistory",
+                "Politics"
+            ],
+            "skills": [
+                "AcademicWriting",
+                "Experimentation",
+                "Creativity"
+            ],
+            "likes": 14,
+            "dislikes": 14,
+            "friends": false,
+            "weekday": "Fr"
+        },
+        "importance": [
+            "friends",
+            "likes",
+            "skills",
+            "topics"
+        ]
+    },
+    {
+        "id": 15,
+        "preferences": {
+            "period": "P2",
+            "hobby": "Sewing",
+            "topics": [
+                "RaceAndEthnicity",
+                "Institutions",
+                "Finance",
+                "ComputationalModeling"
+            ],
+            "skills": [
+                "CriticalThinking",
+                "Summarisation"
+            ],
+            "likes": 25,
+            "dislikes": 7,
+            "friends": true,
+            "weekday": "Th"
+        },
+        "importance": [
+            "friends",
+            "likes",
+            "skills",
+            "topics"
+        ]
+    },
+    {
+        "id": 27,
+        "preferences": {
+            "period": "P1",
+            "hobby": "",
+            "topics": [
+                "SpecificHistory",
+                "Syntax"
+            ],
+            "skills": [
+                "Creativity",
+                "Presenting"
+            ],
+            "likes": 5,
+            "dislikes": 8,
+            "friends": true,
+            "weekday": "Th"
+        },
+        "importance": [
+            "friends",
+            "likes",
+            "skills",
+            "topics"
+        ]
+    },
+    {
+        "id": 16,
+        "preferences": {
+            "period": "P2",
+            "hobby": "Saxophone",
+            "topics": [
+                "ScientificPhilosophy",
+                "Media",
+                "Media"
+            ],
+            "skills": [
+                "Debating",
+                "Presenting"
+            ],
+            "likes": 2,
+            "dislikes": 5,
+            "friends": false,
+            "weekday": "We"
+        },
+        "importance": [
+            "friends",
+            "likes",
+            "skills",
+            "topics"
+        ]
+    },
+    {
+        "id": 19,
+        "preferences": {
+            "period": "P2",
+            "hobby": "",
+            "topics": [
+                "ProgrammingLanguages",
+                "Calculus",
+                "ComputerGraphics"
+            ],
+            "skills": [
+                "Summarisation"
+            ],
+            "likes": 19,
+            "dislikes": 23,
+            "friends": true,
+            "weekday": "Fr"
+        },
+        "importance": [
+            "friends",
+            "likes",
+            "skills",
+            "topics"
+        ]
+    },
+    {
+        "id": 21,
+        "preferences": {
+            "period": "P2",
+            "hobby": "",
+            "topics": [
+                "AppliedEconomy",
+                "Culture"
+            ],
+            "skills": [
+                "AcademicWriting",
+                "Debating",
+                "Presenting"
+            ],
+            "likes": 28,
+            "dislikes": 25,
+            "friends": true,
+            "weekday": "Tu"
+        },
+        "importance": [
+            "friends",
+            "likes",
+            "skills",
+            "topics"
+        ]
+    },
+    {
+        "id": 4,
+        "preferences": {
+            "period": "P2",
+            "hobby": "IceSkating",
+            "topics": [
+                "AppliedEconomy",
+                "Education",
+                "Sustainability",
+                "ClinicalPsychology"
+            ],
+            "skills": [
+                "CriticalThinking",
+                "Debating",
+                "Presenting"
+            ],
+            "likes": 4,
+            "dislikes": 27,
+            "friends": true,
+            "weekday": "We"
+        },
+        "importance": [
+            "friends",
+            "likes",
+            "skills",
+            "topics"
+        ]
+    },
+    {
+        "id": 20,
+        "preferences": {
+            "period": "P3",
+            "hobby": "",
+            "topics": [
+                "BioEngineering",
+                "Thermodynamics",
+                "Botany"
+            ],
+            "skills": [
+                "Programming",
+                "Teamwork"
+            ],
+            "likes": 20,
+            "dislikes": 21,
+            "friends": false,
+            "weekday": "Tu"
+        },
+        "importance": [
+            "friends",
+            "likes",
+            "skills",
+            "topics"
+        ]
+    },
+    {
+        "id": 24,
+        "preferences": {
+            "period": "P4",
+            "hobby": "Saxophone",
+            "topics": [
+                "CognitivePsychology",
+                "Sustainability",
+                "Syntax",
+                "Culture"
+            ],
+            "skills": [
+                "Programming",
+                "Teamwork"
+            ],
+            "likes": 28,
+            "dislikes": 14,
+            "friends": true,
+            "weekday": "We"
+        },
+        "importance": [
+            "friends",
+            "likes",
+            "skills",
+            "topics"
+        ]
+    },
+    {
+        "id": 25,
+        "preferences": {
+            "period": "P1",
+            "hobby": "Sewing",
+            "topics": [
+                "Microeconomics",
+                "Religion"
+            ],
+            "skills": [
+                "Programming",
+                "Teamwork"
+            ],
+            "likes": 8,
+            "dislikes": 18,
+            "friends": false,
+            "weekday": "Tu"
+        },
+        "importance": [
+            "friends",
+            "likes",
+            "skills",
+            "topics"
+        ]
+    },
+    {
+        "id": 26,
+        "preferences": {
+            "period": "P1",
+            "hobby": "",
+            "topics": [
+                "ModernPhilosopy",
+                "Ethics",
+                "Ethics",
+                "Finance"
+            ],
+            "skills": [
+                "Summarisation"
+            ],
+            "likes": 4,
+            "dislikes": 14,
+            "friends": true,
+            "weekday": "Th"
+        },
+        "importance": [
+            "friends",
+            "likes",
+            "skills",
+            "topics"
+        ]
+    },
+    {
+        "id": 2,
+        "preferences": {
+            "period": "P1",
+            "hobby": "",
+            "topics": [
+                "ScientificPhilosophy",
+                "Semantics"
+            ],
+            "skills": [
+                "Programming",
+                "Teamwork",
+                "Presenting"
+            ],
+            "likes": 1,
+            "dislikes": 17,
+            "friends": true,
+            "weekday": "Fr"
+        },
+        "importance": [
+            "friends",
+            "likes",
+            "skills",
+            "topics"
+        ]
+    },
+    {
+        "id": 29,
+        "preferences": {
+            "period": "P1",
+            "hobby": "Tennis",
+            "topics": [
+                "CognitivePsychology",
+                "ComputationalModeling",
+                "Semantics",
+                "Youth"
+            ],
+            "skills": [
+                "Programming",
+                "Teamwork"
+            ],
+            "likes": 22,
+            "dislikes": 1,
+            "friends": false,
+            "weekday": "Th"
+        },
+        "importance": [
+            "friends",
+            "likes",
+            "skills",
+            "topics"
+        ]
+    },
+    {
+        "id": 8,
+        "preferences": {
+            "period": "P3",
+            "hobby": "",
+            "topics": [
+                "GeneralHistory",
+                "Culture"
+            ],
+            "skills": [
+                "Programming",
+                "Teamwork"
+            ],
+            "likes": 15,
+            "dislikes": 1,
+            "friends": false,
+            "weekday": "Mo"
+        },
+        "importance": [
+            "friends",
+            "likes",
+            "skills",
+            "topics"
+        ]
+    },
+    {
+        "id": 3,
+        "preferences": {
+            "period": "P2",
+            "hobby": "ScubaDiving",
+            "topics": [
+                "ContemporaryLiterature",
+                "Ethics"
+            ],
+            "skills": [
+                "Programming",
+                "Teamwork"
+            ],
+            "likes": 6,
+            "dislikes": 3,
+            "friends": true,
+            "weekday": "Tu"
+        },
+        "importance": [
+            "friends",
+            "likes",
+            "skills",
+            "topics"
+        ]
+    },
+    {
+        "id": 5,
+        "preferences": {
+            "period": "P2",
+            "hobby": "",
+            "topics": [
+                "InferentialArgumentation",
+                "ChemicalEngineering",
+                "ProgrammingLanguages"
+            ],
+            "skills": [
+                "Debating",
+                "Presenting"
+            ],
+            "likes": 3,
+            "dislikes": 0,
+            "friends": true,
+            "weekday": "Mo"
+        },
+        "importance": [
+            "friends",
+            "likes",
+            "skills",
+            "topics"
+        ]
+    },
+    {
+        "id": 7,
+        "preferences": {
+            "period": "P3",
+            "hobby": "",
+            "topics": [
+                "AppliedEconomy",
+                "ScientificPhilosophy"
+            ],
+            "skills": [
+                "Summarisation"
+            ],
+            "likes": 22,
+            "dislikes": 23,
+            "friends": false,
+            "weekday": "Fr"
+        },
+        "importance": [
+            "friends",
+            "likes",
+            "skills",
+            "topics"
+        ]
+    }
+]

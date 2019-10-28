@@ -4,20 +4,21 @@ from random import shuffle, randint, seed
 
 class Student:
     def __init__(self, json_idx):
-        with open("./data/student_data.json") as json_data:
+        with open("./data/student_data_final.json") as json_data:
             self.data = json.load(json_data)[json_idx]
         self.ranked_preferences = self.data["importance"]
         shuffle(self.ranked_preferences)
         self.given_preferences = []
         self.preferences = self.data["preferences"]
-        self.prf_idx = 2
+        self.prf_idx = 0
         seed()
 
     def get_next_preference(self):
-        if self.prf_idx < len(self.preferences):
-            next_pref = list(self.preferences.items())[self.prf_idx]
-            print("\nStudent gives new preference: {}\n".format(next_pref[0]))
-            self.given_preferences.append(next_pref)
+        if self.prf_idx < 3:
+            next_pref = self.ranked_preferences[self.prf_idx]
+            next_pref_value = self.preferences[next_pref]
+            print("\nStudent gives new preference: {}\n".format(next_pref))
+            self.given_preferences.append((next_pref, next_pref_value))
             self.prf_idx += 1
             return next_pref
         return None

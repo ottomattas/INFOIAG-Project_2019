@@ -22,7 +22,7 @@ class StateMachine(object):
         a.trust(models_list)
         a.generate_course_scores(models_list)
 
-        with open("./data/student_data.json") as json_data:
+        with open("./data/student_data_final.json") as json_data:
             data = json.load(json_data)
 
         for idx in range(len(data) - 1):
@@ -78,11 +78,12 @@ class PresentResult(StateMachine):
 
 class AskPreferenceState(StateMachine):
     def update(self, agent, student):
-        print("-" * 25, "Current state: ", str(self.currentState).split(".")[1].split()[0], "-" * 25)
         next_pref = student.get_next_preference()
         if next_pref is None:
+            print("End of possible preferences.")
             self.nextState = EndState()
             return
+        print("-" * 25, "Current state: ", str(self.currentState).split(".")[1].split()[0], "-" * 25)
         curr_prefs = student.given_preferences
         print("Basing courses on: {} \n ".format(curr_prefs))
         agent.rank(curr_prefs)
@@ -108,6 +109,7 @@ class AskStrictFilters(StateMachine):
 class EndState(StateMachine):
     def update(self, agent, student):
         print("-" * 25, "Current state: ", str(self.currentState).split(".")[1].split()[0], "-" * 25)
+        print("\nExiting.\n")
         self.currentState = None
 
 
