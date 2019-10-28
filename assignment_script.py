@@ -118,7 +118,7 @@ for idx in range(no_clusters):
 #%%
 import names
 
-no_of_required_teachers = len(range(30)) 
+no_of_required_teachers = len(range(20)) 
 if len(onto.Teacher.instances()) < no_of_required_teachers:
     for num in range(len(onto.Teacher.instances()), no_of_required_teachers):
         temp_teacher = onto.Teacher(f"Teacher{num+1}")
@@ -129,10 +129,12 @@ if len(onto.Teacher.instances()) < no_of_required_teachers:
 else:
     print("Not necessary to add a Teacher")
 # TODO: Teachers and their subjects per period
+
+#%%
 import numpy as np
-all_periods = onto.search(type=onto.Period)
-all_teachers = onto.search(type=onto.Teacher)
-all_courses = onto.search(type=onto.Course)
+all_periods = onto.Period.instances()
+all_teachers = onto.Teacher.instances()
+all_courses = list(onto.Course.instances())
 # for i in range(6):
 for period in all_periods:
     for teacher in all_teachers:
@@ -146,25 +148,31 @@ for period in all_periods:
                 print(prefix + f"Will pick a course for period {period.name}")
                 if len(teacher.teaches) < 1:
                     print(prefix + "Pick random")
-                    picked_course = np.random.choice(all_courses)
+                    picked_course = np.random.choice(list(all_courses))
+                    all_courses = set(all_courses) - set([picked_course])
                     print(prefix + f"Picked => {picked_course}")
                     teacher.teaches.append(picked_course)
                 else:
                     random_course_of_teacher = np.random.choice(teacher.teaches).name
                     print(prefix + f"Pick nearest of random for: '{random_course_of_teacher}'")
-                    picked_courses = [all_courses[course_idx] for course_idx in np.where(kmeans.labels_ == kmeans.predict(Xdf.loc[[random_course_of_teacher]])[0])[0]]
-                    print(teacher.teaches)
-                    print(picked_courses[0].isTaughtOnPeriod)
-                    filtered_courses = set(picked_courses) - set(teacher.teaches)
-                    print(filtered_courses)
+                    course_indices_of_picked_courses = np.where(kmeans.labels_ == kmeans.predict(Xdf.loc[[random_course_of_teacher]])[0])
+                    picked_courses = Xdf.iloc[course_indices_of_picked_courses[0],:].index.values
+
+                    # print(teacher.teaches)
+                    # print(picked_courses[0].isTaughtOnPeriod)
                     isBusyOn = [p for x in teacher.teaches for p in x.isTaughtOnPeriod]
-                    filtered_courses = [c for c in picked_courses if c.isTaughtOnPeriod[0] not in isBusyOn]
-                    print(filtered_courses)
+                    filtered_courses = [c for c in all_courses if c.name in picked_courses]
+                    filtered_courses = [c for c in filtered_courses if c.isTaughtOnPeriod[0] not in isBusyOn]
+                    filtered_courses = set(filtered_courses) - set(teacher.teaches)
+                    # filtered_courses = set([c.name for c in all_courses]).intersection(set(picked_courses))
+                    # print(filtered_courses)
+                    # print(filtered_courses)
                     print(prefix + f"These are the candidate courses {picked_courses}")
                     if len(filtered_courses):
-                        picked_course = np.random.choice(filtered_courses)
-                        print(prefix + f"Picked => {picked_course}")
-                        teacher.teaches.append(picked_course)
+                            picked_course = np.random.choice(list(filtered_courses))
+                            print(prefix + f"Picked => {picked_course}")
+                            all_courses = set(all_courses) - set([picked_course])
+                            teacher.teaches.append(picked_course)
                     else:
                         print(prefix + f"Couldn't set a course!")
 
@@ -263,7 +271,7 @@ periods = ["P1","P2","P3","P4"]
 
 for idx, s in enumerate(all_students):
     id = s.studentID
-    hobby = str(s.practices)
+    hobby = str(s.practices).strip("[").strip("]")
     inte = random.randint(0,2)
 
     if inte == 0:
@@ -274,8 +282,8 @@ for idx, s in enumerate(all_students):
         topics = random.choices(extract_topics(onto.SocialCourse.instances()), k=(inte + 2))
 
     skills = random.choices(s.hasSkill, k=3)
-    like = random.randint(0,29)
-    dislike = random.randint(0,29)
+    like = random.randint(0,19)
+    dislike = random.randint(0,19)
     friends = bool(random.randint(0,1))
     weekday = random.choice(weekdays)
     period = random.choice(periods)
