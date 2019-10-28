@@ -1,5 +1,5 @@
 import json
-from random import shuffle
+from random import shuffle, randint, seed
 
 
 class Student:
@@ -11,6 +11,7 @@ class Student:
         self.given_preferences = []
         self.preferences = self.data["preferences"]
         self.prf_idx = 2
+        seed()
 
     def get_next_preference(self):
         if self.prf_idx < len(self.preferences):
@@ -20,6 +21,14 @@ class Student:
             self.prf_idx += 1
             return next_pref
         return None
+
+    @staticmethod
+    def confirm():
+        if randint(0, 10) > 0:
+            print("\nShow me more!\n")
+            return True
+        print("\nNo, bye!\n")
+        return False
 
     def get_ranked_preferences(self):
         return self.ranked_preferences
