@@ -147,6 +147,7 @@ for period in all_periods:
                 if len(teacher.teaches) < 1:
                     print(prefix + "Pick random")
                     picked_course = np.random.choice(all_courses)
+                    all_courses = set(all_courses) - set([picked_course])
                     print(prefix + f"Picked => {picked_course}")
                     teacher.teaches.append(picked_course)
                 else:
