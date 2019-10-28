@@ -118,7 +118,7 @@ for idx in range(no_clusters):
 #%%
 import names
 
-no_of_required_teachers = len(range(10)) 
+no_of_required_teachers = len(range(20)) 
 if len(onto.Teacher.instances()) < no_of_required_teachers:
     for num in range(len(onto.Teacher.instances()), no_of_required_teachers):
         temp_teacher = onto.Teacher(f"Teacher{num+1}")
