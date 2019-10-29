@@ -1,3 +1,4 @@
+import numpy as np
 from statistics import mean
 
 
@@ -44,6 +45,11 @@ class AgentModel:
             return -(5 - x) / 5
         return 0
 
+
+    @staticmethod
+    def sigmoid_score_discount(x):
+        return (11 / (1 + np.e ** (-x / 2))) - 5.5
+
     @staticmethod
     def score_discount(x):
         # 1 + 0.9 + ... + 0.1 + 0.0
@@ -62,7 +68,7 @@ class AgentModel:
             model_ratings = model.get_course_ratings()
             for course in model_ratings:
                 model_ratings[course] = AgentModel.score(model_ratings[course]) * self.trust_dict[
-                    model.id] * AgentModel.score_discount(len(self.trust_dict))
+                    model.id] * AgentModel.sigmoid_score_discount(len(self.trust_dict))
             trust_scores_dict[model.id] = model_ratings
 
         self.trust_scores_dict = trust_scores_dict

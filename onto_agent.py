@@ -40,12 +40,15 @@ class Agent:
         similar_courses = []
         topics = course.covers
         for c in all_courses:
+            r_meth = 0
             if c == course:
                 continue
+            if c.uses[0].name == course.uses[0].name:
+                r_meth = 1 / (len(topics) + 1)
             c_topic = c.covers
             similar = len(set(c_topic).intersection(set(topics)))
             dissimilar = len(set(c_topic).union(set(topics))) - similar
-            similar_courses.append((c, similar / (similar + dissimilar)))
+            similar_courses.append((c, similar / (similar + dissimilar + 1) + r_meth))
 
         similar_courses.sort(key=lambda t: t[1])
 
