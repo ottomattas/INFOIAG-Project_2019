@@ -18,11 +18,12 @@ class Agent:
         self.pref_weight = None
         self.trust_models = trust_models
         self.student_obj = self.ontology.search(studentID=data["id"])[0]
-        self.disliked_teachers_obj = self.ontology.search(teacherID=data["preferences"]["dislikes"])[0]
-
-        self.liked_teachers_obj = self.ontology.search(teacherID=data["preferences"]["likes"])[0]
-
         self.friends_obj = self.student_obj.hasFriend
+        if data["preferences"]["dislikes"]:
+            self.disliked_teachers_obj = self.ontology.search(teacherID=data["preferences"]["dislikes"])[0]
+
+        if data["preferences"]["likes"]:
+            self.liked_teachers_obj = self.ontology.search(teacherID=data["preferences"]["likes"])[0]
 
     @staticmethod
     def print_debug(*param):
@@ -82,6 +83,24 @@ class Agent:
         return len(set(topics).intersection(set(pref_topics))) / len(pref_topics)
 
     @staticmethod
+    def get_unwanted_topic_scores(course, unwanted_topics):
+        topics = course.covers
+        topics = [t.name for t in topics]
+        return -len(set(topics).intersection(set(unwanted_topics))) / len(unwanted_topics)
+
+    @staticmethod
+    def get_weekdays_score(course, weekdays):
+        course_weekdays = course.isTaughtOnWeekday
+        course_weekdays = [w.name for w in course_weekdays]
+        return len(set(weekdays).intersection(set(course_weekdays)))
+
+    @staticmethod
+    def get_unwanted_weekdays_score(course, weekdays):
+        course_weekdays = course.isTaughtOnWeekday
+        course_weekdays = [w.name for w in course_weekdays]
+        return -len(set(weekdays).intersection(set(course_weekdays)))
+
+    @staticmethod
     def get_skills_scores(course, pref_skills):
         research_met = course.uses
         skills = research_met[0].improves
@@ -134,6 +153,8 @@ class Agent:
             course_scores = []
             if "topics" in preferences: course_scores.append(
                 self.pref_weight["topics"] * self.get_topics_scores(c, preferences["topics"]))
+            if "ntopics" in preferences: course_scores.append(
+                self.pref_weight["ntopics"] * self.get_unwanted_topic_scores(c, preferences["ntopics"]))
             if "skills" in preferences: course_scores.append(
                 self.pref_weight["skills"] * self.get_skills_scores(c, preferences["skills"]))
             if "dislikes" in preferences: course_scores.append(
@@ -142,6 +163,10 @@ class Agent:
                 self.get_likes_scores(c, self.pref_weight["likes"]))
             if "friends" in preferences: course_scores.append(
                 self.get_friends_scores(c, self.pref_weight["friends"]))
+            if "weekdays" in preferences: course_scores.append(
+                self.pref_weight["weekdays"] * self.get_weekdays_score(c, preferences["weekdays"]))
+            if "nweekdays" in preferences: course_scores.append(
+                self.pref_weight["nweekdays"] * self.get_unwanted_weekdays_score(c, preferences["nweekdays"]))
             course_scores.append(self.get_trust_scores(c))
             score_per_course.append(sum(course_scores))
 

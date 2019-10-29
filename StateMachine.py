@@ -22,10 +22,10 @@ class StateMachine(object):
         a.trust(models_list)
         a.generate_course_scores(models_list)
 
-        with open("./data/student_data_final.json") as json_data:
+        with open("./data/student_data.json") as json_data:
             data = json.load(json_data)
 
-        for idx in range(len(data) - 1):
+        for idx in range(len(data)):
             self.student = Student(idx)
             self.currentState = StartState()
             self.agent = Agent(a.trust_scores_dict, self.student.data)
