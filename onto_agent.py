@@ -120,10 +120,12 @@ class Agent:
 
     def get_trust_scores(self, course):
         score = 0
+        no = 0
         for model in self.trust_models:
             if course.name in self.trust_models[model]:
+                no += 1
                 score += self.trust_models[model][course.name]
-        return score
+        return 0 if no == 0 else score / no
 
     def calculate_score(self, package, given_preferences):
         preferences = dict(given_preferences)

@@ -1,6 +1,7 @@
 import numpy as np
-from statistics import mean
 
+from statistics import mean
+from pprint import pprint
 
 class AgentModel:
     def __init__(self, file):
@@ -73,11 +74,13 @@ class AgentModel:
 
         self.trust_scores_dict = trust_scores_dict
 
-# models_list = []
-# for i in range(6):
-#     models_list.append(AgentModel("agent_model{}".format(i)))
-#
-# a = AgentModel("agent_model0")
-# pprint(a.trust(models_list))
+models_list = []
+for i in range(6):
+    models_list.append(AgentModel("models/agent_model{}".format(i)))
+
+# a = AgentModel("models/agent_model0")
+# a.trust(models_list)
+# pprint(a.trust_dict)
 # print("-" * 70)
-# pprint(a.course_scores(models_list))
+# a.generate_course_scores(models_list)
+# pprint(a.trust_scores_dict)
