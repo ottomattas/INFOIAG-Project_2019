@@ -3,7 +3,8 @@ import json
 from Student import Student
 from onto_agent import Agent
 from trust_system import AgentModel
-
+from owlready2 import *
+from quickstart import *
 
 class StateMachine(object):
     __shared_state = {}
@@ -30,6 +31,7 @@ class StateMachine(object):
             self.currentState = StartState()
             self.agent = Agent(a.trust_scores_dict, self.student.data)
             self.update(self.agent, self.student)
+            break #for testing calendar!
 
     def update(self, agent, student):
         while self.currentState:
@@ -39,7 +41,6 @@ class StateMachine(object):
                 self.currentState = self.nextState
                 self.nextState = None
 
-
 class IdleState(StateMachine):
     def update(self, agent, student):
         print("-" * 25, "Current state: ", str(self.currentState).split(".")[1].split()[0], "-" * 25)
@@ -47,18 +48,47 @@ class IdleState(StateMachine):
             self.nextState = AskStrictFilters()
             return
 
-        if type(self.previousState) == PresentResult:
+        if type(self.previousState) == CheckResult:
             print("\nIf you give me more preferences I can do better! Yes or no?")
             if student.confirm():
                 self.nextState = AskPreferenceState()
             else:
-                self.nextState = EndState()
+                self.nextState = PresentFinalResult()
             return
 
         self.nextState = AskPreferenceState()
 
+class PresentFinalResult(StateMachine):
+    def update(self, agent, student):
+        print("-" * 25, "Current state: ", str(self.currentState).split(".")[1].split()[0], "-" * 25)
+        agent.ranked_packages.reverse()
+        for package in agent.ranked_packages:
+            agent.print_debug("Best package: ", package)
+            print("\nWould you like take this course plan! Yes or no?")
+            if student.confirm():
+                hobby = student.get_hobby()
+                """Checking consistancy of ontology w\ respect to chosen course plan and hobby"""
+                if agent.check_hobbies(hobby, package):
+                    #if ontology is good, add new courses to calendar!
+                    print("Adding courses to calendar...")
+                    calendar = GCalendar()
+                    for course in package[0]:
+                        for weekday in course.isTaughtOnWeekday:
+                            calendar.insert_event(course.name, weekday.name)
+                    print("Done\n")
+                    self.nextState = EndState()
+                    return
+                else:
+                    print("\nPlease, choose another course plan!")
+                    continue    
+    
+        print("\nThere are no packages left. Do you want to search again! Yes or Not?")
+        if student.confirm():
+            self.nextState = StartState()
+        else:
+            self.nextState = EndState()    
 
-class PresentResult(StateMachine):
+class CheckResult(StateMachine):
     def update(self, agent, student):
         print("-" * 25, "Current state: ", str(self.currentState).split(".")[1].split()[0], "-" * 25)
         agent.print_debug("Best packages: ", agent.ranked_packages[-5:])
@@ -75,19 +105,18 @@ class PresentResult(StateMachine):
 
         self.nextState = IdleState()
 
-
 class AskPreferenceState(StateMachine):
     def update(self, agent, student):
         next_pref = student.get_next_preference()
         if next_pref is None:
             print("End of possible preferences.")
-            self.nextState = EndState()
+            self.nextState = PresentFinalResult() 
             return
         print("-" * 25, "Current state: ", str(self.currentState).split(".")[1].split()[0], "-" * 25)
         curr_prefs = student.given_preferences
         print("Basing courses on: {} \n ".format(curr_prefs))
         agent.rank(curr_prefs)
-        self.nextState = PresentResult()
+        self.nextState = CheckResult()
 
 
 class AskStrictFilters(StateMachine):

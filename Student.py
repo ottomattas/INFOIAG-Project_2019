@@ -26,9 +26,9 @@ class Student:
     @staticmethod
     def confirm():
         if randint(0, 10) > 0:
-            print("\nShow me more!\n")
+            print("\nYes!\n")
             return True
-        print("\nNo, bye!\n")
+        print("\nNo!\n")
         return False
 
     def get_ranked_preferences(self):
