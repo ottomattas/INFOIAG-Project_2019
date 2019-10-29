@@ -74,9 +74,9 @@ class AgentModel:
 
         self.trust_scores_dict = trust_scores_dict
 
-models_list = []
-for i in range(6):
-    models_list.append(AgentModel("models/agent_model{}".format(i)))
+# models_list = []
+# for i in range(6):
+#     models_list.append(AgentModel("models/agent_model{}".format(i)))
 
 # a = AgentModel("models/agent_model0")
 # a.trust(models_list)
