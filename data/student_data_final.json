@@ -42,7 +42,7 @@
     "id": 9,
     "preferences": {
       "period": "P2",
-      "hobby": "ontology.Sewing",
+      "hobby": "Sewing",
       "topics": [
         "Macroeconomics",
         "Microeconomics"
@@ -52,8 +52,8 @@
         "OscillationsAndWaves"
       ],
       "skills": [
-        "ontology.Teamwork",
-        "ontology.Programming"
+        "Teamwork",
+        "Programming"
       ],
       "likes": 6,
       "dislikes": 1,
@@ -94,9 +94,9 @@
         "Media"
       ],
       "skills": [
-        "ontology.AcademicWriting",
-        "ontology.Debating",
-        "ontology.Summarisation"
+        "AcademicWriting",
+        "Debating",
+        "Summarisation"
       ],
       "likes": 14,
       "dislikes": 1,
@@ -134,8 +134,8 @@
         "CognitivePsychology"
       ],
       "skills": [
-        "ontology.Debating",
-        "ontology.AcademicWriting"
+        "Debating",
+        "AcademicWriting"
       ],
       "likes": 7,
       "dislikes": 13,
@@ -163,7 +163,7 @@
     "id": 17,
     "preferences": {
       "period": "P1",
-      "hobby": "ontology.Tennis",
+      "hobby": "Tennis",
       "topics": [
         "AncientPhilosophy",
         "Media"
@@ -173,7 +173,7 @@
         "Microeconomics"
       ],
       "skills": [
-        "ontology.Programming"
+        "Programming"
       ],
       "likes": 4,
       "dislikes": 14,
@@ -216,7 +216,7 @@
         "Mechanics"
       ],
       "skills": [
-        "ontology.Summarisation"
+        "Summarisation"
       ],
       "likes": 1,
       "dislikes": 5,
@@ -246,7 +246,7 @@
     "id": 11,
     "preferences": {
       "period": "P1",
-      "hobby": "ontology.Sewing",
+      "hobby": "Sewing",
       "topics": [
         "Culture",
         "SocialClass",
@@ -260,8 +260,8 @@
         "Kinematics"
       ],
       "skills": [
-        "ontology.CriticalThinking",
-        "ontology.Debating"
+        "CriticalThinking",
+        "Debating"
       ],
       "likes": 12,
       "dislikes": 17,
@@ -290,7 +290,7 @@
     "id": 1,
     "preferences": {
       "period": "P4",
-      "hobby": "ontology.Archery",
+      "hobby": "Archery",
       "topics": [
         "Topology",
         "Thermodynamics",
@@ -301,9 +301,9 @@
         "ElectroChemistry"
       ],
       "skills": [
-        "ontology.CriticalThinking",
-        "ontology.Debating",
-        "ontology.AcademicWriting"
+        "CriticalThinking",
+        "Debating",
+        "AcademicWriting"
       ],
       "likes": 12,
       "dislikes": 9,
@@ -333,7 +333,7 @@
     "id": 22,
     "preferences": {
       "period": "P4",
-      "hobby": "ontology.Football",
+      "hobby": "Football",
       "topics": [
         "Semantics",
         "ClinicalPsychology",
@@ -347,7 +347,7 @@
         "CognitivePsychology"
       ],
       "skills": [
-        "ontology.AcademicWriting"
+        "AcademicWriting"
       ],
       "likes": 9,
       "dislikes": 8,
@@ -390,7 +390,7 @@
         "Syntax"
       ],
       "skills": [
-        "ontology.Programming"
+        "Programming"
       ],
       "likes": 14,
       "dislikes": 9,
@@ -419,7 +419,7 @@
     "id": 13,
     "preferences": {
       "period": "P1",
-      "hobby": "ontology.Archery",
+      "hobby": "Archery",
       "topics": [
         "AnthropologicalTheories",
         "Sustainability",
@@ -433,9 +433,9 @@
         "Botany"
       ],
       "skills": [
-        "ontology.CriticalThinking",
-        "ontology.Teamwork",
-        "ontology.Programming"
+        "CriticalThinking",
+        "Teamwork",
+        "Programming"
       ],
       "likes": 2,
       "dislikes": 12,
@@ -475,8 +475,8 @@
         "Semantics"
       ],
       "skills": [
-        "ontology.Teamwork",
-        "ontology.Programming"
+        "Teamwork",
+        "Programming"
       ],
       "likes": 12,
       "dislikes": 4,
@@ -514,8 +514,8 @@
         "CognitivePsychology"
       ],
       "skills": [
-        "ontology.Experimentation",
-        "ontology.Summarisation"
+        "Experimentation",
+        "Summarisation"
       ],
       "likes": 11,
       "dislikes": 15,
@@ -545,7 +545,7 @@
     "id": 14,
     "preferences": {
       "period": "P2",
-      "hobby": "ontology.Tennis",
+      "hobby": "Tennis",
       "topics": [
         "Leadership",
         "Finance",
@@ -559,8 +559,8 @@
         "SystemsDesign"
       ],
       "skills": [
-        "ontology.Creativity",
-        "ontology.AcademicWriting"
+        "Creativity",
+        "AcademicWriting"
       ],
       "likes": 7,
       "dislikes": 8,
@@ -589,7 +589,7 @@
     "id": 15,
     "preferences": {
       "period": "P4",
-      "hobby": "ontology.Sewing",
+      "hobby": "Sewing",
       "topics": [
         "AnthropologicalTheories",
         "Ethics",
@@ -603,7 +603,7 @@
         "OscillationsAndWaves"
       ],
       "skills": [
-        "ontology.Debating"
+        "Debating"
       ],
       "likes": 14,
       "dislikes": 19,
@@ -647,8 +647,8 @@
         "Media"
       ],
       "skills": [
-        "ontology.Teamwork",
-        "ontology.AcademicWriting"
+        "Teamwork",
+        "AcademicWriting"
       ],
       "likes": 0,
       "dislikes": 6,
@@ -677,7 +677,7 @@
     "id": 16,
     "preferences": {
       "period": "P2",
-      "hobby": "ontology.Saxophone",
+      "hobby": "Saxophone",
       "topics": [
         "Language",
         "Sustainability"
@@ -686,9 +686,9 @@
         "GeneralHistory"
       ],
       "skills": [
-        "ontology.Presenting",
-        "ontology.Debating",
-        "ontology.Programming"
+        "Presenting",
+        "Debating",
+        "Programming"
       ],
       "likes": 10,
       "dislikes": 3,
@@ -728,7 +728,7 @@
         "Media"
       ],
       "skills": [
-        "ontology.Summarisation"
+        "Summarisation"
       ],
       "likes": 7,
       "dislikes": 13,
@@ -766,7 +766,7 @@
         "Semantics"
       ],
       "skills": [
-        "ontology.AcademicWriting"
+        "AcademicWriting"
       ],
       "likes": 17,
       "dislikes": 6,
@@ -795,7 +795,7 @@
     "id": 4,
     "preferences": {
       "period": "P1",
-      "hobby": "ontology.IceSkating",
+      "hobby": "IceSkating",
       "topics": [
         "RaceAndEthnicity",
         "ComputationalModeling"
@@ -805,9 +805,9 @@
         "Neurobiology"
       ],
       "skills": [
-        "ontology.CriticalThinking",
-        "ontology.Debating",
-        "ontology.Programming"
+        "CriticalThinking",
+        "Debating",
+        "Programming"
       ],
       "likes": 12,
       "dislikes": 11,
@@ -850,8 +850,8 @@
         "ComputerGraphics"
       ],
       "skills": [
-        "ontology.Teamwork",
-        "ontology.Programming"
+        "Teamwork",
+        "Programming"
       ],
       "likes": 14,
       "dislikes": 6,
@@ -880,7 +880,7 @@
     "id": 24,
     "preferences": {
       "period": "P1",
-      "hobby": "ontology.Saxophone",
+      "hobby": "Saxophone",
       "topics": [
         "Culture",
         "SocialClass",
@@ -894,8 +894,8 @@
         "BioEngineering"
       ],
       "skills": [
-        "ontology.Teamwork",
-        "ontology.Programming"
+        "Teamwork",
+        "Programming"
       ],
       "likes": 18,
       "dislikes": 14,
@@ -924,7 +924,7 @@
     "id": 25,
     "preferences": {
       "period": "P2",
-      "hobby": "ontology.Sewing",
+      "hobby": "Sewing",
       "topics": [
         "Sustainability",
         "TextAnalysis",
@@ -937,7 +937,7 @@
         "ComputerGraphics"
       ],
       "skills": [
-        "ontology.Teamwork"
+        "Teamwork"
       ],
       "likes": 4,
       "dislikes": 18,
@@ -979,7 +979,7 @@
         "AppliedEconomy"
       ],
       "skills": [
-        "ontology.Summarisation"
+        "Summarisation"
       ],
       "likes": 19,
       "dislikes": 1,
@@ -1020,9 +1020,9 @@
         "ComputerGraphics"
       ],
       "skills": [
-        "ontology.Presenting",
-        "ontology.CriticalThinking",
-        "ontology.AcademicWriting"
+        "Presenting",
+        "CriticalThinking",
+        "AcademicWriting"
       ],
       "likes": 10,
       "dislikes": 11,
@@ -1050,7 +1050,7 @@
     "id": 29,
     "preferences": {
       "period": "P2",
-      "hobby": "ontology.Tennis",
+      "hobby": "Tennis",
       "topics": [
         "Pragmatics",
         "Macroeconomics"
@@ -1059,8 +1059,8 @@
         "Syntax"
       ],
       "skills": [
-        "ontology.Teamwork",
-        "ontology.Programming"
+        "Teamwork",
+        "Programming"
       ],
       "likes": 1,
       "dislikes": 5,
@@ -1103,8 +1103,8 @@
         "OscillationsAndWaves"
       ],
       "skills": [
-        "ontology.Teamwork",
-        "ontology.Programming"
+        "Teamwork",
+        "Programming"
       ],
       "likes": 16,
       "dislikes": 18,
@@ -1133,7 +1133,7 @@
     "id": 3,
     "preferences": {
       "period": "P4",
-      "hobby": "ontology.ScubaDiving",
+      "hobby": "ScubaDiving",
       "topics": [
         "Macroeconomics",
         "Semantics",
@@ -1147,8 +1147,8 @@
         "Mechanics"
       ],
       "skills": [
-        "ontology.Teamwork",
-        "ontology.Programming"
+        "Teamwork",
+        "Programming"
       ],
       "likes": 3,
       "dislikes": 7,
@@ -1188,7 +1188,7 @@
         "Algebra"
       ],
       "skills": [
-        "ontology.Presenting"
+        "Presenting"
       ],
       "likes": 10,
       "dislikes": 13,
@@ -1228,7 +1228,7 @@
         "Mechanics"
       ],
       "skills": [
-        "ontology.Summarisation"
+        "Summarisation"
       ],
       "likes": 13,
       "dislikes": 17,

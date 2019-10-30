@@ -1,5 +1,6 @@
 import json
 
+import pandas as pd
 from Student import Student
 from onto_agent import Agent
 from trust_system import AgentModel
@@ -15,6 +16,7 @@ class StateMachine(object):
         self.checked = False
         self.rank_package = self.dummy_hard_package = self.dummy_dummy_package = None
         self.performance = None
+        self.df = None
         self.__dict__ = self.__shared_state
 
 
@@ -25,8 +27,8 @@ class StateMachine(object):
         a = AgentModel("./models/agent_model0")
         a.trust(models_list)
         a.generate_course_scores(models_list)
-
-        with open("./data/student_data.json") as json_data:
+        self.df = pd.DataFrame(columns=["dummy_dummy", "dummy_hard", "rank", "dummy_scores", "dummy_hard_scores", "rank_scores"])
+        with open("./data/student_data_final.json") as json_data:
             data = json.load(json_data)
 
         for idx in range(len(data)):
@@ -34,7 +36,6 @@ class StateMachine(object):
             self.currentState = StartState()
             self.agent = Agent(a.trust_scores_dict, data[idx])
             self.update(self.agent, self.student)
-            #break #for testing calendar!
 
     def update(self, agent, student):
         while self.currentState:
@@ -148,8 +149,13 @@ class EndState(StateMachine):
         dummy_hard_perf = agent.check_unitary_prefs(self.dummy_hard_package)
         dummy_dummy_pref = agent.check_unitary_prefs(self.dummy_dummy_package)
         rank_pref = agent.check_unitary_prefs(self.rank_package)
-        print(self.dummy_dummy_package, self.dummy_hard_package, self.rank_package)
         self.performance = (dummy_dummy_pref, dummy_hard_perf, rank_pref)
+        print(tuple(self.dummy_dummy_package), self.dummy_hard_package, self.rank_package)
+        print(self.performance)
+        # print(self.df)
+        self.df = self.df.append({"dummy_dummy": tuple(self.dummy_dummy_package), "dummy_hard":  self.dummy_hard_package, "rank": self.rank_package,
+                         "dummy_scores": self.performance[0], "dummy_hard_scores": self.performance[1], "rank_scores": self.performance[2]}, ignore_index=True)
+
         self.currentState = None
 
 
