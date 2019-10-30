@@ -6,7 +6,7 @@ class Student:
     def __init__(self, data):
         self.data = data
         self.ranked_preferences = self.data["importance"]
-        # shuffle(self.ranked_preferences)
+        shuffle(self.ranked_preferences)
         self.given_preferences = []
         self.preferences = self.data["preferences"]
         self.prf_idx = 0

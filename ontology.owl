@@ -3091,7 +3091,6 @@
         <hasFriend rdf:resource="https://project-intelligent-agents.uu.nl#Student29"/>
         <hasTaken rdf:resource="https://project-intelligent-agents.uu.nl#EconomicEthics"/>
         <hasTaken rdf:resource="https://project-intelligent-agents.uu.nl#FinancialRegulation"/>
-        <practices rdf:resource="https://project-intelligent-agents.uu.nl#Sewing"/>
         <firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pearl</firstName>
         <secondName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ewell</secondName>
         <studentID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</studentID>
@@ -3121,7 +3120,6 @@
         <hasFriend rdf:resource="https://project-intelligent-agents.uu.nl#Student23"/>
         <hasTaken rdf:resource="https://project-intelligent-agents.uu.nl#BigData"/>
         <hasTaken rdf:resource="https://project-intelligent-agents.uu.nl#EnergyConversionTechnology"/>
-        <practices rdf:resource="https://project-intelligent-agents.uu.nl#Sewing"/>
         <firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mary</firstName>
         <secondName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Robinson</secondName>
         <studentID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</studentID>
@@ -3151,7 +3149,6 @@
         <hasFriend rdf:resource="https://project-intelligent-agents.uu.nl#Student7"/>
         <hasTaken rdf:resource="https://project-intelligent-agents.uu.nl#AppliedCognitivePsychology"/>
         <hasTaken rdf:resource="https://project-intelligent-agents.uu.nl#DevelopmentalNeuroPsychology"/>
-        <practices rdf:resource="https://project-intelligent-agents.uu.nl#Archery"/>
         <firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joseph</firstName>
         <secondName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Koepsell</secondName>
         <studentID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</studentID>
@@ -3165,7 +3162,6 @@
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Student"/>
         <hasFriend rdf:resource="https://project-intelligent-agents.uu.nl#Student19"/>
         <hasTaken rdf:resource="https://project-intelligent-agents.uu.nl#MathematicsInFinance"/>
-        <practices rdf:resource="https://project-intelligent-agents.uu.nl#Tennis"/>
         <firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vera</firstName>
         <secondName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Duff</secondName>
         <studentID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</studentID>
@@ -3180,7 +3176,6 @@
         <hasFriend rdf:resource="https://project-intelligent-agents.uu.nl#Student2"/>
         <hasFriend rdf:resource="https://project-intelligent-agents.uu.nl#Student28"/>
         <hasTaken rdf:resource="https://project-intelligent-agents.uu.nl#MultiAgentLearning"/>
-        <practices rdf:resource="https://project-intelligent-agents.uu.nl#Sewing"/>
         <firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rose</firstName>
         <secondName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Davis</secondName>
         <studentID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</studentID>
@@ -3194,7 +3189,6 @@
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Student"/>
         <hasTaken rdf:resource="https://project-intelligent-agents.uu.nl#BiologicalModeling"/>
         <hasTaken rdf:resource="https://project-intelligent-agents.uu.nl#ComputationalBiology"/>
-        <practices rdf:resource="https://project-intelligent-agents.uu.nl#Saxophone"/>
         <firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nella</firstName>
         <secondName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cox</secondName>
         <studentID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</studentID>
@@ -3208,7 +3202,6 @@
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Student"/>
         <hasFriend rdf:resource="https://project-intelligent-agents.uu.nl#Student10"/>
         <hasTaken rdf:resource="https://project-intelligent-agents.uu.nl#ProbabilisticReasoning"/>
-        <practices rdf:resource="https://project-intelligent-agents.uu.nl#Tennis"/>
         <firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shawn</firstName>
         <secondName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stinson</secondName>
         <studentID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</studentID>
@@ -3234,7 +3227,6 @@
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Student2">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Student"/>
         <hasTaken rdf:resource="https://project-intelligent-agents.uu.nl#EnergyConversionTechnology"/>
-        <practices rdf:resource="https://project-intelligent-agents.uu.nl#Archery"/>
         <firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marie</firstName>
         <secondName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hughes</secondName>
         <studentID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</studentID>
@@ -3290,7 +3282,6 @@
         <hasFriend rdf:resource="https://project-intelligent-agents.uu.nl#Student14"/>
         <hasFriend rdf:resource="https://project-intelligent-agents.uu.nl#Student15"/>
         <hasTaken rdf:resource="https://project-intelligent-agents.uu.nl#ComputationalBiology"/>
-        <practices rdf:resource="https://project-intelligent-agents.uu.nl#Football"/>
         <firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Betty</firstName>
         <secondName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cocke</secondName>
         <studentID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</studentID>
@@ -3316,7 +3307,6 @@
     <owl:NamedIndividual rdf:about="https://project-intelligent-agents.uu.nl#Student25">
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Student"/>
         <hasTaken rdf:resource="https://project-intelligent-agents.uu.nl#CognitiveBehaviouralTherapy"/>
-        <practices rdf:resource="https://project-intelligent-agents.uu.nl#Saxophone"/>
         <firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frank</firstName>
         <secondName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lansdale</secondName>
         <studentID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</studentID>
@@ -3330,7 +3320,6 @@
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Student"/>
         <hasFriend rdf:resource="https://project-intelligent-agents.uu.nl#Student25"/>
         <hasTaken rdf:resource="https://project-intelligent-agents.uu.nl#EmpiricalEconomy"/>
-        <practices rdf:resource="https://project-intelligent-agents.uu.nl#Sewing"/>
         <firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Randy</firstName>
         <secondName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kubiszewski</secondName>
         <studentID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</studentID>
@@ -3399,7 +3388,6 @@
         <hasFriend rdf:resource="https://project-intelligent-agents.uu.nl#Student9"/>
         <hasTaken rdf:resource="https://project-intelligent-agents.uu.nl#LanguageAcqusition"/>
         <hasTaken rdf:resource="https://project-intelligent-agents.uu.nl#LanguageBrainAndCognition"/>
-        <practices rdf:resource="https://project-intelligent-agents.uu.nl#Tennis"/>
         <firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Toby</firstName>
         <secondName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chauvin</secondName>
         <studentID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">29</studentID>
@@ -3414,7 +3402,6 @@
         <hasFriend rdf:resource="https://project-intelligent-agents.uu.nl#Student19"/>
         <hasFriend rdf:resource="https://project-intelligent-agents.uu.nl#Student6"/>
         <hasTaken rdf:resource="https://project-intelligent-agents.uu.nl#FinancialRegulations"/>
-        <practices rdf:resource="https://project-intelligent-agents.uu.nl#ScubaDiving"/>
         <firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frances</firstName>
         <secondName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Silva</secondName>
         <studentID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</studentID>
@@ -3428,7 +3415,6 @@
         <rdf:type rdf:resource="https://project-intelligent-agents.uu.nl#Student"/>
         <hasFriend rdf:resource="https://project-intelligent-agents.uu.nl#Student30"/>
         <hasTaken rdf:resource="https://project-intelligent-agents.uu.nl#Publishing"/>
-        <practices rdf:resource="https://project-intelligent-agents.uu.nl#IceSkating"/>
         <firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stephen</firstName>
         <secondName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Estrada</secondName>
         <studentID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</studentID>
