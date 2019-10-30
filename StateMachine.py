@@ -13,7 +13,10 @@ class StateMachine(object):
         self.previousState = self.currentState = self.nextState = None
         self.agent = self.student = None
         self.checked = False
+        self.rank_package = self.dummy_hard_package = self.dummy_dummy_package = None
+        self.performance = None
         self.__dict__ = self.__shared_state
+
 
     def run(self):
         models_list = []
@@ -23,7 +26,7 @@ class StateMachine(object):
         a.trust(models_list)
         a.generate_course_scores(models_list)
 
-        with open("./data/student_data_final.json") as json_data:
+        with open("./data/student_data.json") as json_data:
             data = json.load(json_data)
 
         for idx in range(len(data)):
@@ -70,23 +73,24 @@ class PresentFinalResult(StateMachine):
                 """Checking consistancy of ontology w\ respect to chosen course plan and hobby"""
                 if agent.check_hobbies(hobby, package):
                     #if ontology is good, add new courses to calendar!
-                    print("Adding courses to calendar...")
-                    calendar = GCalendar()
-                    for course in package[0]:
-                        for weekday in course.isTaughtOnWeekday:
-                            calendar.insert_event(course.name, weekday.name)
-                    print("Done\n")
+                    # print("Adding courses to calendar...")
+                    # calendar = GCalendar()
+                    # for course in package[0]:
+                    #     for weekday in course.isTaughtOnWeekday:
+                    #         calendar.insert_event(course.name, weekday.name)
+                    # print("Done\n")
+                    self.rank_package = package[0]
                     self.nextState = EndState()
                     return
                 else:
                     print("\nPlease, choose another course plan!")
-                    continue    
-    
+                    continue
+
         print("\nThere are no packages left. Do you want to search again! Yes or Not?")
         if student.confirm():
             self.nextState = StartState()
         else:
-            self.nextState = EndState()    
+            self.nextState = EndState(None)
 
 class CheckResult(StateMachine):
     def update(self, agent, student):
@@ -110,7 +114,7 @@ class AskPreferenceState(StateMachine):
         next_pref = student.get_next_preference()
         if next_pref is None:
             print("End of possible preferences.")
-            self.nextState = PresentFinalResult() 
+            self.nextState = PresentFinalResult()
             return
         print("-" * 25, "Current state: ", str(self.currentState).split(".")[1].split()[0], "-" * 25)
         curr_prefs = student.given_preferences
@@ -131,14 +135,21 @@ class AskStrictFilters(StateMachine):
         period = student.get_period()
         print("\nApplying filter on period: {}\n".format(period))
         agent.check_period(period)
-
         self.nextState = IdleState()
 
 
 class EndState(StateMachine):
+
     def update(self, agent, student):
         print("-" * 25, "Current state: ", str(self.currentState).split(".")[1].split()[0], "-" * 25)
         print("\nExiting.\n")
+        self.dummy_hard_package = agent.dummy_choice_after_hard_filters()
+        self.dummy_dummy_package = agent.dummy_dummy_choice()
+        dummy_hard_perf = agent.check_unitary_prefs(self.dummy_hard_package)
+        dummy_dummy_pref = agent.check_unitary_prefs(self.dummy_dummy_package)
+        rank_pref = agent.check_unitary_prefs(self.rank_package)
+        print(self.dummy_dummy_package, self.dummy_hard_package, self.rank_package)
+        self.performance = (dummy_dummy_pref, dummy_hard_perf, rank_pref)
         self.currentState = None
 
 

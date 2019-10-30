@@ -4,8 +4,6 @@ from random import shuffle, randint, seed
 
 class Student:
     def __init__(self, data):
-        # with open("./data/student_data.json") as json_data:
-        #     self.data = json.load(json_data)[json_idx]
         self.data = data
         self.ranked_preferences = self.data["importance"]
         # shuffle(self.ranked_preferences)

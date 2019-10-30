@@ -1,5 +1,7 @@
+import numpy as np
 from itertools import combinations, chain
 from pprint import pprint
+from random import randint, shuffle
 
 from owlready2 import *
 
@@ -14,11 +16,14 @@ class Agent:
         with self.ontology:
             sync_reasoner(infer_property_values=True)
 
-        self.ranked_packages = self.packages = None
-        self.pref_weight = None
-        self.trust_models = trust_models
-        self.student_obj = self.ontology.search(studentID=data["id"])[0]
-        self.friends_obj = self.student_obj.hasFriend
+        self.counter            = 0
+        self.preferences        = data["preferences"]
+        self.ranked_packages    = self.packages = None
+        self.pref_weight        = None
+        self.trust_models       = trust_models
+        self.student_obj        = self.ontology.search(studentID=data["id"])[0]
+        self.friends_obj        = self.student_obj.hasFriend
+
         if data["preferences"]["dislikes"]:
             self.disliked_teachers_obj = self.ontology.search(teacherID=data["preferences"]["dislikes"])[0]
 
@@ -29,6 +34,107 @@ class Agent:
     def print_debug(*param):
         pprint(param)
         print("-" * 50)
+
+    # performance metric
+    def dummy_choice_after_hard_filters(self):
+        idx = randint(0, len(self.packages))
+        return self.packages[idx]
+
+    def dummy_dummy_choice(self):
+        # 2 course package
+        all_courses = self.get_all_courses()
+        shuffle(all_courses)
+        if randint(0, 1) == 0:
+            return all_courses[0:2]
+        return all_courses[0:3]
+
+    @staticmethod
+    def prepare_data(preference_dict):
+        pref_tuple_list = []
+        for p in preference_dict:
+            if not preference_dict[p]:
+                continue
+            if type(preference_dict[p]) == type(list()):
+                pref_tuple_list += [(p, elem) for elem in preference_dict[p]]
+            pref_tuple_list.append((p, preference_dict[p]))
+        return pref_tuple_list
+
+    def apply_pref(self, pref_type, pref_value, package):
+        self.counter += 1
+        met_prefs = 0
+
+        if pref_type == "period":
+            if (all([True if c.isTaughtOnPeriod[0].name == pref_value else False for c in package])):
+                return 1
+            return 0
+
+        if pref_type == "hobby":
+            if (all([True if pref_value not in [w.name for w in c.isTaughtOnWeekday] else False for c in package])):
+                return 1
+            return 0
+
+        if pref_type == "weekdays":
+            if (any([True if pref_value in [w.name for w in c.isTaughtOnWeekday] else False for c in package])):
+                return 1
+            return 0
+
+        if pref_type == "nweekdays":
+            if (any([True if pref_value in [w.name for w in c.isTaughtOnWeekday] else False for c in package])):
+                return 0
+            return 1
+
+        if pref_type == "topics":
+            package_topics = [c.covers for c in package]
+            pack_topics = [t.name for t in list(np.concatenate(package_topics))]
+            if pref_value in pack_topics:
+                return 1
+            return 0
+
+        if pref_type == "ntopics":
+            package_ntopics = [c.covers for c in package]
+            pack_ntopics = [t.name for t in list(np.concatenate(package_ntopics))]
+            if pref_value in pack_ntopics:
+                return 0
+            return 1
+
+        if pref_type == "skills":
+            package_skills = [c.uses[0].improves for c in package]
+            pack_skills = [s.name for s in list(np.concatenate(package_skills))]
+            if pref_value in pack_skills:
+                return 1
+            return 0
+
+        if pref_type == "likes":
+            teacher_courses = [c.name for c in self.liked_teachers_obj.teaches]
+            if (any([c for c in package if c in teacher_courses])):
+                return 1
+            return 0
+
+        if pref_type == "dislikes":
+            teacher_courses = [c.name for c in self.disliked_teachers_obj.teaches]
+            if (any([c for c in package if c in teacher_courses])):
+                 return 0
+            return 1
+
+        if pref_type == "friends":
+            friends_courses = [c.name
+                              for s in self.friends_obj
+                              for c in s.takes
+                              ]
+            if pref_value in friends_courses:
+                return 1
+            return 0
+
+    def check_unitary_prefs(self, package):
+        self.counter = 0
+        pref_list = Agent.prepare_data(self.preferences)
+        met_prefs = [0]
+        for tuple in pref_list:
+            met_prefs.append(self.apply_pref(tuple[0], tuple[1], package))
+        return sum(met_prefs) / self.counter
+
+    def compact_prefs(self, package):
+        pass
 
     @staticmethod
     def extract_topics(course_list):
@@ -237,8 +343,8 @@ class Agent:
     def check_hobbies(self, hobby, package=False):
         consist = True
         with self.ontology:
-            if package: 
-                self.student_obj.takes = [course for course in package[0]]  
+            if package:
+                self.student_obj.takes = [course for course in package[0]]
             if hobby:
                 self.student_obj.practices = [self.ontology.Hobby(hobby)]
                 try:
