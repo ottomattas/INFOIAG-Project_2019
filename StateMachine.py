@@ -23,15 +23,15 @@ class StateMachine(object):
         a.trust(models_list)
         a.generate_course_scores(models_list)
 
-        with open("./data/student_data.json") as json_data:
+        with open("./data/student_data_final.json") as json_data:
             data = json.load(json_data)
 
         for idx in range(len(data)):
-            self.student = Student(idx)
+            self.student = Student(data[idx])
             self.currentState = StartState()
-            self.agent = Agent(a.trust_scores_dict, self.student.data)
+            self.agent = Agent(a.trust_scores_dict, data[idx])
             self.update(self.agent, self.student)
-            break #for testing calendar!
+            #break #for testing calendar!
 
     def update(self, agent, student):
         while self.currentState:

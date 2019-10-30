@@ -4,18 +4,31 @@
     "preferences": {
       "period": "",
       "hobby": "",
-      "topics": [],
-      "skills": [],
-      "likes": [],
-      "dislikes": [],
+      "topics": [
+      ],
+      "ntopics": [
+      ],
+      "skills": [
+      ],
+      "likes": [
+      ],
+      "dislikes": [
+      ],
       "friends": null,
-      "weekday": ""
+      "weekdays": [
+      ],
+      "nweekdays": [
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
       "topics"
+
     ]
   },
   {
@@ -23,18 +36,31 @@
     "preferences": {
       "period": "",
       "hobby": "",
-      "topics": [],
-      "skills": [],
-      "likes": [],
-      "dislikes": [],
+      "topics": [
+      ],
+      "ntopics": [
+      ],
+      "skills": [
+      ],
+      "likes": [
+      ],
+      "dislikes": [
+      ],
       "friends": null,
-      "weekday": ""
+      "weekdays": [
+      ],
+      "nweekdays": [
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
       "topics"
+
     ]
   },
   {
@@ -42,18 +68,31 @@
     "preferences": {
       "period": "",
       "hobby": "",
-      "topics": [],
-      "skills": [],
-      "likes": [],
-      "dislikes": [],
+      "topics": [
+      ],
+      "ntopics": [
+      ],
+      "skills": [
+      ],
+      "likes": [
+      ],
+      "dislikes": [
+      ],
       "friends": null,
-      "weekday": ""
+      "weekdays": [
+      ],
+      "nweekdays": [
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
       "topics"
+
     ]
   },
   {
@@ -61,18 +100,31 @@
     "preferences": {
       "period": "",
       "hobby": "",
-      "topics": [],
-      "skills": [],
-      "likes": [],
-      "dislikes": [],
+      "topics": [
+      ],
+      "ntopics": [
+      ],
+      "skills": [
+      ],
+      "likes": [
+      ],
+      "dislikes": [
+      ],
       "friends": null,
-      "weekday": ""
+      "weekdays": [
+      ],
+      "nweekdays": [
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
       "topics"
+
     ]
   },
   {
@@ -80,18 +132,31 @@
     "preferences": {
       "period": "",
       "hobby": "",
-      "topics": [],
-      "skills": [],
-      "likes": [],
-      "dislikes": [],
+      "topics": [
+      ],
+      "ntopics": [
+      ],
+      "skills": [
+      ],
+      "likes": [
+      ],
+      "dislikes": [
+      ],
       "friends": null,
-      "weekday": ""
+      "weekdays": [
+      ],
+      "nweekdays": [
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
       "topics"
+
     ]
   },
   {
@@ -99,18 +164,31 @@
     "preferences": {
       "period": "",
       "hobby": "",
-      "topics": [],
-      "skills": [],
-      "likes": [],
-      "dislikes": [],
+      "topics": [
+      ],
+      "ntopics": [
+      ],
+      "skills": [
+      ],
+      "likes": [
+      ],
+      "dislikes": [
+      ],
       "friends": null,
-      "weekday": ""
+      "weekdays": [
+      ],
+      "nweekdays": [
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
       "topics"
+
     ]
   },
   {
@@ -118,18 +196,31 @@
     "preferences": {
       "period": "",
       "hobby": "",
-      "topics": [],
-      "skills": [],
-      "likes": [],
-      "dislikes": [],
+      "topics": [
+      ],
+      "ntopics": [
+      ],
+      "skills": [
+      ],
+      "likes": [
+      ],
+      "dislikes": [
+      ],
       "friends": null,
-      "weekday": ""
+      "weekdays": [
+      ],
+      "nweekdays": [
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
       "topics"
+
     ]
   },
   {
@@ -137,18 +228,31 @@
     "preferences": {
       "period": "",
       "hobby": "",
-      "topics": [],
-      "skills": [],
-      "likes": [],
-      "dislikes": [],
+      "topics": [
+      ],
+      "ntopics": [
+      ],
+      "skills": [
+      ],
+      "likes": [
+      ],
+      "dislikes": [
+      ],
       "friends": null,
-      "weekday": ""
+      "weekdays": [
+      ],
+      "nweekdays": [
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
       "topics"
+
     ]
   },
   {
@@ -156,18 +260,31 @@
     "preferences": {
       "period": "",
       "hobby": "",
-      "topics": [],
-      "skills": [],
-      "likes": [],
-      "dislikes": [],
+      "topics": [
+      ],
+      "ntopics": [
+      ],
+      "skills": [
+      ],
+      "likes": [
+      ],
+      "dislikes": [
+      ],
       "friends": null,
-      "weekday": ""
+      "weekdays": [
+      ],
+      "nweekdays": [
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
       "topics"
+
     ]
   },
   {
@@ -175,18 +292,31 @@
     "preferences": {
       "period": "",
       "hobby": "",
-      "topics": [],
-      "skills": [],
-      "likes": [],
-      "dislikes": [],
+      "topics": [
+      ],
+      "ntopics": [
+      ],
+      "skills": [
+      ],
+      "likes": [
+      ],
+      "dislikes": [
+      ],
       "friends": null,
-      "weekday": ""
+      "weekdays": [
+      ],
+      "nweekdays": [
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
       "topics"
+
     ]
   },
   {
@@ -194,18 +324,31 @@
     "preferences": {
       "period": "",
       "hobby": "",
-      "topics": [],
-      "skills": [],
-      "likes": [],
-      "dislikes": [],
+      "topics": [
+      ],
+      "ntopics": [
+      ],
+      "skills": [
+      ],
+      "likes": [
+      ],
+      "dislikes": [
+      ],
       "friends": null,
-      "weekday": ""
+      "weekdays": [
+      ],
+      "nweekdays": [
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
       "topics"
+
     ]
   },
   {
@@ -213,18 +356,31 @@
     "preferences": {
       "period": "",
       "hobby": "",
-      "topics": [],
-      "skills": [],
-      "likes": [],
-      "dislikes": [],
+      "topics": [
+      ],
+      "ntopics": [
+      ],
+      "skills": [
+      ],
+      "likes": [
+      ],
+      "dislikes": [
+      ],
       "friends": null,
-      "weekday": ""
+      "weekdays": [
+      ],
+      "nweekdays": [
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
       "topics"
+
     ]
   },
   {
@@ -232,18 +388,31 @@
     "preferences": {
       "period": "",
       "hobby": "",
-      "topics": [],
-      "skills": [],
-      "likes": [],
-      "dislikes": [],
+      "topics": [
+      ],
+      "ntopics": [
+      ],
+      "skills": [
+      ],
+      "likes": [
+      ],
+      "dislikes": [
+      ],
       "friends": null,
-      "weekday": ""
+      "weekdays": [
+      ],
+      "nweekdays": [
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
       "topics"
+
     ]
   },
   {
@@ -251,18 +420,31 @@
     "preferences": {
       "period": "",
       "hobby": "",
-      "topics": [],
-      "skills": [],
-      "likes": [],
-      "dislikes": [],
+      "topics": [
+      ],
+      "ntopics": [
+      ],
+      "skills": [
+      ],
+      "likes": [
+      ],
+      "dislikes": [
+      ],
       "friends": null,
-      "weekday": ""
+      "weekdays": [
+      ],
+      "nweekdays": [
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
       "topics"
+
     ]
   },
   {
@@ -270,18 +452,31 @@
     "preferences": {
       "period": "",
       "hobby": "",
-      "topics": [],
-      "skills": [],
-      "likes": [],
-      "dislikes": [],
+      "topics": [
+      ],
+      "ntopics": [
+      ],
+      "skills": [
+      ],
+      "likes": [
+      ],
+      "dislikes": [
+      ],
       "friends": null,
-      "weekday": ""
+      "weekdays": [
+      ],
+      "nweekdays": [
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
       "topics"
+
     ]
   },
   {
@@ -289,18 +484,31 @@
     "preferences": {
       "period": "",
       "hobby": "",
-      "topics": [],
-      "skills": [],
-      "likes": [],
-      "dislikes": [],
+      "topics": [
+      ],
+      "ntopics": [
+      ],
+      "skills": [
+      ],
+      "likes": [
+      ],
+      "dislikes": [
+      ],
       "friends": null,
-      "weekday": ""
+      "weekdays": [
+      ],
+      "nweekdays": [
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
       "topics"
+
     ]
   },
   {
@@ -308,18 +516,31 @@
     "preferences": {
       "period": "",
       "hobby": "",
-      "topics": [],
-      "skills": [],
-      "likes": [],
-      "dislikes": [],
+      "topics": [
+      ],
+      "ntopics": [
+      ],
+      "skills": [
+      ],
+      "likes": [
+      ],
+      "dislikes": [
+      ],
       "friends": null,
-      "weekday": ""
+      "weekdays": [
+      ],
+      "nweekdays": [
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
       "topics"
+
     ]
   },
   {
@@ -327,18 +548,31 @@
     "preferences": {
       "period": "",
       "hobby": "",
-      "topics": [],
-      "skills": [],
-      "likes": [],
-      "dislikes": [],
+      "topics": [
+      ],
+      "ntopics": [
+      ],
+      "skills": [
+      ],
+      "likes": [
+      ],
+      "dislikes": [
+      ],
       "friends": null,
-      "weekday": ""
+      "weekdays": [
+      ],
+      "nweekdays": [
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
       "topics"
+
     ]
   },
   {
@@ -346,18 +580,31 @@
     "preferences": {
       "period": "",
       "hobby": "",
-      "topics": [],
-      "skills": [],
-      "likes": [],
-      "dislikes": [],
+      "topics": [
+      ],
+      "ntopics": [
+      ],
+      "skills": [
+      ],
+      "likes": [
+      ],
+      "dislikes": [
+      ],
       "friends": null,
-      "weekday": ""
+      "weekdays": [
+      ],
+      "nweekdays": [
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
       "topics"
+
     ]
   },
   {
@@ -365,18 +612,31 @@
     "preferences": {
       "period": "",
       "hobby": "",
-      "topics": [],
-      "skills": [],
-      "likes": [],
-      "dislikes": [],
+      "topics": [
+      ],
+      "ntopics": [
+      ],
+      "skills": [
+      ],
+      "likes": [
+      ],
+      "dislikes": [
+      ],
       "friends": null,
-      "weekday": ""
+      "weekdays": [
+      ],
+      "nweekdays": [
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
       "topics"
+
     ]
   },
   {
@@ -384,18 +644,31 @@
     "preferences": {
       "period": "",
       "hobby": "",
-      "topics": [],
-      "skills": [],
-      "likes": [],
-      "dislikes": [],
+      "topics": [
+      ],
+      "ntopics": [
+      ],
+      "skills": [
+      ],
+      "likes": [
+      ],
+      "dislikes": [
+      ],
       "friends": null,
-      "weekday": ""
+      "weekdays": [
+      ],
+      "nweekdays": [
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
       "topics"
+
     ]
   },
   {
@@ -403,18 +676,31 @@
     "preferences": {
       "period": "",
       "hobby": "",
-      "topics": [],
-      "skills": [],
-      "likes": [],
-      "dislikes": [],
+      "topics": [
+      ],
+      "ntopics": [
+      ],
+      "skills": [
+      ],
+      "likes": [
+      ],
+      "dislikes": [
+      ],
       "friends": null,
-      "weekday": ""
+      "weekdays": [
+      ],
+      "nweekdays": [
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
       "topics"
+
     ]
   },
   {
@@ -422,18 +708,31 @@
     "preferences": {
       "period": "",
       "hobby": "",
-      "topics": [],
-      "skills": [],
-      "likes": [],
-      "dislikes": [],
+      "topics": [
+      ],
+      "ntopics": [
+      ],
+      "skills": [
+      ],
+      "likes": [
+      ],
+      "dislikes": [
+      ],
       "friends": null,
-      "weekday": ""
+      "weekdays": [
+      ],
+      "nweekdays": [
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
       "topics"
+
     ]
   },
   {
@@ -441,18 +740,31 @@
     "preferences": {
       "period": "",
       "hobby": "",
-      "topics": [],
-      "skills": [],
-      "likes": [],
-      "dislikes": [],
+      "topics": [
+      ],
+      "ntopics": [
+      ],
+      "skills": [
+      ],
+      "likes": [
+      ],
+      "dislikes": [
+      ],
       "friends": null,
-      "weekday": ""
+      "weekdays": [
+      ],
+      "nweekdays": [
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
       "topics"
+
     ]
   },
   {
@@ -460,18 +772,31 @@
     "preferences": {
       "period": "",
       "hobby": "",
-      "topics": [],
-      "skills": [],
-      "likes": [],
-      "dislikes": [],
+      "topics": [
+      ],
+      "ntopics": [
+      ],
+      "skills": [
+      ],
+      "likes": [
+      ],
+      "dislikes": [
+      ],
       "friends": null,
-      "weekday": ""
+      "weekdays": [
+      ],
+      "nweekdays": [
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
       "topics"
+
     ]
   },
   {
@@ -479,18 +804,31 @@
     "preferences": {
       "period": "",
       "hobby": "",
-      "topics": [],
-      "skills": [],
-      "likes": [],
-      "dislikes": [],
+      "topics": [
+      ],
+      "ntopics": [
+      ],
+      "skills": [
+      ],
+      "likes": [
+      ],
+      "dislikes": [
+      ],
       "friends": null,
-      "weekday": ""
+      "weekdays": [
+      ],
+      "nweekdays": [
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
       "topics"
+
     ]
   },
   {
@@ -498,18 +836,31 @@
     "preferences": {
       "period": "",
       "hobby": "",
-      "topics": [],
-      "skills": [],
-      "likes": [],
-      "dislikes": [],
+      "topics": [
+      ],
+      "ntopics": [
+      ],
+      "skills": [
+      ],
+      "likes": [
+      ],
+      "dislikes": [
+      ],
       "friends": null,
-      "weekday": ""
+      "weekdays": [
+      ],
+      "nweekdays": [
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
       "topics"
+
     ]
   },
   {
@@ -517,18 +868,31 @@
     "preferences": {
       "period": "",
       "hobby": "",
-      "topics": [],
-      "skills": [],
-      "likes": [],
-      "dislikes": [],
+      "topics": [
+      ],
+      "ntopics": [
+      ],
+      "skills": [
+      ],
+      "likes": [
+      ],
+      "dislikes": [
+      ],
       "friends": null,
-      "weekday": ""
+      "weekdays": [
+      ],
+      "nweekdays": [
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
       "topics"
+
     ]
   },
   {
@@ -536,18 +900,31 @@
     "preferences": {
       "period": "",
       "hobby": "",
-      "topics": [],
-      "skills": [],
-      "likes": [],
-      "dislikes": [],
+      "topics": [
+      ],
+      "ntopics": [
+      ],
+      "skills": [
+      ],
+      "likes": [
+      ],
+      "dislikes": [
+      ],
       "friends": null,
-      "weekday": ""
+      "weekdays": [
+      ],
+      "nweekdays": [
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
       "topics"
+
     ]
   },
   {
@@ -555,18 +932,63 @@
     "preferences": {
       "period": "",
       "hobby": "",
-      "topics": [],
-      "skills": [],
-      "likes": [],
-      "dislikes": [],
+      "topics": [
+      ],
+      "ntopics": [
+      ],
+      "skills": [
+      ],
+      "likes": [
+      ],
+      "dislikes": [
+      ],
       "friends": null,
-      "weekday": ""
+      "weekdays": [
+      ],
+      "nweekdays": [
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
       "topics"
+
+    ]
+  },
+  {
+    "id": null,
+    "preferences": {
+      "period": "",
+      "hobby": "",
+      "topics": [
+      ],
+      "ntopics": [
+      ],
+      "skills": [
+      ],
+      "likes": [
+      ],
+      "dislikes": [
+      ],
+      "friends": null,
+      "weekdays": [
+      ],
+      "nweekdays": [
+      ]
+    },
+    "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
+      "friends",
+      "likes",
+      "skills",
+      "topics"
+
     ]
   }
 ]

@@ -63,7 +63,6 @@ class GCalendar:
             'RRULE:FREQ=WEEKLY;COUNT=14'
           ],
           'attendees': [
-            {'email': 'O.Hundogan@gmail.com'},
             {'email': 'sbrin@example.com'},
             {'email': 'mternyuk@gmail.com'},
           ],
