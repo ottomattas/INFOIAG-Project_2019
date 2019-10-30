@@ -1,7 +1,7 @@
 import numpy as np
 from itertools import combinations, chain
 from pprint import pprint
-from random import randint, shuffle
+from random import randint, shuffle, seed
 
 from owlready2 import *
 
@@ -23,6 +23,7 @@ class Agent:
         self.trust_models       = trust_models
         self.student_obj        = self.ontology.search(studentID=data["id"])[0]
         self.friends_obj        = self.student_obj.hasFriend
+        seed()
 
         if data["preferences"]["dislikes"]:
             self.disliked_teachers_obj = self.ontology.search(teacherID=data["preferences"]["dislikes"])[0]
@@ -129,9 +130,9 @@ class Agent:
         self.counter = 0
         pref_list = Agent.prepare_data(self.preferences)
         met_prefs = [0]
-        for tuple in pref_list:
-            met_prefs.append(self.apply_pref(tuple[0], tuple[1], package))
-        return sum(met_prefs) / self.counter
+        for tuple_ in pref_list:
+            met_prefs.append(self.apply_pref(tuple_[0], tuple_[1], package))
+        return sum(met_prefs) / self.counter if self.counter > 0 else 0
 
     def compact_prefs(self, package):
         pass

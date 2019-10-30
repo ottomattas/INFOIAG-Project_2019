@@ -28,7 +28,7 @@ class StateMachine(object):
         a.trust(models_list)
         a.generate_course_scores(models_list)
         self.df = pd.DataFrame(columns=["dummy_dummy", "dummy_hard", "rank", "dummy_scores", "dummy_hard_scores", "rank_scores"])
-        with open("./data/student_data_final.json") as json_data:
+        with open("./data/student_data.json") as json_data:
             data = json.load(json_data)
 
         for idx in range(len(data)):

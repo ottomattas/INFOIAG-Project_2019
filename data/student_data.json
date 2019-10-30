@@ -37,5 +37,87 @@
       "skills",
       "topics"
     ]
+  },
+  {
+    "id": 9,
+    "preferences": {
+      "period": "P2",
+      "hobby": "Sewing",
+      "topics": [
+        "Macroeconomics",
+        "Microeconomics"
+      ],
+      "ntopics": [
+        "20thCenturyLiterature",
+        "OscillationsAndWaves"
+      ],
+      "skills": [
+        "Teamwork",
+        "Programming"
+      ],
+      "likes": 6,
+      "dislikes": 1,
+      "friends": true,
+      "weekdays": [],
+      "nweekdays": [],
+      "weekday": [
+        "We",
+        "Tu"
+      ],
+      "nweekday": [
+        "Fr"
+      ]
+    },
+    "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
+      "friends",
+      "likes",
+      "skills",
+      "topics"
+    ]
+  },
+  {
+    "id": 28,
+    "preferences": {
+      "period": "P2",
+      "hobby": "",
+      "topics": [
+        "Probability",
+        "Kinematics",
+        "OscillationsAndWaves"
+      ],
+      "ntopics": [
+        "ScientificPhilosophy",
+        "Evolution",
+        "Media"
+      ],
+      "skills": [
+        "AcademicWriting",
+        "Debating",
+        "Summarisation"
+      ],
+      "likes": 14,
+      "dislikes": 1,
+      "friends": true,
+      "weekdays": [],
+      "nweekdays": [],
+      "weekday": [
+        "Mo"
+      ],
+      "nweekday": [
+        "Th"
+      ]
+    },
+    "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
+      "friends",
+      "likes",
+      "skills",
+      "topics"
+    ]
   }
 ]
