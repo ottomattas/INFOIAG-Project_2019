@@ -255,10 +255,10 @@ def extract_topics(course_list):
                 ]))
 
 
-onto = owl.get_ontology("./ultimate_ontology.owl")
+onto = owl.get_ontology("./ontology.owl")
 onto.load()
 all_students = onto.Student.instances()
-
+print(len(all_students))
 with open("./data/student_data_new.json") as json_data:
     data = json.load(json_data)
 
@@ -270,22 +270,32 @@ periods = ["P1","P2","P3","P4"]
 
 
 for idx, s in enumerate(all_students):
-    id = s.studentID
+    id = s.studentID[0]
+    print(s.studentID)
     hobby = str(s.practices).strip("[").strip("]")
     inte = random.randint(0,2)
 
+    print(len(onto.HumanitiesCourse.instances()))
     if inte == 0:
-        topics = random.choices(extract_topics(onto.HumanitiesCourse.instances()), k=(inte + 2))
+        topics = random.sample(extract_topics(onto.HumanitiesCourse.instances()), k=(inte + 2))
+        ntopics = set(random.sample(extract_topics(onto.HumanitiesCourse.instances()), k=(inte + 2))).difference(set(topics))
     elif inte == 1:
-        topics = random.choices(extract_topics(onto.ScienceCourse.instances()), k=(inte + 2))
+        topics = random.sample(extract_topics(onto.ScienceCourse.instances()), k=(inte + 2))
+        ntopics = set(random.sample(extract_topics(onto.ScienceCourse.instances()), k=(inte + 2))).difference(set(topics))
     elif inte == 2:
-        topics = random.choices(extract_topics(onto.SocialCourse.instances()), k=(inte + 2))
+        topics = random.sample(extract_topics(onto.SocialCourse.instances()), k=(inte + 2))
+        ntopics = set(random.sample(extract_topics(onto.ScienceCourse.instances()), k=(inte + 2))).difference(set(topics))
 
-    skills = random.choices(s.hasSkill, k=3)
+    print(s.hasSkill)
+    skills = random.choices(s.hasSkill, k=random.randint(2,3))
     like = random.randint(0,19)
     dislike = random.randint(0,19)
     friends = bool(random.randint(0,1))
-    weekday = random.choice(weekdays)
+    weekday = random.choices(weekdays, k=random.randint(1,2))
+    nweekday = random.choices(weekdays, k=random.randint(1,2))
+    while nweekday == weekday:
+        nweekday = random.choices(weekdays, k=random.randint(1, 2))
+
     period = random.choice(periods)
 
 
@@ -297,12 +307,14 @@ for idx, s in enumerate(all_students):
     data[idx]["id"] = id
     data[idx]["preferences"]["period"] = period
     data[idx]["preferences"]["hobby"] = hobby
-    data[idx]["preferences"]["topics"] = topics
+    data[idx]["preferences"]["topics"] = list(topics)
+    data[idx]["preferences"]["ntopics"] = list(ntopics)
     data[idx]["preferences"]["skills"] = list(skills)
     data[idx]["preferences"]["likes"] = like
     data[idx]["preferences"]["dislikes"] = dislike
     data[idx]["preferences"]["friends"] = friends
     data[idx]["preferences"]["weekday"] = weekday
+    data[idx]["preferences"]["nweekday"] = nweekday
 
 
 

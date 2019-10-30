@@ -1,23 +1,37 @@
 [
   {
-    "id": 0,
+    "id": 1,
     "preferences": {
-      "period": "P4",
+      "period": "P1",
       "hobby": "",
       "topics": [
-        "Ethics",
-        "Language"
+        "Logic",
+        "ComputerGraphics"
+      ],
+      "ntopics": [
+        "GeneralHistory"
       ],
       "skills": [
-        "AcademicWriting",
-        "Creativity"
+        "Programming"
       ],
-      "likes": 19,
-      "dislikes": 5,
+      "likes": [
+        1
+      ],
+      "dislikes": [
+      ],
       "friends": true,
-      "weekday": "We"
+      "weekdays": [
+        "Fr",
+        "Th"
+      ],
+      "nweekdays": [
+        "Mo"
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
@@ -27,22 +41,37 @@
   {
     "id": 9,
     "preferences": {
-      "period": "P1",
-      "hobby": "Sewing",
+      "period": "P2",
+      "hobby": "ontology.Sewing",
       "topics": [
-        "ModernPhilosopy",
-        "Culture"
+        "Macroeconomics",
+        "Microeconomics"
+      ],
+      "ntopics": [
+        "20thCenturyLiterature",
+        "OscillationsAndWaves"
       ],
       "skills": [
-        "Teamwork",
-        "Programming"
+        "ontology.Teamwork",
+        "ontology.Programming"
       ],
-      "likes": 11,
-      "dislikes": 3,
-      "friends": false,
-      "weekday": "Fr"
+      "likes": 6,
+      "dislikes": 1,
+      "friends": true,
+      "weekdays": [],
+      "nweekdays": [],
+      "weekday": [
+        "We",
+        "Tu"
+      ],
+      "nweekday": [
+        "Fr"
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
@@ -52,23 +81,39 @@
   {
     "id": 28,
     "preferences": {
-      "period": "P3",
+      "period": "P2",
       "hobby": "",
       "topics": [
-        "Macroeconomics",
-        "VictorianLiterature"
+        "Probability",
+        "Kinematics",
+        "OscillationsAndWaves"
+      ],
+      "ntopics": [
+        "ScientificPhilosophy",
+        "Evolution",
+        "Media"
       ],
       "skills": [
-        "AcademicWriting",
-        "Summarisation",
-        "Presenting"
+        "ontology.AcademicWriting",
+        "ontology.Debating",
+        "ontology.Summarisation"
       ],
-      "likes": 17,
-      "dislikes": 17,
+      "likes": 14,
+      "dislikes": 1,
       "friends": true,
-      "weekday": "Fr"
+      "weekdays": [],
+      "nweekdays": [],
+      "weekday": [
+        "Mo"
+      ],
+      "nweekday": [
+        "Th"
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
@@ -78,24 +123,36 @@
   {
     "id": 10,
     "preferences": {
-      "period": "P1",
+      "period": "P4",
       "hobby": "",
       "topics": [
-        "Institutions",
-        "Leadership",
         "ComputationalModeling",
-        "Language"
+        "TextAnalysis"
+      ],
+      "ntopics": [
+        "Sustainability",
+        "CognitivePsychology"
       ],
       "skills": [
-        "CriticalThinking",
-        "Presenting"
+        "ontology.Debating",
+        "ontology.AcademicWriting"
       ],
-      "likes": 2,
-      "dislikes": 0,
-      "friends": false,
-      "weekday": "Th"
+      "likes": 7,
+      "dislikes": 13,
+      "friends": true,
+      "weekdays": [],
+      "nweekdays": [],
+      "weekday": [
+        "Fr"
+      ],
+      "nweekday": [
+        "Tu"
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
@@ -105,22 +162,36 @@
   {
     "id": 17,
     "preferences": {
-      "period": "P4",
-      "hobby": "Tennis",
+      "period": "P1",
+      "hobby": "ontology.Tennis",
       "topics": [
+        "AncientPhilosophy",
+        "Media"
+      ],
+      "ntopics": [
         "ClinicalPsychology",
-        "GeneralHistory"
+        "Microeconomics"
       ],
       "skills": [
-        "Teamwork",
-        "Programming"
+        "ontology.Programming"
       ],
-      "likes": 8,
-      "dislikes": 16,
+      "likes": 4,
+      "dislikes": 14,
       "friends": false,
-      "weekday": "We"
+      "weekdays": [],
+      "nweekdays": [],
+      "weekday": [
+        "Tu"
+      ],
+      "nweekday": [
+        "Fr",
+        "Mo"
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
@@ -130,22 +201,41 @@
   {
     "id": 18,
     "preferences": {
-      "period": "P3",
+      "period": "P4",
       "hobby": "",
       "topics": [
-        "Databases",
-        "Finance",
-        "Algorithms"
+        "ModernPhilosopy",
+        "Semantics",
+        "RaceAndEthnicity",
+        "Neurobiology"
+      ],
+      "ntopics": [
+        "Combinatorics",
+        "Thermodynamics",
+        "CellBiology",
+        "Mechanics"
       ],
       "skills": [
-        "Summarisation"
+        "ontology.Summarisation"
       ],
-      "likes": 16,
-      "dislikes": 7,
+      "likes": 1,
+      "dislikes": 5,
       "friends": true,
-      "weekday": "We"
+      "weekdays": [],
+      "nweekdays": [],
+      "weekday": [
+        "We",
+        "Fr"
+      ],
+      "nweekday": [
+        "Mo",
+        "We"
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
@@ -155,23 +245,41 @@
   {
     "id": 11,
     "preferences": {
-      "period": "P2",
-      "hobby": "Sewing",
+      "period": "P1",
+      "hobby": "ontology.Sewing",
       "topics": [
-        "Probability",
-        "InferentialArgumentation",
-        "Finance"
+        "Culture",
+        "SocialClass",
+        "CognitivePsychology",
+        "RaceAndEthnicity"
+      ],
+      "ntopics": [
+        "SystemsDesign",
+        "Topology",
+        "CellBiology",
+        "Kinematics"
       ],
       "skills": [
-        "Teamwork",
-        "CriticalThinking"
+        "ontology.CriticalThinking",
+        "ontology.Debating"
       ],
-      "likes": 15,
-      "dislikes": 14,
+      "likes": 12,
+      "dislikes": 17,
       "friends": false,
-      "weekday": "We"
+      "weekdays": [],
+      "nweekdays": [],
+      "weekday": [
+        "Tu",
+        "Fr"
+      ],
+      "nweekday": [
+        "Th"
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
@@ -181,24 +289,40 @@
   {
     "id": 1,
     "preferences": {
-      "period": "P1",
-      "hobby": "Archery",
+      "period": "P4",
+      "hobby": "ontology.Archery",
       "topics": [
-        "ModernPhilosopy",
-        "SocialClass",
-        "Ethics",
-        "Education"
+        "Topology",
+        "Thermodynamics",
+        "Kinematics"
+      ],
+      "ntopics": [
+        "Language",
+        "ElectroChemistry"
       ],
       "skills": [
-        "Debating",
-        "CriticalThinking"
+        "ontology.CriticalThinking",
+        "ontology.Debating",
+        "ontology.AcademicWriting"
       ],
-      "likes": 18,
-      "dislikes": 0,
-      "friends": false,
-      "weekday": "Mo"
+      "likes": 12,
+      "dislikes": 9,
+      "friends": true,
+      "weekdays": [],
+      "nweekdays": [],
+      "weekday": [
+        "Mo",
+        "Tu"
+      ],
+      "nweekday": [
+        "Fr",
+        "Fr"
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
@@ -208,25 +332,40 @@
   {
     "id": 22,
     "preferences": {
-      "period": "P2",
-      "hobby": "Football",
+      "period": "P4",
+      "hobby": "ontology.Football",
       "topics": [
-        "Leadership",
+        "Semantics",
         "ClinicalPsychology",
-        "Education",
-        "Institutions"
+        "Leadership",
+        "Syntax"
+      ],
+      "ntopics": [
+        "InferentialArgumentation",
+        "Evolution",
+        "ElectroChemistry",
+        "CognitivePsychology"
       ],
       "skills": [
-        "Debating",
-        "CriticalThinking",
-        "AcademicWriting"
+        "ontology.AcademicWriting"
       ],
-      "likes": 17,
-      "dislikes": 9,
-      "friends": false,
-      "weekday": "Mo"
+      "likes": 9,
+      "dislikes": 8,
+      "friends": true,
+      "weekdays": [],
+      "nweekdays": [],
+      "weekday": [
+        "Th",
+        "We"
+      ],
+      "nweekday": [
+        "Mo"
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
@@ -239,21 +378,37 @@
       "period": "P3",
       "hobby": "",
       "topics": [
-        "ComputationalModeling",
-        "Macroeconomics",
-        "AppliedEconomy",
-        "Semantics"
+        "Ethics",
+        "AnthropologicalTheories",
+        "Youth",
+        "Education"
+      ],
+      "ntopics": [
+        "DataStructures",
+        "ScientificPhilosophy",
+        "ComputerArchitecture",
+        "Syntax"
       ],
       "skills": [
-        "Teamwork",
-        "Programming"
+        "ontology.Programming"
       ],
-      "likes": 5,
-      "dislikes": 13,
+      "likes": 14,
+      "dislikes": 9,
       "friends": true,
-      "weekday": "Th"
+      "weekdays": [],
+      "nweekdays": [],
+      "weekday": [
+        "Th",
+        "Mo"
+      ],
+      "nweekday": [
+        "Mo"
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
@@ -264,22 +419,42 @@
     "id": 13,
     "preferences": {
       "period": "P1",
-      "hobby": "Archery",
+      "hobby": "ontology.Archery",
       "topics": [
-        "Semantics",
-        "ElectroChemistry",
-        "ChemicalBonding"
+        "AnthropologicalTheories",
+        "Sustainability",
+        "CognitivePsychology",
+        "SocialClass"
+      ],
+      "ntopics": [
+        "Thermodynamics",
+        "Probability",
+        "ScientificPhilosophy",
+        "Botany"
       ],
       "skills": [
-        "Presenting",
-        "Programming"
+        "ontology.CriticalThinking",
+        "ontology.Teamwork",
+        "ontology.Programming"
       ],
-      "likes": 4,
-      "dislikes": 2,
-      "friends": true,
-      "weekday": "We"
+      "likes": 2,
+      "dislikes": 12,
+      "friends": false,
+      "weekdays": [],
+      "nweekdays": [],
+      "weekday": [
+        "Tu",
+        "Tu"
+      ],
+      "nweekday": [
+        "Fr",
+        "Mo"
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
@@ -289,24 +464,37 @@
   {
     "id": 23,
     "preferences": {
-      "period": "P4",
+      "period": "P1",
       "hobby": "",
       "topics": [
-        "Sustainability",
-        "Ethics",
-        "Finance",
-        "Ethics"
+        "ModernPhilosopy",
+        "AncientPhilosophy"
+      ],
+      "ntopics": [
+        "20thCenturyLiterature",
+        "Semantics"
       ],
       "skills": [
-        "Teamwork",
-        "Programming"
+        "ontology.Teamwork",
+        "ontology.Programming"
       ],
-      "likes": 3,
-      "dislikes": 10,
-      "friends": false,
-      "weekday": "We"
+      "likes": 12,
+      "dislikes": 4,
+      "friends": true,
+      "weekdays": [],
+      "nweekdays": [],
+      "weekday": [
+        "Fr",
+        "We"
+      ],
+      "nweekday": [
+        "We"
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
@@ -316,21 +504,37 @@
   {
     "id": 6,
     "preferences": {
-      "period": "P1",
+      "period": "P3",
       "hobby": "",
       "topics": [
-        "ScientificPhilosophy",
-        "TextAnalysis"
+        "Culture",
+        "20thCenturyLiterature"
+      ],
+      "ntopics": [
+        "CognitivePsychology"
       ],
       "skills": [
-        "Summarisation"
+        "ontology.Experimentation",
+        "ontology.Summarisation"
       ],
-      "likes": 8,
-      "dislikes": 17,
+      "likes": 11,
+      "dislikes": 15,
       "friends": true,
-      "weekday": "Tu"
+      "weekdays": [],
+      "nweekdays": [],
+      "weekday": [
+        "Th",
+        "Mo"
+      ],
+      "nweekday": [
+        "Fr",
+        "Th"
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
@@ -341,21 +545,40 @@
     "id": 14,
     "preferences": {
       "period": "P2",
-      "hobby": "Tennis",
+      "hobby": "ontology.Tennis",
       "topics": [
-        "Syntax",
-        "AncientPhilosophy"
+        "Leadership",
+        "Finance",
+        "Culture",
+        "Language"
+      ],
+      "ntopics": [
+        "ChemicalBonding",
+        "ScientificPhilosophy",
+        "ProgrammingLanguages",
+        "SystemsDesign"
       ],
       "skills": [
-        "Creativity",
-        "Experimentation"
+        "ontology.Creativity",
+        "ontology.AcademicWriting"
       ],
-      "likes": 0,
-      "dislikes": 15,
-      "friends": true,
-      "weekday": "Tu"
+      "likes": 7,
+      "dislikes": 8,
+      "friends": false,
+      "weekdays": [],
+      "nweekdays": [],
+      "weekday": [
+        "Tu"
+      ],
+      "nweekday": [
+        "We",
+        "We"
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
@@ -366,22 +589,40 @@
     "id": 15,
     "preferences": {
       "period": "P4",
-      "hobby": "Sewing",
+      "hobby": "ontology.Sewing",
       "topics": [
-        "Neurobiology",
-        "ScientificPhilosophy"
+        "AnthropologicalTheories",
+        "Ethics",
+        "Language",
+        "CognitivePsychology"
+      ],
+      "ntopics": [
+        "DataStructures",
+        "ComputerArchitecture",
+        "Semantics",
+        "OscillationsAndWaves"
       ],
       "skills": [
-        "Debating",
-        "CriticalThinking",
-        "Presenting"
+        "ontology.Debating"
       ],
-      "likes": 0,
-      "dislikes": 12,
-      "friends": false,
-      "weekday": "Fr"
+      "likes": 14,
+      "dislikes": 19,
+      "friends": true,
+      "weekdays": [],
+      "nweekdays": [],
+      "weekday": [
+        "Mo",
+        "Fr"
+      ],
+      "nweekday": [
+        "Mo",
+        "Mo"
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
@@ -391,23 +632,41 @@
   {
     "id": 27,
     "preferences": {
-      "period": "P4",
+      "period": "P1",
       "hobby": "",
       "topics": [
-        "20thCenturyLiterature",
-        "Semantics"
+        "Youth",
+        "ClinicalPsychology",
+        "SocialClass",
+        "Microeconomics"
+      ],
+      "ntopics": [
+        "SystemsDesign",
+        "ProgrammingLanguages",
+        "Semantics",
+        "Media"
       ],
       "skills": [
-        "Teamwork",
-        "Summarisation",
-        "Creativity"
+        "ontology.Teamwork",
+        "ontology.AcademicWriting"
       ],
-      "likes": 12,
-      "dislikes": 16,
+      "likes": 0,
+      "dislikes": 6,
       "friends": true,
-      "weekday": "Mo"
+      "weekdays": [],
+      "nweekdays": [],
+      "weekday": [
+        "We",
+        "Tu"
+      ],
+      "nweekday": [
+        "We"
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
@@ -418,22 +677,36 @@
     "id": 16,
     "preferences": {
       "period": "P2",
-      "hobby": "Saxophone",
+      "hobby": "ontology.Saxophone",
       "topics": [
-        "ModernPhilosopy",
-        "ChemicalEngineering",
-        "Kinematics"
+        "Language",
+        "Sustainability"
+      ],
+      "ntopics": [
+        "GeneralHistory"
       ],
       "skills": [
-        "AcademicWriting",
-        "Programming"
+        "ontology.Presenting",
+        "ontology.Debating",
+        "ontology.Programming"
       ],
-      "likes": 14,
-      "dislikes": 15,
-      "friends": true,
-      "weekday": "Mo"
+      "likes": 10,
+      "dislikes": 3,
+      "friends": false,
+      "weekdays": [],
+      "nweekdays": [],
+      "weekday": [
+        "Mo",
+        "Mo"
+      ],
+      "nweekday": [
+        "Fr"
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
@@ -443,21 +716,36 @@
   {
     "id": 19,
     "preferences": {
-      "period": "P2",
+      "period": "P4",
       "hobby": "",
       "topics": [
-        "ScientificPhilosophy",
-        "AppliedEconomy"
+        "Probability",
+        "Logic",
+        "Algorithms"
+      ],
+      "ntopics": [
+        "Calculus",
+        "Media"
       ],
       "skills": [
-        "Summarisation"
+        "ontology.Summarisation"
       ],
-      "likes": 17,
-      "dislikes": 2,
-      "friends": false,
-      "weekday": "Th"
+      "likes": 7,
+      "dislikes": 13,
+      "friends": true,
+      "weekdays": [],
+      "nweekdays": [],
+      "weekday": [
+        "Mo"
+      ],
+      "nweekday": [
+        "Th"
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
@@ -467,22 +755,36 @@
   {
     "id": 21,
     "preferences": {
-      "period": "P4",
+      "period": "P2",
       "hobby": "",
       "topics": [
-        "Politics",
-        "VictorianLiterature"
+        "RaceAndEthnicity",
+        "SocialClass"
+      ],
+      "ntopics": [
+        "AppliedEconomy",
+        "Semantics"
       ],
       "skills": [
-        "AcademicWriting",
-        "Presenting"
+        "ontology.AcademicWriting"
       ],
-      "likes": 19,
-      "dislikes": 14,
-      "friends": true,
-      "weekday": "Mo"
+      "likes": 17,
+      "dislikes": 6,
+      "friends": false,
+      "weekdays": [],
+      "nweekdays": [],
+      "weekday": [
+        "We",
+        "We"
+      ],
+      "nweekday": [
+        "Th"
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
@@ -493,23 +795,37 @@
     "id": 4,
     "preferences": {
       "period": "P1",
-      "hobby": "IceSkating",
+      "hobby": "ontology.IceSkating",
       "topics": [
-        "Macroeconomics",
-        "ComputationalModeling",
+        "RaceAndEthnicity",
+        "ComputationalModeling"
+      ],
+      "ntopics": [
         "ModernPhilosopy",
-        "Sustainability"
+        "Neurobiology"
       ],
       "skills": [
-        "AcademicWriting",
-        "Programming"
+        "ontology.CriticalThinking",
+        "ontology.Debating",
+        "ontology.Programming"
       ],
-      "likes": 16,
-      "dislikes": 5,
-      "friends": false,
-      "weekday": "We"
+      "likes": 12,
+      "dislikes": 11,
+      "friends": true,
+      "weekdays": [],
+      "nweekdays": [],
+      "weekday": [
+        "We",
+        "Mo"
+      ],
+      "nweekday": [
+        "Th"
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
@@ -522,20 +838,38 @@
       "period": "P4",
       "hobby": "",
       "topics": [
-        "CognitivePsychology",
-        "ModernPhilosopy",
-        "Semantics"
+        "Macroeconomics",
+        "Culture",
+        "AppliedEconomy",
+        "AnthropologicalTheories"
+      ],
+      "ntopics": [
+        "Algebra",
+        "Language",
+        "Probability",
+        "ComputerGraphics"
       ],
       "skills": [
-        "Teamwork",
-        "Programming"
+        "ontology.Teamwork",
+        "ontology.Programming"
       ],
-      "likes": 7,
-      "dislikes": 13,
-      "friends": true,
-      "weekday": "Fr"
+      "likes": 14,
+      "dislikes": 6,
+      "friends": false,
+      "weekdays": [],
+      "nweekdays": [],
+      "weekday": [
+        "Th",
+        "Th"
+      ],
+      "nweekday": [
+        "We"
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
@@ -545,23 +879,41 @@
   {
     "id": 24,
     "preferences": {
-      "period": "P4",
-      "hobby": "Saxophone",
+      "period": "P1",
+      "hobby": "ontology.Saxophone",
       "topics": [
-        "Syntax",
-        "Microeconomics",
-        "RaceAndEthnicity",
-        "SocialClass"
+        "Culture",
+        "SocialClass",
+        "Institutions",
+        "Language"
+      ],
+      "ntopics": [
+        "Topology",
+        "Combinatorics",
+        "DataStructures",
+        "BioEngineering"
       ],
       "skills": [
-        "Programming"
+        "ontology.Teamwork",
+        "ontology.Programming"
       ],
-      "likes": 16,
-      "dislikes": 15,
+      "likes": 18,
+      "dislikes": 14,
       "friends": false,
-      "weekday": "Fr"
+      "weekdays": [],
+      "nweekdays": [],
+      "weekday": [
+        "We",
+        "Th"
+      ],
+      "nweekday": [
+        "Th"
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
@@ -571,24 +923,40 @@
   {
     "id": 25,
     "preferences": {
-      "period": "P1",
-      "hobby": "Sewing",
+      "period": "P2",
+      "hobby": "ontology.Sewing",
       "topics": [
-        "ModernPhilosopy",
-        "Youth",
+        "Sustainability",
+        "TextAnalysis",
         "Language",
-        "Finance"
+        "CognitivePsychology"
+      ],
+      "ntopics": [
+        "Logic",
+        "Evolution",
+        "ComputerGraphics"
       ],
       "skills": [
-        "Teamwork",
-        "Programming"
+        "ontology.Teamwork"
       ],
-      "likes": 2,
-      "dislikes": 3,
+      "likes": 4,
+      "dislikes": 18,
       "friends": false,
-      "weekday": "We"
+      "weekdays": [],
+      "nweekdays": [],
+      "weekday": [
+        "Th",
+        "Tu"
+      ],
+      "nweekday": [
+        "Th",
+        "Mo"
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
@@ -598,21 +966,38 @@
   {
     "id": 26,
     "preferences": {
-      "period": "P2",
+      "period": "P3",
       "hobby": "",
       "topics": [
-        "ModernPhilosopy",
-        "GeneralHistory"
+        "Language",
+        "Media",
+        "Probability"
+      ],
+      "ntopics": [
+        "SystemsDesign",
+        "ThermoChemistry",
+        "AppliedEconomy"
       ],
       "skills": [
-        "Summarisation"
+        "ontology.Summarisation"
       ],
-      "likes": 16,
+      "likes": 19,
       "dislikes": 1,
-      "friends": false,
-      "weekday": "We"
+      "friends": true,
+      "weekdays": [],
+      "nweekdays": [],
+      "weekday": [
+        "Tu"
+      ],
+      "nweekday": [
+        "Th",
+        "Fr"
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
@@ -625,20 +1010,36 @@
       "period": "P4",
       "hobby": "",
       "topics": [
+        "Pharmacology",
+        "ComputationalModeling",
+        "Databases"
+      ],
+      "ntopics": [
         "DataStructures",
-        "Calculus",
-        "Media"
+        "ThermoChemistry",
+        "ComputerGraphics"
       ],
       "skills": [
-        "Teamwork",
-        "Programming"
+        "ontology.Presenting",
+        "ontology.CriticalThinking",
+        "ontology.AcademicWriting"
       ],
-      "likes": 8,
-      "dislikes": 12,
-      "friends": true,
-      "weekday": "Tu"
+      "likes": 10,
+      "dislikes": 11,
+      "friends": false,
+      "weekdays": [],
+      "nweekdays": [],
+      "weekday": [
+        "We"
+      ],
+      "nweekday": [
+        "Th"
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
@@ -648,24 +1049,36 @@
   {
     "id": 29,
     "preferences": {
-      "period": "P1",
-      "hobby": "Tennis",
+      "period": "P2",
+      "hobby": "ontology.Tennis",
       "topics": [
-        "AppliedEconomy",
-        "AppliedEconomy",
-        "ModernPhilosopy",
-        "Youth"
+        "Pragmatics",
+        "Macroeconomics"
+      ],
+      "ntopics": [
+        "Syntax"
       ],
       "skills": [
-        "Teamwork",
-        "Programming"
+        "ontology.Teamwork",
+        "ontology.Programming"
       ],
       "likes": 1,
-      "dislikes": 17,
-      "friends": true,
-      "weekday": "Th"
+      "dislikes": 5,
+      "friends": false,
+      "weekdays": [],
+      "nweekdays": [],
+      "weekday": [
+        "Th",
+        "We"
+      ],
+      "nweekday": [
+        "Tu"
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
@@ -678,19 +1091,38 @@
       "period": "P2",
       "hobby": "",
       "topics": [
-        "ModernPhilosopy",
-        "ScientificPhilosophy"
+        "Language",
+        "AnthropologicalTheories",
+        "ComputationalModeling",
+        "SocialClass"
+      ],
+      "ntopics": [
+        "DataStructures",
+        "ThermoChemistry",
+        "Databases",
+        "OscillationsAndWaves"
       ],
       "skills": [
-        "Teamwork",
-        "Programming"
+        "ontology.Teamwork",
+        "ontology.Programming"
       ],
-      "likes": 0,
-      "dislikes": 3,
-      "friends": true,
-      "weekday": "Tu"
+      "likes": 16,
+      "dislikes": 18,
+      "friends": false,
+      "weekdays": [],
+      "nweekdays": [],
+      "weekday": [
+        "Th",
+        "Th"
+      ],
+      "nweekday": [
+        "Mo"
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
@@ -700,22 +1132,40 @@
   {
     "id": 3,
     "preferences": {
-      "period": "P2",
-      "hobby": "ScubaDiving",
+      "period": "P4",
+      "hobby": "ontology.ScubaDiving",
       "topics": [
-        "19thCenturyLiterature",
-        "CognitivePsychology"
+        "Macroeconomics",
+        "Semantics",
+        "Language",
+        "ComputationalModeling"
+      ],
+      "ntopics": [
+        "Algebra",
+        "ParticlePhysics",
+        "Media",
+        "Mechanics"
       ],
       "skills": [
-        "Teamwork",
-        "Programming"
+        "ontology.Teamwork",
+        "ontology.Programming"
       ],
-      "likes": 7,
-      "dislikes": 1,
+      "likes": 3,
+      "dislikes": 7,
       "friends": false,
-      "weekday": "Mo"
+      "weekdays": [],
+      "nweekdays": [],
+      "weekday": [
+        "Fr"
+      ],
+      "nweekday": [
+        "We"
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
@@ -725,23 +1175,38 @@
   {
     "id": 5,
     "preferences": {
-      "period": "P2",
+      "period": "P4",
       "hobby": "",
       "topics": [
+        "Neurobiology",
+        "Combinatorics",
+        "Topology"
+      ],
+      "ntopics": [
         "Language",
-        "Politics"
+        "ComputerArchitecture",
+        "Algebra"
       ],
       "skills": [
-        "Debating",
-        "AcademicWriting",
-        "CriticalThinking"
+        "ontology.Presenting"
       ],
-      "likes": 19,
-      "dislikes": 1,
+      "likes": 10,
+      "dislikes": 13,
       "friends": false,
-      "weekday": "Tu"
+      "weekdays": [],
+      "nweekdays": [],
+      "weekday": [
+        "Th",
+        "We"
+      ],
+      "nweekday": [
+        "Fr"
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",
@@ -751,23 +1216,61 @@
   {
     "id": 7,
     "preferences": {
-      "period": "P4",
+      "period": "P3",
       "hobby": "",
       "topics": [
-        "Semantics",
-        "Microeconomics",
-        "RaceAndEthnicity",
-        "Ethics"
+        "ComputationalModeling",
+        "ComputerGraphics",
+        "Finance"
+      ],
+      "ntopics": [
+        "ElectroChemistry",
+        "Mechanics"
       ],
       "skills": [
-        "Summarisation"
+        "ontology.Summarisation"
       ],
-      "likes": 7,
-      "dislikes": 13,
+      "likes": 13,
+      "dislikes": 17,
       "friends": false,
-      "weekday": "Mo"
+      "weekdays": [],
+      "nweekdays": [],
+      "weekday": [
+        "Fr"
+      ],
+      "nweekday": [
+        "Fr",
+        "Tu"
+      ]
     },
     "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
+      "friends",
+      "likes",
+      "skills",
+      "topics"
+    ]
+  },
+  {
+    "id": null,
+    "preferences": {
+      "period": "",
+      "hobby": "",
+      "topics": [],
+      "ntopics": [],
+      "skills": [],
+      "likes": [],
+      "dislikes": [],
+      "friends": null,
+      "weekdays": [],
+      "nweekdays": []
+    },
+    "importance": [
+      "ntopics",
+      "nweekdays",
+      "weekdays",
       "friends",
       "likes",
       "skills",

@@ -3,9 +3,10 @@ from random import shuffle, randint, seed
 
 
 class Student:
-    def __init__(self, json_idx):
-        with open("./data/student_data.json") as json_data:
-            self.data = json.load(json_data)[json_idx]
+    def __init__(self, data):
+        # with open("./data/student_data.json") as json_data:
+        #     self.data = json.load(json_data)[json_idx]
+        self.data = data
         self.ranked_preferences = self.data["importance"]
         # shuffle(self.ranked_preferences)
         self.given_preferences = []
@@ -26,9 +27,9 @@ class Student:
     @staticmethod
     def confirm():
         if randint(0, 10) > 0:
-            print("\nShow me more!\n")
+            print("\nYes!\n")
             return True
-        print("\nNo, bye!\n")
+        print("\nNo!\n")
         return False
 
     def get_ranked_preferences(self):
