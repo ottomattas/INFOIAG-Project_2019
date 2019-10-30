@@ -2,6 +2,7 @@ from __future__ import print_function
 import datetime
 import pickle
 import os.path
+import random
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
@@ -12,7 +13,7 @@ class GCalendar:
     def __init__(self):
         pass
 
-    def insert_event(self, activity):
+    def insert_event(self, activity, ontoWeekday):
         # If modifying these scopes, delete the file token.pickle.
         SCOPES = ['https://www.googleapis.com/auth/calendar']
 
@@ -44,10 +45,10 @@ class GCalendar:
         now = datetime.datetime.utcnow().isoformat() + 'Z' # 'Z' indicates UTC time
 
         # activity = ("IntelligentAgents", "Monday")
-        weekday, weekday_, summary = GCalendar.plan_weekday(activity[1], activity[0])
+        weekday, weekday_ = GCalendar.plan_weekday(ontoWeekday)
 
         event = {
-          'summary': summary,
+          'summary': activity,
           'location': 'Utrecht Science Park',
           'description': 'A chance to hear more about OWL',
           'start': {
@@ -64,6 +65,7 @@ class GCalendar:
           'attendees': [
             {'email': 'O.Hundogan@gmail.com'},
             {'email': 'sbrin@example.com'},
+            {'email': 'mternyuk@gmail.com'},
           ],
           'reminders': {
             'useDefault': False,
@@ -78,14 +80,21 @@ class GCalendar:
         print('Event created: %s' % (event.get('htmlLink')))
 
     @staticmethod
-    def plan_weekday(activity_weekday, activity_name):
+    def plan_weekday(activity_weekday):
+        randomHour = random.randint(10, 15)  
         d = 4
-        if activity_weekday == "Monday":
+        if activity_weekday == "Mo":
             d += 0
-        if activity_weekday == "Tuesday":
+        if activity_weekday == "Tu":
             d += 1
+        if activity_weekday == "We":
+            d += 2
+        if activity_weekday == "Th":
+            d += 3
+        if activity_weekday == "Fr":
+            d += 4
         # contiune
-        datetime = '2019-11-{}T09:00:00-07:00'.format(d)
-        datetime_ = '2019-11-{}T11:00:00-07:00'.format(d)
-        summary = activity_name
-        return datetime, datetime_, summary
+        datetime = '2019-11-{}T{}:00:00'.format(d, randomHour)
+        datetime_ = '2019-11-{}T{}:00:00'.format(d, randomHour + 2)
+        #summary = activity_name
+        return datetime, datetime_

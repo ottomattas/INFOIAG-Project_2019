@@ -234,11 +234,18 @@ class Agent:
         social_courses = list(self.ontology.SocialCourse.instances())
         return humanities_courses + science_courses + social_courses
 
-    def check_hobbies(self, hobby):
+    def check_hobbies(self, hobby, package=False):
+        consist = True
         with self.ontology:
+            if package: 
+                self.student_obj.takes = [course for course in package[0]]  
             if hobby:
                 self.student_obj.practices = [self.ontology.Hobby(hobby)]
                 try:
+                    print("\nChecking consistancy of ontology...")
                     sync_reasoner(infer_property_values=True)
+                    consist = True
                 except OwlReadyInconsistentOntologyError:
                     self.print_debug("INCONSISTENCY: Student can't take course on same day as hobby.")
+                    consist = False
+        return consist
