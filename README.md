@@ -1,42 +1,70 @@
-# Student Course Recommendation Agent
-### Group 7
-Firstly, needs to install all dependences which contains in __requirements.txt__ file. You can easy do that with comand in terminal: 
-```sh
-$ pip install -r requirements.txt
-```
+Student Course Recommendation Agent
+===================================
 
-To start the program you need to go to path which contains "main.py" file and run it in terminal
-```sh
+### Group 7
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+To install the required packages listed in requirements.txt file, run the following command:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+$ pip install -r requirements.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+To start the program change directory to the project root folder and run:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 $ python3 main.py
-```
- 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ### main.py
-This file contains only main() function where creates and runs *"StateMachine"* class which we use for handling agents (state transition function) and students behaviour. 
+
+This file contains only main() function where creates and
+runs *"StateMachine"* class which we use for handling agents (state transition
+function) and students behaviour.
 
 ### StateMachine.py
-This file contains implementation of *"StateMachine"* class and his inherits.
 
-__*StateMachine*__ class contains main initialisation function, run and update functions. 
-In initialisation function we define only object varaibles. 
+**StateMachine.py**
 
-At __*run()*__ function 
+This file contains an implementation of *"StateMachine"* class and its child
+classes.
 
-At __*update()*__ function contains state transition function.
+**StateMachine** class contains the main initialisation function, run and update
+functions. In the initialisation function, we define only object variables.
 
-__*IdleState*__ class is inherit of main *StateMachine* class which contains implementation of state change situations and forwards agent to one of the next states:
-    - AskStrictFilters
-    - AskPreferenceState
-    - PresentFinalResult
+At **update()** function contains state transition function.
 
-__*PresentFinalResult*__ class is inherit of main *StateMachine* class and contains implimentation of presenting final course packages one by one. If user accepts one of them interaction ends. If agent out of suggestions, system ask user to change preferences.
+**IdleState** class is inherited from the main *StateMachine* class which
+contains implementation of state change situations and forwards agent to one of
+the next states: - AskStrictFilters - AskPreferenceState - PresentFinalResult
 
-This text you see here is *actually* written in Markdown! To get a feel for Markdown's syntax, type some text into the left window and watch the results in the right.
+**PresentFinalResult** class is inherited from the main *StateMachine* class and
+contains the implementation of presenting final course packages one by one. If
+the user accepts one of these, the program ends. If the agent is out of
+suggestions, the system asks the user to change preferences.
 
-__*CheckResult*__ class is inherit of main *StateMachine* class and contains function of presenting intermediate results and displays best 5 course packages. If rank of packages equal system warns user about this situation and builds similarity rank in advance.
+**CheckResult** class is inherited from the main *StateMachine* class and
+contains the function of presenting intermediate results and displays the best
+5-course packages. If the rank of packages equal system warns the user about
+this situation and builds similarity rank in advance.
 
-__*AskPreferenceState*__ class is inherit of main *StateMachine* class and contains function of user-agent interaction. And retrieving user preferences. If agent out of preferences it goes directly to *PresentFinalResult* state, otherwise to *CheckResult* state.
+**AskPreferenceState** class is inherited from the main *StateMachine* class and
+contains the function of user-agent interaction. And retrieving user
+preferences. If agent out of preferences it goes directly
+to *PresentFinalResult* state, otherwise to *CheckResult* state.
 
-__*AskStrictFilters*__ class is inherit of main *StateMachine* class and contains function which applying hard filters (period and hobbies). 
+**AskStrictFilters** class is inherited from the main *StateMachine* class and
+contains a function which applying hard filters (period and hobbies).
 
-__*EndState*__ class is inherit of main *StateMachine* class and contains function which gets course packeges from random and hard filter only agents and make a comparison with our agent by accuracy.
+**EndState** class is inherited from the main *StateMachine* class and contains
+a function which gets course packages from random and hard filter only agents
+and makes a comparison with our agent by accuracy.
+
+![](media/ad5a24e12b07faf421e3603e5bc7793d.jpg)

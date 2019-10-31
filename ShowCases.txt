@@ -1,5 +1,0 @@
-## Inference to be shown:
-Which course enhances a certain skill
-Which topics does student know
-Which courses has a student unlocked based on taken Courses
-Which courses student has taken based on taken Advanced Courses
