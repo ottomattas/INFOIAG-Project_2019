@@ -40,6 +40,7 @@ class AgentModel:
 
     @staticmethod
     def score(x):
+        
         if x > 5:
             return (x - 5) / 5
         if x < 5:
@@ -53,7 +54,7 @@ class AgentModel:
 
     @staticmethod
     def score_discount(x):
-        # 1 + 0.9 + ... + 0.1 + 0.0
+        
         mx = (10 * 11 / 2) / 10
         if x > 10:
             return mx
@@ -61,6 +62,7 @@ class AgentModel:
         return mx - ((n * (n + 1) / 2) / 10)
 
     def generate_course_scores(self, agents_models):
+
         if not self.trust_dict:
             return
 
@@ -73,14 +75,3 @@ class AgentModel:
             trust_scores_dict[model.id] = model_ratings
 
         self.trust_scores_dict = trust_scores_dict
-
-# models_list = []
-# for i in range(6):
-#     models_list.append(AgentModel("models/agent_model{}".format(i)))
-
-# a = AgentModel("models/agent_model0")
-# a.trust(models_list)
-# pprint(a.trust_dict)
-# print("-" * 70)
-# a.generate_course_scores(models_list)
-# pprint(a.trust_scores_dict)
