@@ -1,44 +1,5 @@
 [
   {
-    "id": 1,
-    "preferences": {
-      "period": "P1",
-      "hobby": "",
-      "topics": [
-        "Logic",
-        "ComputerGraphics"
-      ],
-      "ntopics": [
-        "GeneralHistory"
-      ],
-      "skills": [
-        "Programming"
-      ],
-      "likes": [
-        1
-      ],
-      "dislikes": [
-      ],
-      "friends": true,
-      "weekdays": [
-        "Fr",
-        "Th"
-      ],
-      "nweekdays": [
-        "Mo"
-      ]
-    },
-    "importance": [
-      "ntopics",
-      "nweekdays",
-      "weekdays",
-      "friends",
-      "likes",
-      "skills",
-      "topics"
-    ]
-  },
-  {
     "id": 9,
     "preferences": {
       "period": "P2",
@@ -58,8 +19,6 @@
       "likes": 6,
       "dislikes": 1,
       "friends": true,
-      "weekdays": [],
-      "nweekdays": [],
       "weekday": [
         "We",
         "Tu"
@@ -69,9 +28,10 @@
       ]
     },
     "importance": [
+      "dislikes",
       "ntopics",
-      "nweekdays",
-      "weekdays",
+      "nweekday",
+      "weekday",
       "friends",
       "likes",
       "skills",
@@ -101,8 +61,6 @@
       "likes": 14,
       "dislikes": 1,
       "friends": true,
-      "weekdays": [],
-      "nweekdays": [],
       "weekday": [
         "Mo"
       ],
@@ -111,9 +69,10 @@
       ]
     },
     "importance": [
+      "dislikes",
       "ntopics",
-      "nweekdays",
-      "weekdays",
+      "nweekday",
+      "weekday",
       "friends",
       "likes",
       "skills",
@@ -140,8 +99,6 @@
       "likes": 7,
       "dislikes": 13,
       "friends": true,
-      "weekdays": [],
-      "nweekdays": [],
       "weekday": [
         "Fr"
       ],
@@ -150,9 +107,10 @@
       ]
     },
     "importance": [
+      "dislikes",
       "ntopics",
-      "nweekdays",
-      "weekdays",
+      "nweekday",
+      "weekday",
       "friends",
       "likes",
       "skills",
@@ -178,8 +136,6 @@
       "likes": 4,
       "dislikes": 14,
       "friends": false,
-      "weekdays": [],
-      "nweekdays": [],
       "weekday": [
         "Tu"
       ],
@@ -189,9 +145,10 @@
       ]
     },
     "importance": [
+      "dislikes",
       "ntopics",
-      "nweekdays",
-      "weekdays",
+      "nweekday",
+      "weekday",
       "friends",
       "likes",
       "skills",
@@ -221,8 +178,6 @@
       "likes": 1,
       "dislikes": 5,
       "friends": true,
-      "weekdays": [],
-      "nweekdays": [],
       "weekday": [
         "We",
         "Fr"
@@ -233,9 +188,10 @@
       ]
     },
     "importance": [
+      "dislikes",
       "ntopics",
-      "nweekdays",
-      "weekdays",
+      "nweekday",
+      "weekday",
       "friends",
       "likes",
       "skills",
@@ -266,8 +222,6 @@
       "likes": 12,
       "dislikes": 17,
       "friends": false,
-      "weekdays": [],
-      "nweekdays": [],
       "weekday": [
         "Tu",
         "Fr"
@@ -277,9 +231,10 @@
       ]
     },
     "importance": [
+      "dislikes",
       "ntopics",
-      "nweekdays",
-      "weekdays",
+      "nweekday",
+      "weekday",
       "friends",
       "likes",
       "skills",
@@ -308,8 +263,6 @@
       "likes": 12,
       "dislikes": 9,
       "friends": true,
-      "weekdays": [],
-      "nweekdays": [],
       "weekday": [
         "Mo",
         "Tu"
@@ -320,9 +273,10 @@
       ]
     },
     "importance": [
+      "dislikes",
       "ntopics",
-      "nweekdays",
-      "weekdays",
+      "nweekday",
+      "weekday",
       "friends",
       "likes",
       "skills",
@@ -352,8 +306,6 @@
       "likes": 9,
       "dislikes": 8,
       "friends": true,
-      "weekdays": [],
-      "nweekdays": [],
       "weekday": [
         "Th",
         "We"
@@ -363,9 +315,10 @@
       ]
     },
     "importance": [
+      "dislikes",
       "ntopics",
-      "nweekdays",
-      "weekdays",
+      "nweekday",
+      "weekday",
       "friends",
       "likes",
       "skills",
@@ -395,8 +348,6 @@
       "likes": 14,
       "dislikes": 9,
       "friends": true,
-      "weekdays": [],
-      "nweekdays": [],
       "weekday": [
         "Th",
         "Mo"
@@ -406,9 +357,10 @@
       ]
     },
     "importance": [
+      "dislikes",
       "ntopics",
-      "nweekdays",
-      "weekdays",
+      "nweekday",
+      "weekday",
       "friends",
       "likes",
       "skills",
@@ -440,8 +392,6 @@
       "likes": 2,
       "dislikes": 12,
       "friends": false,
-      "weekdays": [],
-      "nweekdays": [],
       "weekday": [
         "Tu",
         "Tu"
@@ -452,9 +402,10 @@
       ]
     },
     "importance": [
+      "dislikes",
       "ntopics",
-      "nweekdays",
-      "weekdays",
+      "nweekday",
+      "weekday",
       "friends",
       "likes",
       "skills",
@@ -481,8 +432,6 @@
       "likes": 12,
       "dislikes": 4,
       "friends": true,
-      "weekdays": [],
-      "nweekdays": [],
       "weekday": [
         "Fr",
         "We"
@@ -492,9 +441,10 @@
       ]
     },
     "importance": [
+      "dislikes",
       "ntopics",
-      "nweekdays",
-      "weekdays",
+      "nweekday",
+      "weekday",
       "friends",
       "likes",
       "skills",
@@ -520,8 +470,6 @@
       "likes": 11,
       "dislikes": 15,
       "friends": true,
-      "weekdays": [],
-      "nweekdays": [],
       "weekday": [
         "Th",
         "Mo"
@@ -532,9 +480,10 @@
       ]
     },
     "importance": [
+      "dislikes",
       "ntopics",
-      "nweekdays",
-      "weekdays",
+      "nweekday",
+      "weekday",
       "friends",
       "likes",
       "skills",
@@ -565,8 +514,6 @@
       "likes": 7,
       "dislikes": 8,
       "friends": false,
-      "weekdays": [],
-      "nweekdays": [],
       "weekday": [
         "Tu"
       ],
@@ -576,9 +523,10 @@
       ]
     },
     "importance": [
+      "dislikes",
       "ntopics",
-      "nweekdays",
-      "weekdays",
+      "nweekday",
+      "weekday",
       "friends",
       "likes",
       "skills",
@@ -608,8 +556,6 @@
       "likes": 14,
       "dislikes": 19,
       "friends": true,
-      "weekdays": [],
-      "nweekdays": [],
       "weekday": [
         "Mo",
         "Fr"
@@ -620,9 +566,10 @@
       ]
     },
     "importance": [
+      "dislikes",
       "ntopics",
-      "nweekdays",
-      "weekdays",
+      "nweekday",
+      "weekday",
       "friends",
       "likes",
       "skills",
@@ -653,8 +600,6 @@
       "likes": 0,
       "dislikes": 6,
       "friends": true,
-      "weekdays": [],
-      "nweekdays": [],
       "weekday": [
         "We",
         "Tu"
@@ -664,9 +609,10 @@
       ]
     },
     "importance": [
+      "dislikes",
       "ntopics",
-      "nweekdays",
-      "weekdays",
+      "nweekday",
+      "weekday",
       "friends",
       "likes",
       "skills",
@@ -693,8 +639,6 @@
       "likes": 10,
       "dislikes": 3,
       "friends": false,
-      "weekdays": [],
-      "nweekdays": [],
       "weekday": [
         "Mo",
         "Mo"
@@ -704,9 +648,10 @@
       ]
     },
     "importance": [
+      "dislikes",
       "ntopics",
-      "nweekdays",
-      "weekdays",
+      "nweekday",
+      "weekday",
       "friends",
       "likes",
       "skills",
@@ -733,8 +678,6 @@
       "likes": 7,
       "dislikes": 13,
       "friends": true,
-      "weekdays": [],
-      "nweekdays": [],
       "weekday": [
         "Mo"
       ],
@@ -743,9 +686,10 @@
       ]
     },
     "importance": [
+      "dislikes",
       "ntopics",
-      "nweekdays",
-      "weekdays",
+      "nweekday",
+      "weekday",
       "friends",
       "likes",
       "skills",
@@ -771,8 +715,6 @@
       "likes": 17,
       "dislikes": 6,
       "friends": false,
-      "weekdays": [],
-      "nweekdays": [],
       "weekday": [
         "We",
         "We"
@@ -782,9 +724,10 @@
       ]
     },
     "importance": [
+      "dislikes",
       "ntopics",
-      "nweekdays",
-      "weekdays",
+      "nweekday",
+      "weekday",
       "friends",
       "likes",
       "skills",
@@ -812,8 +755,6 @@
       "likes": 12,
       "dislikes": 11,
       "friends": true,
-      "weekdays": [],
-      "nweekdays": [],
       "weekday": [
         "We",
         "Mo"
@@ -823,9 +764,10 @@
       ]
     },
     "importance": [
+      "dislikes",
       "ntopics",
-      "nweekdays",
-      "weekdays",
+      "nweekday",
+      "weekday",
       "friends",
       "likes",
       "skills",
@@ -856,8 +798,6 @@
       "likes": 14,
       "dislikes": 6,
       "friends": false,
-      "weekdays": [],
-      "nweekdays": [],
       "weekday": [
         "Th",
         "Th"
@@ -867,9 +807,10 @@
       ]
     },
     "importance": [
+      "dislikes",
       "ntopics",
-      "nweekdays",
-      "weekdays",
+      "nweekday",
+      "weekday",
       "friends",
       "likes",
       "skills",
@@ -900,8 +841,6 @@
       "likes": 18,
       "dislikes": 14,
       "friends": false,
-      "weekdays": [],
-      "nweekdays": [],
       "weekday": [
         "We",
         "Th"
@@ -911,9 +850,10 @@
       ]
     },
     "importance": [
+      "dislikes",
       "ntopics",
-      "nweekdays",
-      "weekdays",
+      "nweekday",
+      "weekday",
       "friends",
       "likes",
       "skills",
@@ -942,8 +882,6 @@
       "likes": 4,
       "dislikes": 18,
       "friends": false,
-      "weekdays": [],
-      "nweekdays": [],
       "weekday": [
         "Th",
         "Tu"
@@ -954,9 +892,10 @@
       ]
     },
     "importance": [
+      "dislikes",
       "ntopics",
-      "nweekdays",
-      "weekdays",
+      "nweekday",
+      "weekday",
       "friends",
       "likes",
       "skills",
@@ -984,8 +923,6 @@
       "likes": 19,
       "dislikes": 1,
       "friends": true,
-      "weekdays": [],
-      "nweekdays": [],
       "weekday": [
         "Tu"
       ],
@@ -995,9 +932,10 @@
       ]
     },
     "importance": [
+      "dislikes",
       "ntopics",
-      "nweekdays",
-      "weekdays",
+      "nweekday",
+      "weekday",
       "friends",
       "likes",
       "skills",
@@ -1027,8 +965,6 @@
       "likes": 10,
       "dislikes": 11,
       "friends": false,
-      "weekdays": [],
-      "nweekdays": [],
       "weekday": [
         "We"
       ],
@@ -1037,9 +973,10 @@
       ]
     },
     "importance": [
+      "dislikes",
       "ntopics",
-      "nweekdays",
-      "weekdays",
+      "nweekday",
+      "weekday",
       "friends",
       "likes",
       "skills",
@@ -1065,8 +1002,6 @@
       "likes": 1,
       "dislikes": 5,
       "friends": false,
-      "weekdays": [],
-      "nweekdays": [],
       "weekday": [
         "Th",
         "We"
@@ -1076,9 +1011,10 @@
       ]
     },
     "importance": [
+      "dislikes",
       "ntopics",
-      "nweekdays",
-      "weekdays",
+      "nweekday",
+      "weekday",
       "friends",
       "likes",
       "skills",
@@ -1109,8 +1045,6 @@
       "likes": 16,
       "dislikes": 18,
       "friends": false,
-      "weekdays": [],
-      "nweekdays": [],
       "weekday": [
         "Th",
         "Th"
@@ -1120,9 +1054,10 @@
       ]
     },
     "importance": [
+      "dislikes",
       "ntopics",
-      "nweekdays",
-      "weekdays",
+      "nweekday",
+      "weekday",
       "friends",
       "likes",
       "skills",
@@ -1153,8 +1088,6 @@
       "likes": 3,
       "dislikes": 7,
       "friends": false,
-      "weekdays": [],
-      "nweekdays": [],
       "weekday": [
         "Fr"
       ],
@@ -1163,9 +1096,10 @@
       ]
     },
     "importance": [
+      "dislikes",
       "ntopics",
-      "nweekdays",
-      "weekdays",
+      "nweekday",
+      "weekday",
       "friends",
       "likes",
       "skills",
@@ -1193,8 +1127,6 @@
       "likes": 10,
       "dislikes": 13,
       "friends": false,
-      "weekdays": [],
-      "nweekdays": [],
       "weekday": [
         "Th",
         "We"
@@ -1204,9 +1136,10 @@
       ]
     },
     "importance": [
+      "dislikes",
       "ntopics",
-      "nweekdays",
-      "weekdays",
+      "nweekday",
+      "weekday",
       "friends",
       "likes",
       "skills",
@@ -1233,8 +1166,6 @@
       "likes": 13,
       "dislikes": 17,
       "friends": false,
-      "weekdays": [],
-      "nweekdays": [],
       "weekday": [
         "Fr"
       ],
@@ -1244,9 +1175,10 @@
       ]
     },
     "importance": [
+      "dislikes",
       "ntopics",
-      "nweekdays",
-      "weekdays",
+      "nweekday",
+      "weekday",
       "friends",
       "likes",
       "skills",
@@ -1264,13 +1196,14 @@
       "likes": [],
       "dislikes": [],
       "friends": null,
-      "weekdays": [],
-      "nweekdays": []
+      "weekday": [],
+      "nweekday": []
     },
     "importance": [
+      "dislikes",
       "ntopics",
-      "nweekdays",
-      "weekdays",
+      "nweekday",
+      "weekday",
       "friends",
       "likes",
       "skills",

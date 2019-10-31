@@ -57,74 +57,98 @@ class Agent:
                 continue
             if type(preference_dict[p]) == type(list()):
                 pref_tuple_list += [(p, elem) for elem in preference_dict[p]]
-            pref_tuple_list.append((p, preference_dict[p]))
+            else:
+                pref_tuple_list.append((p, preference_dict[p]))
         return pref_tuple_list
 
     def apply_pref(self, pref_type, pref_value, package):
         self.counter += 1
-        met_prefs = 0
-
+        print("========================================================================")
         if pref_type == "period":
             if (all([True if c.isTaughtOnPeriod[0].name == pref_value else False for c in package])):
+                print(f"period 1")
                 return 1
+            print(f"period 0")
             return 0
 
         if pref_type == "hobby":
             if (all([True if pref_value not in [w.name for w in c.isTaughtOnWeekday] else False for c in package])):
+                print(f"hobby 1")
                 return 1
+            print(f"hobb0 0")
             return 0
 
-        if pref_type == "weekdays":
+        if pref_type == "weekday":
             if (any([True if pref_value in [w.name for w in c.isTaughtOnWeekday] else False for c in package])):
+                print(f"weekday 1")
                 return 1
+            print(f"weekday 0")
             return 0
 
-        if pref_type == "nweekdays":
+        if pref_type == "nweekday":
             if (any([True if pref_value in [w.name for w in c.isTaughtOnWeekday] else False for c in package])):
-                return 0
-            return 1
+                print(f"nweekday -1")
+                return -1
+            print(f"nweekday 0")
+            return 0
 
         if pref_type == "topics":
             package_topics = [c.covers for c in package]
             pack_topics = [t.name for t in list(np.concatenate(package_topics))]
             if pref_value in pack_topics:
+                print(f"topics 1")
                 return 1
+            print(f"topics 0")
             return 0
 
         if pref_type == "ntopics":
             package_ntopics = [c.covers for c in package]
             pack_ntopics = [t.name for t in list(np.concatenate(package_ntopics))]
             if pref_value in pack_ntopics:
-                return 0
-            return 1
+                print(f"ntopics -1")
+                return -1
+            print(f"ntopics 0")
+            return 0
 
         if pref_type == "skills":
             package_skills = [c.uses[0].improves for c in package]
             pack_skills = [s.name for s in list(np.concatenate(package_skills))]
             if pref_value in pack_skills:
+                print(f"skills 1")
                 return 1
+            print(f"skills 0")
             return 0
 
         if pref_type == "likes":
-            teacher_courses = [c.name for c in self.liked_teachers_obj.teaches]
-            if (any([c for c in package if c in teacher_courses])):
-                return 1
+            if self.liked_teachers_obj:
+                teacher_courses = [c.name for c in self.liked_teachers_obj.teaches]
+                if (any([c for c in package if c in teacher_courses])):
+                    print(f"likes 1")
+                    return 1
+                print(f"likes 0")
             return 0
 
         if pref_type == "dislikes":
-            teacher_courses = [c.name for c in self.disliked_teachers_obj.teaches]
-            if (any([c for c in package if c in teacher_courses])):
-                 return 0
-            return 1
+            if self.liked_teachers_obj:
+                teacher_courses = [c.name for c in self.disliked_teachers_obj.teaches]
+                if (any([c for c in package if c in teacher_courses])):
+                    print(f"dislikes -1")
+                    return -1
+                print(f"dislikes 0")
+            return 0
 
         if pref_type == "friends":
             friends_courses = [c.name
                               for s in self.friends_obj
                               for c in s.takes
                               ]
-            if pref_value in friends_courses:
+            if (any([c for c in package if c in friends_courses])):
+                print(f"friends 1")
                 return 1
+            print(f"friends 0")
             return 0
+        print("THIS SHOULD NOT BE HERE")
+        return 0
 
     def check_unitary_prefs(self, package):
         self.counter = 0
@@ -132,6 +156,7 @@ class Agent:
         met_prefs = [0]
         for tuple_ in pref_list:
             met_prefs.append(self.apply_pref(tuple_[0], tuple_[1], package))
+            print(f"{tuple_},{self.counter}")
         return sum(met_prefs) / self.counter if self.counter > 0 else 0
 
     def compact_prefs(self, package):
@@ -182,6 +207,16 @@ class Agent:
         for idx, p in enumerate(importance[1:-1]):
             pref_weight[p] = 1 - (idx + 1) * split
         return pref_weight
+        # return {
+        #     "topics": 1,
+        #     "skills": 1,
+        #     "likes": 1,
+        #     "dislikes": 1,
+        #     "friends": 1,
+        #     "ntopics": 1,
+        #     "nweekday": 1,
+        #     "weekday": 1,
+        # }
 
     @staticmethod
     def get_topics_scores(course, pref_topics):
@@ -196,16 +231,16 @@ class Agent:
         return -len(set(topics).intersection(set(unwanted_topics))) / len(unwanted_topics)
 
     @staticmethod
-    def get_weekdays_score(course, weekdays):
-        course_weekdays = course.isTaughtOnWeekday
-        course_weekdays = [w.name for w in course_weekdays]
-        return len(set(weekdays).intersection(set(course_weekdays)))
+    def get_weekday_score(course, weekday):
+        course_weekday = course.isTaughtOnWeekday
+        course_weekday = [w.name for w in course_weekday]
+        return len(set(weekday).intersection(set(course_weekday)))
 
     @staticmethod
-    def get_unwanted_weekdays_score(course, weekdays):
-        course_weekdays = course.isTaughtOnWeekday
-        course_weekdays = [w.name for w in course_weekdays]
-        return -len(set(weekdays).intersection(set(course_weekdays)))
+    def get_unwanted_weekday_score(course, weekday):
+        course_weekday = course.isTaughtOnWeekday
+        course_weekday = [w.name for w in course_weekday]
+        return -len(set(weekday).intersection(set(course_weekday)))
 
     @staticmethod
     def get_skills_scores(course, pref_skills):
@@ -228,14 +263,18 @@ class Agent:
         return basic_courses
 
     def get_dislikes_scores(self, course, weight):
-        if course.name in [c.name for c in self.disliked_teachers_obj.teaches]:
-            return -weight
-        return weight
+        if self.disliked_teachers_obj:
+            if course.name in [c.name for c in self.disliked_teachers_obj.teaches]:
+                return -weight
+            return weight
+        return 0
 
     def get_likes_scores(self, course, weight):
-        if course.name in [c.name for c in self.liked_teachers_obj.teaches]:
-            return weight
-        return -weight
+        if self.liked_teachers_obj:
+            if course.name in [c.name for c in self.liked_teachers_obj.teaches]:
+                return weight
+            return -weight
+        return 0
 
     def get_friends_scores(self, course, weight):
         friends_courses = [friend.takes for friend in self.friends_obj]
@@ -270,10 +309,10 @@ class Agent:
                 self.get_likes_scores(c, self.pref_weight["likes"]))
             if "friends" in preferences: course_scores.append(
                 self.get_friends_scores(c, self.pref_weight["friends"]))
-            if "weekdays" in preferences: course_scores.append(
-                self.pref_weight["weekdays"] * self.get_weekdays_score(c, preferences["weekdays"]))
-            if "nweekdays" in preferences: course_scores.append(
-                self.pref_weight["nweekdays"] * self.get_unwanted_weekdays_score(c, preferences["nweekdays"]))
+            if "weekday" in preferences: course_scores.append(
+                self.pref_weight["weekday"] * self.get_weekday_score(c, preferences["weekday"]))
+            if "nweekday" in preferences: course_scores.append(
+                self.pref_weight["nweekday"] * self.get_unwanted_weekday_score(c, preferences["nweekday"]))
             course_scores.append(self.get_trust_scores(c))
             score_per_course.append(sum(course_scores))
 
@@ -288,6 +327,7 @@ class Agent:
         for p in self.packages:
             package_score_list.append((p, self.calculate_score(p, given_preferences) / len(p)))
         package_score_list.sort(key=lambda t: t[1])
+        # print("TRUST", [self.get_trust_scores(c) for c in package_score_list[-1]])
         self.ranked_packages = package_score_list
 
     def similarity_rank(self):
@@ -301,6 +341,7 @@ class Agent:
                  len(taken_topics.intersection(pack_topics)) / len(package[0]) + package[1]))
         similar_score_list.sort(key=lambda _t: _t[1])
         self.print_debug("Best after similarity ranking packages: ", similar_score_list[-5:])
+        # print("TRUST", [self.get_trust_scores(c) for c in similar_score_list[-1]])
         return similar_score_list
 
     def check_period(self, period):
@@ -342,17 +383,21 @@ class Agent:
         return humanities_courses + science_courses + social_courses
 
     def check_hobbies(self, hobby, package=False):
-        consist = True
-        with self.ontology:
-            if package:
-                self.student_obj.takes = [course for course in package[0]]
-            if hobby:
-                self.student_obj.practices = [self.ontology.Hobby(hobby)]
-                try:
-                    print("\nChecking consistancy of ontology...")
-                    sync_reasoner(infer_property_values=True)
-                    consist = True
-                except OwlReadyInconsistentOntologyError:
-                    self.print_debug("INCONSISTENCY: Student can't take course on same day as hobby.")
-                    consist = False
-        return consist
+        # consist = True
+        # with self.ontology:
+        #     if package:
+        #         self.student_obj.takes = [course for course in package[0]]
+        #     if hobby:
+        #         self.student_obj.practices = [self.ontology.Hobby(hobby)]
+        #         try:
+        #             print("\nChecking consistancy of ontology...")
+        #             sync_reasoner(infer_property_values=True)
+        #             consist = True
+        #         except OwlReadyInconsistentOntologyError:
+        #             self.student_obj.takes = []
+        #             self.student_obj.practices = []
+        #             self.print_debug(f"INCONSISTENCY: Student can't take {package} on same day as '{hobby}'.")
+        #             consist = False
+        if hobby:
+            self.packages = list(set([package for package in self.packages for c in package if self.ontology.Hobby(hobby).isPracticedOnWeekday not in c.isTaughtOnWeekday]))
+        
