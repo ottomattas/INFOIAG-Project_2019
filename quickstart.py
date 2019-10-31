@@ -44,27 +44,24 @@ class GCalendar:
         # Call the Calendar API
         now = datetime.datetime.utcnow().isoformat() + 'Z' # 'Z' indicates UTC time
 
-        # activity = ("IntelligentAgents", "Monday")
-        weekday, weekday_ = GCalendar.plan_weekday(ontoWeekday)
+        StartTime, EndTime = GCalendar.plan_weekday(ontoWeekday)
 
         event = {
           'summary': activity,
           'location': 'Utrecht Science Park',
           'description': 'A chance to hear more about OWL',
           'start': {
-            'dateTime': weekday,
+            'dateTime': StartTime,
             'timeZone': 'Europe/Amsterdam',
           },
           'end': {
-            'dateTime': weekday_,
+            'dateTime': EndTime,
             'timeZone': 'Europe/Amsterdam',
           },
           'recurrence': [
             'RRULE:FREQ=WEEKLY;COUNT=14'
           ],
           'attendees': [
-            {'email': 'sbrin@example.com'},
-            {'email': 'mternyuk@gmail.com'},
           ],
           'reminders': {
             'useDefault': False,
@@ -92,8 +89,8 @@ class GCalendar:
             d += 3
         if activity_weekday == "Fr":
             d += 4
-        # contiune
-        datetime = '2019-11-{}T{}:00:00'.format(d, randomHour)
-        datetime_ = '2019-11-{}T{}:00:00'.format(d, randomHour + 2)
-        #summary = activity_name
-        return datetime, datetime_
+        
+        datetimeStart = '2019-11-{}T{}:00:00'.format(d, randomHour)
+        datetimeEnd   = '2019-11-{}T{}:00:00'.format(d, randomHour + 2)
+        
+        return datetimeStart, datetimeEnd
