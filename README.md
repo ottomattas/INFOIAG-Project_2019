@@ -8,6 +8,7 @@ Intelligent Agents
 
 ---
 [Utrecht University](https://www.uu.nl/en) - [Artificial Intelligence Master's program](https://www.uu.nl/masters/en/artificial-intelligence)
+
 ---
 
 Student Course Recommendation Agent
